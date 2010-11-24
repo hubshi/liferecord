@@ -1,0 +1,37 @@
+------
+1:跳转到指定的第n行
+	:n   nG
+2.转换为改写模式
+  R
+
+------删除命令
+1:向下删除指定的n行数
+  nd
+2.删除多行x-y
+  :x,yd 
+  
+  vim显示行号、语法高亮、自动缩进的设置
+本文对vim的设置仅仅针对UBUNTU与Fedora系统，其他LINUX版本我没有实验过，敬请读者谅解！谢谢
+
+在UBUNTU中vim的配置文件存放在/etc/vim目录中，配置文件名为vimrc
+
+在Fedora中vim的配置文件存放在/etc目录中，配置文件名为vimrc
+
+在终端 输入以下命令来编辑vimrc配置文件：
+sudo vim /etc/vim/vimrc
+或者 sudo gedit /etc/vim/vimrc
+
+1、显示行号
+    
+在文件末端添加一新行，输入 set nu
+
+2、语法高亮
+在文件中找到 "syntax on   这一行，去掉前面的双引号"，双引号是注释的意思
+
+3、自动缩进
+
+在文件末尾添加一行，输入  set autoindent
+在添加一行，输入         set cindent
+其中 autoindent 是自动缩进； cindent是特别针对 C语言语法自动缩进
+
+注意：如果设置好以上设置后，VIM没有作出相应的动作，那么请你把你的VIM升级到最新版，一般只要在终端输入以下命令即可：sudo apt-get install vim

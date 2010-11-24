@@ -1,0 +1,10 @@
+#start local svnserver command.
+c:\progra~1\csvn\bin\svnserve.exe -d -r d:\mydocu~1\svn
+# create svn windows service
+sc create svn binpath= "c:\progra~1\csvn\bin\svnserve.exe --service --root d:\mydocu~1\svn" displayname= "Subversion service" depend= tcpip start= auto
+# delete svn windows service
+sc delete svn
+#svn initial hooks command file name
+pre-revprop-change.cmd
+#svnsync to googlecode initial command.
+svnsync init https://liferecord.googlecode.com/svn file:///D:/MyDocu~1/lr

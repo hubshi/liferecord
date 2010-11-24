@@ -1,0 +1,8 @@
+http://tieba.baidu.com/f?kz=180368148
+
+1:删除C:\Dicuments and settings\All users\Application Data\windows Genuine Advantage\data\文件夹里的data文件（打开显示隐藏的文件选项，就能看见了.) 
+   
+2:断开网络连接(把网线拔了或禁用都行)  
+   
+3：在验证对话框中点击“验证”，（若1中提到的“data”文件夹中的文件又出现，请马上再次删除）；等到出现通过验证的对话框后，再按提示安装即可。  
+

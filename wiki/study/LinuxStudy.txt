@@ -1,0 +1,147 @@
+Q:How to disp directory only?
+A:ls -l -d */
+A:ls -l | grep ^d
+
+Q:How to delete directory?
+A:rm -r -f
+
+Q:在装了xp后再装linux,现在grub默认启动是linux,如何修改,让默认启动为xp?
+A:1.编辑/boot/grub/menu.lst 看xp是第几项   修改default   后的数字为项号-1
+  or
+  2.修改/etc/grub/grub.conf文件中default项为DOS
+
+
+Q:如何让怎么让linux默认不启动X window
+A:etc/inittab文档中
+# Default runlevel. (Do not set to 0 or 6)
+id:3:initdefault:
+-----------------------------------
+在Linux中有7种启动级别，默认是X-Window，像是Windows的窗口模式，而Linux的操作和配置一般我们都采用输入命令的方式来完成，像DOS操作系统一样，如何让Linux一启动就进入这种模式呢？
+    以管理员身份进入Linux，修改文件：/etc/inittab文件
+    找到“id:5:initdefault:”，其中的5就是X-Window，为默认运行级别，一般我们把5改为3即可。
+    一共有7种启动级别，分别为：
+
+#   0 - halt (Do NOT set initdefault to this)
+#   1 - Single user mode
+#   2 - Multiuser, without NFS (The same as 3, if you do not have networking)
+#   3 - Full multiuser mode (command-line mode)
+#   4 - unused
+#   5 - X11 (X-Window)
+#   6 - reboot (Do NOT set initdefault to this)
+各个运行级的详细解释：
+0 为停机，机器关闭。
+1 为单用户模式，就像Win9x下的安全模式类似。
+2 为多用户模式，但是没有NFS支持。
+3 为完整的多用户模式，是标准的运行级。
+4 一般不用，在一些特殊情况下可以用它来做一些事情。例如在笔记本电脑的电池用尽时，可以切换到这个模式来做一些设置。
+5 就是X11，进到X Window系统了。
+6 为重启，运行init 6机器就会重启。
+
+0和6一般不用；
+运行startx可启动到级别5。
+-----------------------------------
+
+Q:字符终端模式下如何启动x-windows：
+A:startx
+
+Q:如何退出x-windows：
+A:注销即可
+
+-----------------------------------Linux Hard Disk Format Command
+by Vivek Gite · 31 comments
+http://www.cyberciti.biz/faq/linux-disk-format/
+Q. I've installed a new 250GB SATA hard disk on our office CentOS Linux server. How do I format a hard disk under Linux operating system from a shell prompt?
+
+A.. There are total 4 steps involved for hard disk upgrade and installation procedure:
+
+Step #1 : Partition the new disk using fdisk command
+Following command will list all detected hard disks:
+# fdisk -l | grep '^Disk'
+Output:
+
+Disk /dev/sda: 251.0 GB, 251000193024 bytes
+Disk /dev/sdb: 251.0 GB, 251000193024 bytesA device name refers to the entire hard disk. For more information see Linux partition naming convention and IDE drive mappings.
+To partition the disk - /dev/sdb, enter:
+# fdisk /dev/sdb
+The basic fdisk commands you need are:
+
+m - print help
+p - print the partition table
+n - create a new partition
+d - delete a partition
+q - quit without saving changes
+w - write the new partition table and exit
+Step#2 : Format the new disk using mkfs.ext3 command
+To format Linux partitions using ext2fs on the new disk:
+# mkfs.ext3 /dev/sdb1
+Step#3 : Mount the new disk using mount command
+First create a mount point /disk1 and use mount command to mount /dev/sdb1, enter:
+# mkdir /disk1
+# mount /dev/sdb1 /disk1
+# df -H
+Step#4 : Update /etc/fstab file
+Open /etc/fstab file, enter:
+# vi /etc/fstab
+Append as follows:
+
+/dev/sdb1               /disk1           ext3    defaults        1 2Save and close the file.
+
+Task: Label the partition
+You can label the partition using e2label. For example, if you want to label the new partition /backup, enter
+# e2label /dev/sdb1 /backup
+You can use label name insted of partition name to mount disk using /etc/fstab:
+LABEL=/backup /disk1 ext3 defaults 1 2
+-----------------------------------Linux Hard Disk Format Command
+
+
+Q： 开机启动时怎样自动运行程序
+A： Linux加载后, 它将初始化硬件和设备驱动, 然后运行第一个进程init。init根据配置文件继续引导过程，启动其它进程。通常情况下，修改放置在 /etc/rc或 /etc/rc.d 或 /etc/rc?.d 目录下的脚本文件，可以使init自动启动其它程序。例如：编辑 /etc/rc.d/rc.local 文件，在文件最末加上一行“xinit”或“startx”，可以在开机启动后直接进入X－Window。
+　　2．登录时自动运行程序
+　　用户登录时，bash首先自动执行系统管理员建立的全局登录script ：/ect/profile。然后bash在用户起始目录下按顺序查找三个特殊文件中的一个：/.bash_profile、/.bash_login、/.profile，但只执行最先找到的一个。
+　　因此，只需根据实际需要在上述文件中加入命令就可以实现用户登录时自动运行某些程序（类似于DOS下的Autoexec.bat）。
+　　3．退出登录时自动运行程序
+　　退出登录时，bash自动执行个人的退出登录脚本/.bash_logout。例如，在/.bash_logout中加入命令“tar －cvzf c.source.tgz ＊.c”，则在每次退出登录时自动执行 “tar” 命令备份 ＊.c 文件。
+　　4．定期自动运行程序
+　　Linux有一个称为crond的守护程序，主要功能是周期性地检查 /var/spool/cron目录下的一组命令文件的内容，并在设定的时间执行这些文件中的命令。用户可以通过crontab 命令来建立、修改、删除这些命令文件。
+　　例如，建立文件crondFile，内容为“00 9 23 Jan ＊ HappyBirthday”，运行“crontab cronFile”命令后，每当元月23日上午9:00系统自动执行“HappyBirthday”的程序（“＊”表示不管当天是星期几）。
+　　5．定时自动运行程序一次
+　　定时执行命令at 与crond 类似（但它只执行一次）：命令在给定的时间执行，但不自动重复。at命令的一般格式为：at [ －f file ] time ，在指定的时间执行file文件中所给出的所有命令。也可直接从键盘输入命令：
+　　＄ at 12:00
+　　at>mailto Roger －s ″Have a lunch″ < plan.txt
+　　at>Ctr－D
+　　Job 1 at 2000－11－09 12:00
+　　2000－11－09 12:00时候自动发一标题为“Have a lunch”，内容为plan.txt文件内容的邮件给Roger。
+
+Q:linux命令行下中文显示为乱码 应该如何解决
+A:	先用命令查看系统有没有安装中文字体
+		locale -a
+		然后添加语言设置
+		lang=zh_CN.utf8
+		vi /etc/sysconfig/i18n
+		将里面的LANG="zh_CN.GB18030" 改成这个样子重启机器就可以了!
+A2:
+		在安装Redhat Linux 9.0时，如果安装中选择的默认语言为简体中文，则在安装后,在命令行中的许多命令的运行结果显示为乱码。而且用redhat_config_language命令也无法将系统默认语言修改为英文。
+	对这一问题，我们可以修改 /etc/sysconfig/ 目录下的 i18n文件。首备份此文件，然后将该文件的第一行修改为：
+		LANG="en_US.UTF-8"
+
+	如果第二行开头为：
+	LANGUAGE=
+	则将此行删除
+
+	设置字体：
+	SYSFONT="latarcyrheb-sun16"
+
+	如有以此开头的一行：
+	SYSFONGACM=
+	则将此行删除
+
+	保存文件。重启系统后，这些命令就会返回英文提示了。
+
+Q:telnet root用户的登入
+A:1/etc/pam.d/login
+　  #auth required pam_securetty.so #将这一行加上注释！
+  2/etc/securetty加上下面几行：
+     pts/0
+     pts/1
+     pts/2
+     pts/3

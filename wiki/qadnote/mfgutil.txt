@@ -1,0 +1,5 @@
+mfgutil.lnk
+目标：
+"C:\Program Files\OpenEdge\bin\prowin32.exe" -p \\dbserver\root$\app\mfgpro\qad2k8\guicli\xmfgusrc\mfgutil.p -c 500 -s 128 -D 50 -TM 31 -TB 31 -B 1000 -yy 1920 -d mdy -ininame mfguprog.ini
+起始位置
+\\dbserver\root$\app\mfgpro\qad2k8\guicli

@@ -1,0 +1,54 @@
+lvlarrp.p 2+                                         36.16.10.3 许可应用程序报表                                      日期: 10/19/10
+页:      1                                               EB2SP8 TEST CO.LTD.                                          时间: 16:30:58
+
+应用程序     许可                                许可         Appln         许可 安装      安装      截止     审计         审计
+描述         代码                                类型         版本          数量 日期/时间 人        日期     截止日期  天数/号
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+AUDIT        PLY1J PLV6K PLT2L PJQCK PLT0K 0K540 名称为       eB2              1 10/23/08  mfg       11/02/08 10/23/09
+License Audit                                                                   12:01:24                                     1
+
+CONSIGNMENT  FF1&H FDC&H FF1RH FBDNH FF1PH VDYKX 并行的       eB2             42 09/01/09  mfg                09/01/10       90
+Consignment Inventory                                                           16:57:05
+
+FA           P2WLP P3PLP P2W&P P20CP P2WNP 033J4 并行的       eB2             42 09/01/09  mfg                09/01/10       90
+Fixed Assets                                                                    16:57:51
+
+KBMGMT       P1VB2 P09B2 P1VC3 P2TM2 P1VD2 0048& 名称为       eB2             50 09/01/09  mfg                09/01/10       90
+Lean Manufacturing                                                              16:58:38
+
+MFG/PRO      p1vnm p15nm p1vmn p2g1m p1vlm 004q6 名称为       eB2             30 12/01/09  mfg                10/23/09
+MFG/PRO Foundation                                                              15:09:43                                     1
+
+MFG/PRO      P1VV4 P0LV4 P1VT5 P2GH4 P1VX4 004SP 名称为       eB2             40 12/01/09  mfg                12/01/10       90
+MFG/PRO Foundation                                                              10:55:14
+
+MFG/PRO      P2Q8K P2X8K P2QCL P12WK P2QGK 038B0 名称为       eB2             10 12/01/09  mfg                12/01/10
+MFG/PRO Foundation                                                              10:53:08
+
+PROPLUS      KWCVC KN7VC KWCXB KZNVC KWCXC 4XMSS 名称为       eB2            300 09/01/09  mfg                09/01/10       30
+PRO/PLUS                                                                        16:59:20
+
+RELMGMT      P2SDK P3LDK P2SHK P10RK P2SBK 036G0 并行的       eB2             42 09/01/09  mfg                09/01/10       90
+Release Management                                                              16:56:12
+
+SUPCHAIN     P2R1& P3K1& P2R2& P6PQ& P2R7& 03732 并行的       eB2             42 09/01/09  mfg                09/01/10       90
+Supply Chain Planning                                                           17:00:10
+
+
+
+                                                           报表结束
+lvlarrp.p 2+                                         36.16.10.3 许可应用程序报表                                      日期: 10/19/10
+页:      2                                               EB2SP8 TEST CO.LTD.                                          时间: 16:30:58
+
+
+
+
+报表选择条件:                           报表提交人:                mfg
+
+
+           应用程序:                      至:
+
+               仅显示活动许可: No
+                                                               输出: lic
+                                                         批处理标志:
+

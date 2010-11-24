@@ -1,0 +1,8 @@
+procopy ./db/mfgempty ./compile/mfgundef
+proutil mfgundef -C convchar convert undefined
+install -remote x:\mgsvr\guicli
+proutil admtrain -C truncate Bi
+
+
+wk0305.ini Production database paramer file.
+wk0306.ini Training and Demonstration Dbs Parameter file.

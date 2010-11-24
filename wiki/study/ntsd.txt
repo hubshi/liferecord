@@ -1,0 +1,3 @@
+ntsd -c q -p pid  
+ntsd -c q -pn explorer.exe
+taskkill /pid 1234 /f

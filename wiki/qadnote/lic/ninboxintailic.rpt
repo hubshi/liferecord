@@ -1,0 +1,47 @@
+lvlarrp.p 2+                                         36.16.10.3 许可应用程序报表                                      日期: 10/11/09
+页:      1                                                     宁波信泰                                               时间: 14:33:12
+
+应用程序     许可                                许可         Appln         许可 安装      安装      截止     审计         审计
+描述         代码                                类型         版本          数量 日期/时间 人        日期     截止日期  天数/号
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+CONSIGNMENT  699dh 69qdh 699cg 6g49h 6994h &8pgx 名称为       eB2.1           30 06/02/10  mfg                07/02/10       90
+Consignment Inventory                                                           10:33:47
+
+ECOMMERCE    69cc7 69nc7 69cd6 6ddp7 69c37 &8m9n 名称为       eB2.1           30 06/02/10  mfg                07/02/10       90
+EDI ECommerce                                                                   10:34:45
+
+FA           69&w2 69gw2 69&v3 69d42 69&m2 &8hy& 名称为       eB2.1           30 06/02/10  mfg                07/02/10       90
+Fixed Assets                                                                    10:35:57
+
+MFG/PRO      69fny 69lny 69fkz 6br1y 69fxy &8kqd 名称为       eB2.1           30 06/02/10  mfg                07/02/10       90
+MFG/PRO Foundation                                                              10:32:57
+
+PROPLUS      69fxb 69lxb 69ftc 6blxb 69fnb &8kzr 名称为       eB2.1           30 06/02/10  mfg                07/02/10       90
+PRO/PLUS                                                                        10:36:48
+
+RELMGMT      69fsy 69lsy 69fyz 6bmfy 69fjy &8kvd 名称为       eB2.1           30 06/02/10  mfg                07/02/10       90
+Release Management                                                              10:37:37
+
+SSD          V93CG V9XCG V932H V88SG V933D F8W9W 名称为       eB2.1           30 06/03/17  mfg                07/03/17       90
+Shared Services Domain                                                          09:21:06
+
+SUPCHAIN     69dkw 69kkw 69dnx 6f24w 69dtw &8l&g 名称为       eB2.1           30 06/02/10  mfg                07/02/10       90
+Supply Chain Planning                                                           10:38:17
+
+
+
+                                                           报表结束
+lvlarrp.p 2+                                         36.16.10.3 许可应用程序报表                                      日期: 10/11/09
+页:      2                                                     宁波信泰                                               时间: 14:33:12
+
+
+
+
+报表选择条件:                           报表提交人:                mfg
+
+
+           应用程序:                      至:
+
+               仅显示活动许可: Yes
+                                                               输出: printer
+                                                         批处理标志:

@@ -1,0 +1,10 @@
+Linux下修改PATH的方法
+比如要把/etc/apache/bin目录添加到PATH中
+1.#PATH=$PATH:/etc/apache/bin
+使用这种方法,每当登出PATH就会恢复
+2.#vi /etc/profile
+在适当位置添加PATH=$PATH:/etc/apache/bin
+这种方法最好,除非你强制手动修改PATH的值,否则将不会被改变
+3.#vi ~/.bash_profile
+修改PATH行,把/etc/apache/bin添加进去
+这种方法是针对用户起作用的

@@ -1,0 +1,34 @@
+Q:将数据库设置的年/月/日格式修改为月/日/年，怎么操作？
+A:修改progress安装目录下的startup.pf文件和mfgpro安装目录下的locale.dat 
+Q:MFG/PRO 出来的报表多了一页白纸，如何？
+A:打印机设置是不是66行,后面的code control全部删除
+  or 还可以把66改成60
+
+Printer prints additional blank pages on all reports  
+ 
+	Solution ID: qad13434  
+	Usage:  1 
+	Status:  Verified 
+	Last Modified:  01/31/2008 
+	Fact:  MFG/Pro all versions 
+	Fact:  36.13.2 Printer Setup Maintenance 
+	Fact:  NetWare 
+	Fact:  Using NetWare Print Queue 
+	Fact:  HP Laser printer
+	 
+	Symptom:  Printer prints additional blank pages on all reports 
+	Symptom:  Control codes are set correctly for printer but additional pages
+	 
+	Cause:  Networking issue. Problem printing via NetWare network.
+	 
+	Fix:  Setup printing via ip and setup share on network. 
+
+Q:出货单确认界面rcsois.p里怎么不出现发票打印选择界面？
+A:打印机默认维护(mgupmt.p)里维护成了page.
+A:程序xxrcsois1.p里有控制需维护一个sosorp10.p程序的菜单且此菜单要有权限
+  才可以出现发票打印的界面。
+
+Q:库存周转率的计算公式
+　　库存周转率的计算公式，实际评价中可用如下公式进行计算： 　　库存周转率=（使用数量/库存数量）×100% 使用数量并不等于出库数量，因为出库数量包括一部分备用数量。除此之外也有以金额计算库存周转率的。同样道理使用金额并不等于出库金额。 　　库存周转率=（使用金额/库存金额）×100% 使用金额也好，库存金额也好，是何时的金额，因此规定某个期限来研究金额时，需用下列算式： 　　库存周转率=（该期间的出库总金额/该期间的平均库存金额）×100%=该期间出库总金额×2/(期初库存金额+ 期末库存金额）×100% 库存周转率计算公式是(以月平均库存周转率为例)： 　　1、原材料库存周转率＝月内出库的原材料总成本/原材料平均库存 　　2、在制库存周转率＝月内入库的成品物料成本/平均在制库存 　　3、成品库存周转率＝月销售物料成本/成品在库平均库存
+编辑本段库存周转率的表示方法
+　　库存周转率的不同表示方法： 　　用售价来计算（便于采用售价盘存法的单位，销售额/平均库存额）、 用成本来计算（便于观察销售额库存额和销售成本的比率）、 用销售量来计算（用于订立有关商品的变动、置放商品的场所及销售作业人员计划时，实行单位库存管理）、 用销售金额来计算（便于周转资金的安排）、 用利益和成本来计算 （以总销售额为分子，平均库存额则用成本计算） 　　售价、金额有时会随着单价改变而发生变化，从而影响周转率结果。所以 尽量用量表示，如重量（当期出仓总重量/当期平均库存重量）。 

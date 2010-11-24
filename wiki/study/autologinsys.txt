@@ -1,0 +1,29 @@
+Win xp:
+rundll32 netplwiz.dll,UsersRunDll
+
+redhat／Fedora 系列去掉登录界面后重定向警告信息
+
+方法一：
+编辑/etc/inittab，确保启动级别为5,即：
+id:5:initdefault:
+并且在最后面添加一行：
+x:5:once:/bin/su username -l -c "/bin/bash --login -c startx >/dev/null 2>/dev/null"
+(注：要把原来类似的那行注释掉，username替换为要自动登录的用户名)
+另外要取消GDM之类的登录管理器自动运行，最后重启即可。
+
+
+方法二：
+http://blog.csdn.net/jiayinjia1983116/archive/2008/04/14/2292277.aspx
+在网上有好多文章介绍如何绕过登录界面（主要是针对 redhat 及Fedora系列）。但是在图形界面去掉登录界面会有一些问题（出现一些警告信息）。就是当执行某个用户程序时，在终端1中会出现一些警告信息。究其原因是因为无法把错误信息重定向到错误记录文件中（xdm等登录程序其实就是把警告信息重定向到某个文件中，比如对于xdm ，错误信息被重定向到/var/log/xdm-error 文件中）。本人在xdm作为登录程序，fluxbox 作为窗口管理程序下调试成功，其它的还没有尝试，不过估计应该差不多。
+字符去掉登录界面就比较容易，直接 在initab  里面直接添加“-a root”,如下
+1:2345:respawn:/sbin/getty 38400 tty1 -a root
+2:23:respawn:/sbin/getty 38400 tty2 -a root
+3:23:respawn:/sbin/getty 38400 tty3 -a root
+4:23:respawn:/sbin/getty 38400 tty4 -a root
+5:23:respawn:/sbin/getty 38400 tty5 -a root
+6:23:respawn:/sbin/getty 38400 tty6 -a root
+在xwindow 下就稍微麻烦些，大致思路就是绕过xdm等登录程序，直接启动xwindow。这个可以通过修改prefdm 里面的内容，其实就是注视掉选择登录程序的部分，直接执行Startx，从而启动xwindow。但是这样做在终端1（consle1）会出现警告信息。所以关键是如何将错误信息定向。
+我主要修改了两个脚本，一个是/usr/X11R6/bin/Startx,另一个是/usr/local/app/Rox-filter/appRun.
+在startx中主要是修改了 启动xinit的那一行，“xinit $client $clientargs -- $server $display $serverargs” 在后面添加“>/dev/null 2>&1”,作用就是将错误信息导入到空设备里。
+appRun中也是将调用exec调用的行后面添加“>/dev/null 2>&1”。
+这样所有的错误信息都不会出现在终端中了！OK！自己动手试一试吧！

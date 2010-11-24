@@ -1,0 +1,91 @@
+samba的配置文件smb.conf 谁能给详细解释下每段语句的意识!
+
+1.修改配置文件:smb.conf
+debian:~# vi /etc/samba/smb.conf
+[global]
+workgroup = WORKGROUP
+netbios name = debian_text
+server string = debian_text samba server
+security = share
+[allshare]
+path = /home/allshare
+comment = share allshare
+writeable = yes
+browseable = yes
+public = yes
+
+2.建立相应目录并授权
+debian:~# mkdir /home/allshare
+debian:~# >/home/allshare/hello.txt
+debian:~# chmod -R 777 /home/allshare
+
+3.重启samba
+debian:~# /etc/init.d/samba restart
+其它系统可用下面的命令进行重启：
+#service smb stop
+#service smb start
+#service smb restart
+
+4.检查当前配置
+# testparm
+
+5.windows访问共享文件
+在IE或网上邻居中输入“\\ip”即可，ip可以通过ifconfig命令获得(下面统一使用IP：192.168.0.1)
+注意：不是ipconfig
+
+6.debian访问共享文件
+#smbclient -L 192.168.0.1               //查看共享列表
+#smbclient   //192.168.0.1/allshare   //登陆目标主机的共享目录allshare
+smb>get hello.txt                          //将远程主机上的hello.txt文件下载到本地目录
+smb>put /home/myhello.txt   myhello.txt    //上传文件，必须指定目标目录和名称
+smb>quit
+
+7.查看samba的版本
+#smbd -V
+
+
+（三）、建立基于用户验证的共享目录(注意：只是目录采用用户验证，而服务器不采用用户验证)
+
+1.修改配置文件:smb.conf
+debian:~# vi /etc/samba/smb.conf
+[global]
+workgroup = WORKGROUP
+netbios name = debian_text
+server string = debian_text samba server
+security = share
+[liming]
+path = /home/liming
+comment = liming's directory
+public = no
+writable = yes
+browseable = yes
+valid users = liming
+
+2.添加用户
+
+#useradd liming
+#smbpasswd -a liming        #密码统一为：123456
+
+3.建立相应目录并授权
+debian:~# mkdir /home/liming
+debian:~# chown liming.liming /home/liming #将目录的所有者改为liming
+
+4.重启samba（同上）
+5.windows访问共享文件
+在IE或网上邻居中输入“\\ip”即可,这个时候进入服务器是不用密码的，但是当你进入"liming目录"就要输入用户名和密码了。
+
+6.debian访问共享文件
+#smbclient -L 192.168.0.1               //查看共享列表
+#smbclient   //192.168.0.1/liming -U liming%123456   //登陆目标主机的liming目录,其中用户名：liming，密码：123456（就是上面设置）
+#以后操作同上
+
+Q:将系统用户批量倒成samba用户.
+A:less /etc/passwd | mksmbpasswd.sh >; /etc/samba/smbpasswd
+
+Q:samba显示中文文件名和共享名的方法：
+A:samba 2.x:
+  在[global]下面添加一行：
+  client code page = 936
+  samba 3.0+
+  在[global]下面添加一行：
+  unix charset = gb2312

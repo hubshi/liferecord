@@ -1,0 +1,51 @@
+lvlarrp.p 2+                                         36.16.10.3 许可应用程序报表                                      日期: 11/11/10
+页:      0                                            Quality Products - DB 300                                       时间: 14:43:01
+
+应用程序     许可                                许可         Appln         许可 安装      安装      截止     审计         审计
+描述         代码                                类型         版本          数量 日期/时间 人        日期     截止日期  天数/号
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+AUDIT        lxkk5 rnrk5 rnkv5 rqzz5 rnkt6 gmf&q 并行的       eB2.1           10 11/19/07  mfg       11/13/08 11/13/08       90
+License Audit                                                                   15:03:42
+
+COMPLIANCE   P17M1 P1SM1 P17P0 P7461 P17W1 00RPL 名称为       eB2.1           30 08/11/09  MFG                08/11/10       90
+Compliance                                                                      10:59:36
+
+CONSIGNMENT  699dh 69qdh 699cg 6g49h 6994h &8pgx 名称为       eB2.1           30 11/25/08  mfg                11/25/09       90
+Consignment Inventory                                                           10:20:06
+
+ECOMMERCE    M40WS M4BWS M40SR M171S M40MS 25ZYC 名称为       eB2.1           10 12/01/09  mfg                12/01/10       90
+EDI ECommerce                                                                   11:11:18
+
+FA           69&w2 69gw2 69&v3 69d42 69&m2 &8hy& 名称为       eB2.1           30 12/18/08  mfg                12/18/09       90
+Fixed Assets                                                                    14:44:50
+
+MFG/PRO      s&1&& krc&& kr1n& kvm4& kr1r& 4syk2 并行的       eB2.1           10 11/19/07  mfg       11/13/08 11/13/08       90
+MFG/PRO Foundation                                                              15:01:08
+
+PROPLUS      69fxb 69lxb 69ftc 6blxb 69fnb &8kzr 名称为       eB2.1           30 08/04/09  mfg                08/04/10       90
+PRO/PLUS                                                                        09:55:07
+
+RELMGMT      69fsy 69lsy 69fyz 6bmfy 69fjy &8kvd 名称为       eB2.1           30 08/04/09  mfg                08/04/10       90
+Release Management                                                              09:53:23
+
+SSD          x6pxd pgwxd pgpyd phxhd pgpnd 0h9zy 并行的       eB2.1           10 11/19/07  mfg       11/13/08 11/13/08       90
+Shared Services Domain                                                          15:06:06
+
+SUPCHAIN     69dkw 69kkw 69dnx 6f24w 69dtw &8l&g 名称为       eB2.1           30 08/12/09  mfg                08/12/10       90
+Supply Chain Planning                                                           15:01:26
+
+
+
+                                                           报表结束
+
+
+
+
+报表选择条件:                           报表提交人:                mfg
+
+
+           应用程序:                      至:
+
+               仅显示活动许可: Yes
+                                                               输出: printer
+                                                         批处理标志:

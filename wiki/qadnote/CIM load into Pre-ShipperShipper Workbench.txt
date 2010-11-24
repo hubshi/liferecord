@@ -1,0 +1,88 @@
+CIM load into Pre-Shipper/Shipper Workbench  
+
+ 
+Solution ID: qad102  
+Usage:  16 
+Status:  Verified 
+Last Modified:  09/21/2009 
+Goal:  CIM load into Pre-Shipper/Shipper Workbench 
+Fact:  CIM 
+Fact:  MFG/PRO eB 
+Fact:  7.9.2 Pre-Shipper/Shipper Workbench 
+Fact:  rcshwb.p
+ 
+Fact:  7.9.8 Sales Order Shipper Maintenance 
+Fact:  rcshmt.p
+ 
+Symptom:  Cannot CIM into Pre-Shipper/Shipper Workbench
+ 
+Fix:  Certain CIM options have been enabled when CIMing a document via Pre-Shipper/Shipper Workbench.  Shippers/Pre-shippers are enabled to allow the following:
+
+Add Options:
+1 - Add Item   2 - Add New Container   3 - Add New Container (plus Contents)  4 - Add Existing Container
+
+Once this option is selected, the Item information or container information frame is called for the update of the shipper line.  The following CIM formatted file may assist in terms of concepts (parentheses are included for description only and should not be included with the file:
+
+@@batchload rcshwb.p
+"lf010" "Shipper" ""  "lfcust"                (site/shipper/ID/Customer)
+"Carrier" - "Ship Via"
+1                                (Note: Emulating Add Item Option)
+- - "SO12032"  1                (Sales Order and Line Number provided and additional two - should be added before Sales Order in eB2 and above to accommodate Customer Reference and Model Year)
+5 "EA"
+-
+.                                (F4 out to avoid printing shipper/optional)
+.                                        
+@@end                    
+
+In certain cases the picked or allocated quantity requires modification, this can be accomplished by CIMing into 7.9.8 Sales Order Shipper Maintenance after completing the creation of the shipper or pre-shipper.
+
+This will enable the following concept:
+
+Run 7.9.1 manually to generate a Pre-shipper pick list
+
+FTP the pick list over to a third party warehouse managing company
+
+Receive file(s) from this company confirming shipment and quantities
+shipped
+    
+FTP quantities shipped differ from original quantities on the pick-list
+then modify the quantities on the Pre-shipper or Shipper (CIM process)
+
+Confirm the Shipper (7.9.5) 
+    
+ 
+sample........
+@@batchload sosomt.p
+d2eo1
+00010000
+-
+-
+-
+-
+-
+1
+000-0117-38
+-
+1
+-
+-
+-
+100
+no
+.
+.
+- - 10 - 20 - 30
+-
+.
+@@end
+@@batchload xxrcshwb.p
+10000 S "" 00010000 mv
+-
+1
+- - - - d2eo1 1
+1
+-
+.
+.
+.
+@@end

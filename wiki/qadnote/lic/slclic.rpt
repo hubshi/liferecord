@@ -1,0 +1,41 @@
+lvlarrp.p 2+                                         36.16.10.3 许可应用程序报表                                      日期: 10/11/05
+页:      1                                            隆鑫工业有限公司四轮车本部                                      时间: 14:38:07
+
+应用程序     许可                                许可         Appln         许可 安装      安装      截止     审计         审计
+描述         代码                                类型         版本          数量 日期/时间 人        日期     截止日期  天数/号
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+ECOMMERCE    PK71P PKF1P PK75Q PQ0WP PK79P 0LR34 名称为       eB2.1           10 08/08/06  mfg                09/08/06       90
+EDI ECommerce                                                                   16:12:00
+
+ECONTROL     PK8F9 PK2F9 PK898 PPWS9 PK859 0LQHV 名称为       eB2.1           10 08/08/06  mfg                09/08/06       90
+Enhanced Controls                                                               16:12:56
+
+MFG/PRO      PK9K9 PK3K9 PK9P8 PJW69 PK9T9 0LP&V 名称为       eB2.1           10 08/08/06  mfg                09/08/06       90
+MFG/PRO Foundation                                                              16:11:20
+
+PROPLUS      PK9VN PK3VN PK9ZM PJQVN PK9LN 0LPS7 名称为       eB2.1           10 08/08/06  mfg                09/08/06       90
+PRO/PLUS                                                                        16:13:32
+
+QLINQ        PKBC6 PK0C6 PKBH7 P&466 PKB36 0LN9M 名称为       eB2.1           10 08/08/06  mfg                09/08/06       90
+Qlinq                                                                           16:14:22
+
+SSD          PKC4C PK14C PKC0B PL0PC PKCDC 0LM6S 名称为       eB2.1           10 08/08/06  mfg                09/08/06       90
+Shared Services Domain                                                          16:16:29
+
+
+
+                                                           报表结束
+lvlarrp.p 2+                                         36.16.10.3 许可应用程序报表                                      日期: 10/11/05
+页:      2                                            隆鑫工业有限公司四轮车本部                                      时间: 14:38:07
+
+
+
+
+报表选择条件:                           报表提交人:                mfg
+
+
+           应用程序:                      至:
+
+               仅显示活动许可: Yes
+                                                               输出: printer
+                                                          批处理 ID:

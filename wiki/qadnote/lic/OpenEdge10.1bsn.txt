@@ -1,0 +1,33 @@
+Configuration File:  	D:\Progress\OpenEdge\PROGRESS.CFG
+
+Company Name:  	Softspeed
+
+Product Name:  	OE Studio
+Installation Date:  	Sat Aug 30 01:19:38 2008
+User Limit:  	1
+Expiration Date:  	None
+Serial Number:  	003905668
+Control Numbers:  	Z?ARS - XQE2N - M4CY2
+Version Number:  	10.1B           
+Machine Class:  	KB
+Port Number:  	31
+
+Product Name:  	Client Networking
+Installation Date:  	Sat Aug 30 01:19:38 2008
+User Limit:  	6
+Expiration Date:  	None
+Serial Number:  	003905669
+Control Numbers:  	Z7CRS - XPXXN - KMGYP
+Version Number:  	10.1B           
+Machine Class:  	KB
+Port Number:  	31
+
+Product Name:  	Query/RESULTS
+Installation Date:  	Sat Aug 30 01:19:38 2008
+User Limit:  	8
+Expiration Date:  	None
+Serial Number:  	003905670
+Control Numbers:  	Z?AR9 - XPEEN - K4CYJ
+Version Number:  	10.1B           
+Machine Class:  	KB
+Port Number:  	31

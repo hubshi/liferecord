@@ -1,0 +1,19 @@
+User: root pwd: 123456
+User: mfg pwd:  mfg
+IP:192.168.0.55
+
+服务器上
+1 cd /app/mfgpro/eb21sp5
+2 ./start.Demonstration
+3 cd /app/scripts/
+4 ./startqaddemo
+
+客户机上 .NETUI执行方法
+1 (假如你是第一次运行请执行) 用NOTEPAD打开C:\WINDOWS\system32\drivers\etc\hosts增加一行“192.168.0.55	dbserver ”
+2 (假如你是第一次运行请执行) 用IE打开http://dbserver:8080/qadhome 按他的要求安装.NET UI 的客户端软件
+3 (假如你是第一次运行请执行) 安装好后请确认现在有一个目录C:\Program Files\QAD\QAD Enterprise Applications 2007用碟上文件QAD.Client.exe.config覆盖该目录下一个子目录container中的相同名字文件
+4 双击桌面QAD Enterprise Applications 2007就可执行 用户为mfg 密码为空
+
+客户机上 DESKTOP的执行方法
+1 (假如你是第一次运行请执行) 用NOTEPAD打开C:\WINDOWS\system32\drivers\etc\hosts增加一行“192.168.0.55	dbserver ”
+2 IE打开  http://dbserver:8080/qaddemo/legacy.jsp 

@@ -1,0 +1,4 @@
+EXCEPT 30 "login:"
+OUTPUT "root^M"
+ECCEPT 30 "root's Password:"
+OUTPUT "^M"

@@ -1,0 +1,19 @@
+# This file is edited by fstab-sync - see 'man fstab-sync' for details
+LABEL=/         /                     ext3   defaults          1 1
+LABEL=/boot     /boot                 ext3   defaults          1 2
+none            /dev/pts              devpts gid=5,mode=620    0 0
+none            /dev/shm              tmpfs  defaults          0 0
+none            /proc                 proc   defaults          0 0
+none            /sys                  sysfs  defaults          0 0
+LABEL=/tmp      /tmp                  ext3   defaults          1 2
+LABEL=SWAP-sda5 swap                  swap   defaults          0 0
+/dev/sdb1       /app/tool             ext3   defaults          0 0
+/dev/sdc1       /app/progress         ext3   defaults          0 0
+/dev/sdd1       /app/mfgpro/eb2sp4    ext3   defaults          0 0
+/dev/sde1       /app/mfgpro/eb2sp8    ext3   defaults          0 0
+/dev/sdf1       /app/mfgpro/eb2sp12   ext3   defaults          0 0
+/dev/sdg1       /app/mfgpro/eb21sp5   ext3   defaults          0 0
+/dev/sdh1       /app/mfgpro/qad2008   ext3   defaults          0 0
+/dev/sdi1       /app/mfgpro/qad2k8    ext3   defaults          0 0
+# /dev/fd0                /media/floppy           auto    pamconsole,exec,noauto,managed 0 0
+/dev/fd0                /media/floppy2          auto    pamconsole,exec,noauto,managed 0 0

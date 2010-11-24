@@ -1,0 +1,41 @@
+建立Subversion仓库在本地如何操作?
+http://developer.51cto.com  2010-06-02 14:01  lonkil  vcfans.com  我要评论(0)
+在学习SVN的过程中，你可能会遇到建立Subversion仓库问题，这里就向大家简单介绍一下如何本地建立Subversion仓库，欢迎大家一起来学习。
+本节和大家一起学习一下如何在本地建立Subversion仓库，主要内容有安装Subversion和配置用户和权限等，希望通过本节的介绍，大家能够掌握在本地建立Subversion仓库的方法。
+
+本地建立Subversion仓库
+Subversion真是个好东西，大大提高了团队协同开发的效率，也为本地进行程序开发时保存不同版本提供了便捷。再也不用为一个个小程序在不同进度时，建立xxxx200808026.zip之类突兀文件了，一段时间后自己都不知道这个压缩内包含什么进度内容了。有了Subversion后一个update加一条清楚的注释搞定一切。
+
+今天在机器建了一个版本库，将过程记下以便日后查阅。我的环境是WindowsXP+SP3+SVN 版本 1.4.6 (r28521)
+
+安装Subversion。从官网下载回来一路Next，略过。
+
+在我的F盘建立一个SVN目录，用来存放版本库的文件，将来所有代码也将提交到这里。 
+我的Subversion是安装在D:\Program Files\Subversion\bin下的，在CMD下将目录切换到此处。输入如下命令：svnserve -d -r f:\svn，该命令是用来启用SVN服务的，回车以后，将进入等待界面。进行其他操作需要另起一个CMD，否则会导致后面连接不上。
+简单介绍一下这条命令，-d表示svnserve.exe将以服务的形式在后台运行，-r表示root，以f:\svn作为下面连接服务器的概目录。由于Subversion1.4开始，Subversion本身就集成Windows服务的工具，所以可以直接将svnserve注册成Windows系统服务，随系统启动一起启动在后台运行。
+注册成服务的脚本是这样的：
+
+sc create svn
+binpath= “D:\Program Files\Subversion\bin\svnserve.exe –service -r f:\svn”
+displayname= “Subversion Service”
+depend= Tcpip
+start=auto
+
+在上脚本可以连成一行，将换行处换成空格即可。我个人比较倾向第一种方式，毕竟为一个几天才更新一次或者一天才更新一次的svn，注册成系统服务我感觉划不来。在提交的时间大不开个Cmd执行svnserve -d -r f:\svn还是比较方便的。如果你想删了刚才的服务，可以使用net stop svn sc delete svn,这两句脚本即可。 
+这一步用来建库。命令是：svnadmin create f:\svn\test –fs-type fsfs，如果没出现在什么错误的话，你进入F:\SVN目录后，将会看到Subversion已经建立了一系列文件了，这些文件就是你要的版本库主体文件。这条命令后面的参数–fs-type fsfs,是建立版本库的不同存储方式。还有一种比较常见的就是–fs-type bdb。两种方式各有其优缺点，fsfs已经足够我用了。关于两种方式的异同，请阅这篇文章：subversion中BDB和FSFS两种存储方式的比较。本地建立Subversion仓库时，安装好Subversion以后就要配置用户和权限了。
+
+配置用户和权限。打开f:\svn\test目录下的conf文件夹，该文件夹用来保存用户信息及权限的。其中的svnserve.conf用来记录匿名访问和通过验证的访问权限，以及用户文件与权限分配文件名。svnserve.conf中我是这样配置的：
+[general]
+anon-access = read　#匿名用户根权
+auth-access = write　#通过验证用户根权
+password-db = passwd　#用户帐号文件名
+authz-db = authz#权限分配文件名
+文件passwd，是用来记录用户帐号的文件。我是这样配置的：
+[users]
+lonkil = vcfans.com
+文件authz是用来记录种权限的分配，包插用户组，以及各个用户可以具备不同的根限，管理的相当严格。我的配置如下：
+[test:/]
+lonkil = rw
+
+导入第一版数据到版本库中。命令“svn import test svn://127.0.0.1/test -m “the first one” –username lonkil –password vcfans.com”，此时我当前路径在F:\MySpace下，该命令将F:\MySpace\test文件结构全部导入到Subversion库中。-m参数表示添加的该版本的注释。 
+到这里我已经简单的将本地建立Subversion仓库的过程介绍结束了，接下来就可以使用了。就可以通过svn://127.0.0.1/test进行update,commit等等操作了。

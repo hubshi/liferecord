@@ -1,0 +1,53 @@
+lvlarrp.p 2+                                         36.16.10.3 许可应用程序报表                                      日期: 10/19/10
+页:      1                                                       QAD                                                  时间: 16:34:24
+
+应用程序     许可                                许可         Appln         许可 安装      安装      截止     审计         审计
+描述         代码                                类型         版本          数量 日期/时间 人        日期     截止日期  天数/号
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+AUDIT        lxkk5 rnrk5 rnkv5 rqzz5 rnkt6 gmf&q 并行的       eB2.1           10 09/29/08  mfg       09/24/09 09/24/09       90
+License Audit                                                                   08:33:47
+
+ECOMMERCE    &DZVG &DCVG &DZXH &9R6G &DZLG 6F0SW 名称为       eB2.1           20 08/22/08  mfg                08/22/09       90
+EDI ECommerce                                                                   13:49:18
+
+FA           &f3d5 &fqd5 &f3b4 &fzm5 &f345 6dwgq 名称为       eB2.1           20 08/22/08  mfg                08/22/09       90
+Fixed Assets                                                                    13:50:11
+
+MFG/PRO      s&1&& krc&& kr1n& kvm4& kr1r& 4syk2 并行的       eB2.1           10 09/29/08  mfg       09/24/09 09/24/09
+MFG/PRO Foundation                                                              08:32:48
+
+MFG/PRO      &F051 &FM51 &F030 &GNJ1 &F0F1 6DZ7L 名称为       eB2.1           20 08/22/08  mfg                08/22/09
+MFG/PRO Foundation                                                              13:48:26
+
+MFG/PRO      &F051 &fm51 &f030 &gnj1 &f0f1 6dz7l 名称为       eB2.1           20 08/22/08  mfg                12/02/96       90
+MFG/PRO Foundation                                                              10:15:30
+
+QLINQ        &f12y &fn2y &f14z &hhhy &f1by 6dy0d 名称为       eB2.1           20 08/22/08  mfg                08/22/09       90
+Qlinq                                                                           13:51:04
+
+RELMGMT      69fsy 69lsy 69fyz 6bmfy 69fjy &8kvd 名称为       eB2.1           30 03/15/10  mfg                03/15/11       90
+Release Management                                                              08:59:46
+
+SSD          x6pxd pgwxd pgpyd phxhd pgpnd 0h9zy 并行的       eB2.1           10 09/29/08  mfg       09/24/09 09/24/09       90
+Shared Services Domain                                                          08:34:32
+
+SSD          &f3z3 &fqz3 &f3s2 &d8f3 &f3q3 6dwxj 名称为       eB2.1           20 08/22/08  mfg                08/22/09
+Shared Services Domain                                                          13:52:01
+
+
+
+                                                           报表结束
+lvlarrp.p 2+                                         36.16.10.3 许可应用程序报表                                      日期: 10/19/10
+页:      2                                                       QAD                                                  时间: 16:34:24
+
+
+
+
+报表选择条件:                           报表提交人:                mfg
+
+
+           应用程序:                      至:
+
+               仅显示活动许可: No
+                                                               输出: printer
+                                                          批处理 ID:

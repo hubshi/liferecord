@@ -1,0 +1,46 @@
+EXECNAME
+{gpcdget.i "UT"}
+
+validate(v_date <> "" ,"message information")
+
+&IF DEFINED(GPLABEL_I)=0 &THEN
+&GLOBAL-DEFINE GPLABEL_I
+
+fill(" ",25)
+
+{pxmsg.i &MSGNUM=4693 &ERRORLEVEL=1 &MSGBUFFER=lit-text}
+{pxmsg.i &MSGNUM=80402 &ERRORLEVEL={&INFORMATION-RESULT} &CONFIRM=yn}
+{mfmsg.i 5543 3}
+{mfmsg01.i 5544 2 yn}
+
+prompt-for lang mndnbr with frame a editing:
+if frame-field = "lang" then do:
+next-prompt pt_prod_line with frame a1.
+setframelabels(frame a:handle).
+do transaction:
+{gpselout.i &pagedflag = "nopage" | ""} ±®±Ì∑÷“≥
+{gprunp.i "xxa" "p" "test" "(input 2333,output xxx)"}
+{t001.i}  /*ppplrp.p*/
+getFrameTitle("TOTALS",16)
+
+/*CIM_LOAD*/
+    batchrun  = yes.
+    input from value(fname).
+    output to value(fname + ".out") keep-messages.
+    hide message no-pause.
+    {gprun.i ""ppcsbtld.p""}
+    hide message no-pause.
+    output close.
+    input close.
+    batchrun  = no.
+
+
+{pxrun.i &PROC       = 'processRead' &PROGRAM ='sccexr.p'
+      &PARAM      = "(input  sct_sim,
+        input  element,
+        buffer sc_mstr,
+        input  {&NO_LOCK_FLAG},
+        input  {&NO_WAIT_FLAG})"
+      &NOAPPERROR = true
+      &CATCHERROR = true
+      }

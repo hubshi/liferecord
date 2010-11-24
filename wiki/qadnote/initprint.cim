@@ -1,0 +1,23 @@
+@@batchload mgmgmt05.p
+page
+Default
+wy60prt
+- 66 0 yes
+-
+@@end
+@@batchload mgmgmt05.p
+Printer
+default
+vt100prt
+- 66 0 no
+/dev/tty no
+-
+@@end
+@@batchload mgmgmt05.p
+terminal
+default
+vt100
+- 20 0 no
+-
+-
+@@end
