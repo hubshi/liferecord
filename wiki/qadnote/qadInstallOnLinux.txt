@@ -1,0 +1,58 @@
+windows : 
+
+修改系统目录下的services 和 hosts文件, services中添加的服务要与linux下的一致
+hosts中增加数据库服务器的ip地址和主机名.
+
+1）progress for windows (选择完全安装): 
+    Product Name:   ProVISION
+    Serial Number:   003377365
+    Control Numbers:   Z8ES9 - 6PE6N - 44GYJ
+ 
+    Product Name:   Client Networking
+    Serial Number:   003377367
+    Control Numbers:   Z7CS9 - XQXAN - N4CYJ
+ 
+2）QAD GUISP2
+
+linux :
+ 
+首先安装 j2sdk-1_3_1_09-linux-i586.bin， 并 export JAVAHOME ，并将 JAVAHOME/bin 加入到 PATH 
+java需要 libstdc++*  和 compat-libstdc++*等4个rpm包,在第一张光盘中. 
+
+1）progress for linux :
+     Product Name:  4GL Development
+     Serial Number:  003377366
+     Control Numbers:  ?ZAR? - 6QR6N - 5MHYM
+
+     Product Name:  Query/RESULTS
+     Serial Number:  003377368
+     Control Numbers:  XXESH - 6Q6EM - N4D?M
+
+     Product Name:  Enterprise DB
+     Serial Number:  003377369
+     Control Numbers:  YXER? - 6P6EM - 5MHYR
+
+     Product Name:  WebSpeed Trans Svr
+     Serial Number:  003331220
+     Control Numbers:  YZGSH - 2PPEC - M4H?5
+
+2) QAD SP2 Database server
+3) QAD SP2 Language Files CH
+4) QAD SP2 Language Files US
+
+其他：
+1) 编辑/etc/hosts设定主机名称   
+	格式：ipaddress   hostname   alias
+2) 编辑/etc/services设定服务 
+	格式：服务名  服务号/协议
+	例如：mfgtest 3821/tcp
+
+2) 数据库备份  DATE='date +%Y%m%d%H'  device-name 为备份的数据库文件名
+	probkup online dbname device-name  
+3) 数据库恢复(恢复时数据文件复制到当前目录下，所以运行命令时首先 cd 到数据库文件目录)
+	prorest dbname device-name {-list | -vp | -vf} 
+4) 运行 mfgutil 生成启动脚本
+5) 启动命令
+  $DLC/bin/_mprosrv /data/eb2/db/mfghk -L 8000 -c 350 -B 1000 -S mfghk -N TCP -n 60
+
+ 

@@ -1,0 +1,474 @@
+[Startup]
+; SCCS: @(#)progress.svg        1.2 05/21/97 16:21:30 >
+V6Display=no
+;ImmediateDisplay=yes
+;MultitaskingInterval=100
+CharWidth=9
+DefaultFont="宋体", size 9 
+DefaultFixedFont="宋体", size 9
+PrinterFont="Times New Roman", size 9
+
+;* New frame spacing parameter from Progress - required for legacy code
+FrameSpacing=1
+Use-3D-Size=no
+DLC=c:\progra~1\progress
+PROBUILD=\\qadapp\progress91d\probuild
+PROPATH=.,\\qadapp\guicli,\\qadapp\guicli\src,\\qadapp\guicli\bbi,\\qadapp\guicli\xrc,\\qadapp\guicli\images.pl,\\qadapp\guicli\ch\hk,\\qadapp\guicli\ch\xx,\\qadapp\progress91d\gui\adecomm.pl,\\qadapp\progress91d\gui\adecomp.pl,\\qadapp\progress91d\gui\adedesk.pl,\\qadapp\progress91d\gui\adedict.pl,\\qadapp\progress91d\gui\adeedit.pl,\\qadapp\progress91d\gui\adeicon.pl,\\qadapp\progress91d\gui\aderes.pl,\\qadapp\progress91d\gui\adeshar.pl,\\qadapp\progress91d\gui\adeuib.pl,\\qadapp\progress91d\gui\adexml.pl,\\qadapp\progress91d\gui\as4dict.pl,\\qadapp\progress91d\gui\prodict.pl,\\qadapp\progress91d\gui\protools.pl,\\qadapp\progress91d,\\qadapp\progress91d\bin,\\qadapp\progress91d\gui
+PROMSGS=c:\progra~1\progress\promsgs
+
+[Applications]
+;* Enable Spinning MFG/PRO Globe
+spin=NO
+;* Enable Graphs with the Browse and specify the Grafsman path
+graph=No
+GRAFPATH=
+;* Specifies the executable to run when you select edit image
+paint=
+;* Auto-go default
+auto-go=false
+GRAPATH=
+
+[Colors]
+;******************************************************************************
+; THE DEFINITION OF COLOR 0 THROUGH 15 IS PRIVATE TO THE PROGRESS ADE.  
+; MODIFYING COLORS 0 THROUGH 15 MAY PREVENT THE PROGRESS ADE FROM RUNNING.
+; The following color definitions correspond to the ADE standards.
+;  0 to 15  - reserved
+color0=0,0,0
+color1=0,0,128
+color2=0,128,0
+color3=0,128,128
+color4=128,0,0
+color5=128,0,128
+color6=128,128,0
+color7=128,128,128
+color8=192,192,192
+color9=0,0,255
+color10=0,255,0
+color11=0,255,255
+color12=255,0,0
+color13=255,0,255
+color14=255,255,0
+color15=255,255,255
+color16=255,255,0
+NORMAL=0,15
+INPUT=15,0
+MESSAGES=15,1
+
+[Default Window]
+
+;x=
+;y=
+;rows=
+;columns=
+[fonts]
+;******************************************************************************
+; THE DEFINITION OF FONT 0 THROUGH 7 IS PRIVATE TO THE PROGRESS ADE.  
+; MODIFYING FONTS 0 THROUGH 7 MAY PREVENT THE PROGRESS ADE FROM RUNNING.
+; The following fonts definitions correspond to the ADE standards.
+;       ?  - Note choice of DefaultFont above (=FixedSys)
+;       0  - Fixed System Font (1 char per PPU)  
+;       1  - Proportional System Font
+;       2  - Editor Font for 4GL program entry
+;       3  - TTY Simulator (should be fixed)
+;       4 -  Desktop Font
+;  5 to 7  - reserved
+font0="宋体", size 9
+font1="隶书", size 14
+font2="宋体", size 9
+font3="宋体", size 9
+font4="宋体", size 9
+font5="宋体", size 9
+font6="宋体", size 9
+font7="宋体", size 9
+font8="宋体", size 9
+font9="宋体", size 9
+font10="宋体", size 9
+font11="宋体", size 9
+font12="宋体", size 9
+font13="宋体", size 9
+font14="宋体", size 9
+font15="宋体", size 9
+font16="宋体", size 9
+font17="宋体", size 9
+font18="宋体", size 9
+font19="宋体", size 9
+font20="宋体", size 9 
+font21="宋体", size 9
+font22="宋体", size 9
+font23="宋体", size 9
+font24="宋体", size 9
+font25="宋体", size 9
+font26="宋体", size 9
+font27="宋体", size 9
+font28="宋体", size 9
+font29="宋体", size 9
+font30="宋体", size 9
+font31="宋体", size 9
+; The following variables identify which of the above fonts will be used for
+; 80-column and 132-column reports.  Always used fixed-space fonts for reports.
+80ColumnReportFont=21
+132ColumnReportFont=22
+font32="宋体", size 9
+font33="宋体", size 9
+font34="宋体", size 9
+font35="宋体", size 9
+font36="宋体", size 9
+font37="宋体", size 9
+font38="宋体", size 9
+font39="宋体", size 9
+font40="宋体", size 9
+font41="宋体", size 9
+font42="宋体", size 9
+font43="宋体", size 9
+font44="宋体", size 9
+font45="宋体", size 9
+font46="宋体", size 9
+font47="宋体", size 9
+font48="宋体", size 9
+font49="宋体", size 9
+font50="宋体", size 9
+font51="宋体", size 9
+font52="宋体", size 9
+font53="宋体", size 9
+font54="宋体", size 9
+font55="宋体", size 9
+font56="宋体", size 9
+font57="宋体", size 9
+font58="宋体", size 9
+font59="宋体", size 9
+font60="宋体", size 9
+font61="宋体", size 9
+font62="宋体", size 9
+font63="宋体", size 9
+font64="宋体", size 9
+font65="宋体", size 9
+font66="宋体", size 9
+font67="宋体", size 9
+font68="宋体", size 9
+font69="宋体", size 9
+font70="宋体", size 9
+font71="宋体", size 9
+font72="宋体", size 9
+font73="宋体", size 9
+font74="宋体", size 9
+font75="宋体", size 9
+font76="宋体", size 9
+font77="宋体", size 9
+font78="宋体", size 9
+font79="宋体", size 9
+font80="宋体", size 9
+font81="宋体", size 9
+font82="宋体", size 9
+font83="宋体", size 9
+font84="宋体", size 9
+font85="宋体", size 9
+font86="宋体", size 9
+font87="宋体", size 9
+font88="宋体", size 9
+font89="宋体", size 9
+font90="宋体", size 9
+font91="宋体", size 9
+font92="宋体", size 9
+font93="宋体", size 9
+font94="宋体", size 9
+font95="宋体", size 9
+font96="宋体", size 9
+font97="宋体", size 9
+font98="宋体", size 9
+font99="宋体", size 9
+font100="宋体", size 9
+font101="宋体", size 9
+font102="宋体", size 9
+font103="宋体", size 9
+font104="宋体", size 9
+font105="宋体", size 9
+font106="宋体", size 9
+font107="宋体", size 9
+font108="宋体", size 9
+font109="宋体", size 9
+font110="宋体", size 9
+font111="宋体", size 9
+font112="宋体", size 9
+font113="宋体", size 9
+font114="宋体", size 9
+font115="宋体", size 9
+font116="宋体", size 9
+font117="宋体", size 9
+font118="宋体", size 9
+font119="宋体", size 9
+font120="宋体", size 9
+font121="宋体", size 9
+font122="宋体", size 9
+font123="宋体", size 9
+font124="宋体", size 9
+font125="宋体", size 9
+font126="宋体", size 9
+font127="宋体", size 9
+font128="宋体", size 9
+font129="宋体", size 9
+font130="宋体", size 9
+font131="宋体", size 9
+font132="宋体", size 9
+font133="宋体", size 9
+font134="宋体", size 9
+font135="宋体", size 9
+font136="宋体", size 9
+font137="宋体", size 9
+font138="宋体", size 9
+font139="宋体", size 9
+font140="宋体", size 9
+font141="宋体", size 9
+font142="宋体", size 9
+font143="宋体", size 9
+font144="宋体", size 9
+font145="宋体", size 9
+font146="宋体", size 9
+font147="宋体", size 9
+font148="宋体", size 9
+font149="宋体", size 9
+font150="宋体", size 9
+font151="宋体", size 9
+font152="宋体", size 9
+font153="宋体", size 9
+font154="宋体", size 9
+font155="宋体", size 9
+font156="宋体", size 9
+font157="宋体", size 9
+font158="宋体", size 9
+font159="宋体", size 9
+font160="宋体", size 9
+font161="宋体", size 9
+font162="宋体", size 9
+font163="宋体", size 9
+font164="宋体", size 9
+font165="宋体", size 9
+font166="宋体", size 9
+font167="宋体", size 9
+font168="宋体", size 9
+font169="宋体", size 9
+font170="宋体", size 9
+font171="宋体", size 9
+font172="宋体", size 9
+font173="宋体", size 9
+font174="宋体", size 9
+font175="宋体", size 9
+font176="宋体", size 9
+font177="宋体", size 9
+font178="宋体", size 9
+font179="宋体", size 9
+font180="宋体", size 9
+font181="宋体", size 9
+font182="宋体", size 9
+font183="宋体", size 9
+font184="宋体", size 9
+font185="宋体", size 9
+font186="宋体", size 9
+font187="宋体", size 9
+font188="宋体", size 9
+font189="宋体", size 9
+font190="宋体", size 9
+font191="宋体", size 9
+font192="宋体", size 9
+font193="宋体", size 9
+font194="宋体", size 9
+font195="宋体", size 9
+font196="宋体", size 9
+font197="宋体", size 9
+font198="宋体", size 9
+font199="宋体", size 9
+font200="宋体", size 9
+font201="宋体", size 9
+font202="宋体", size 9
+font203="宋体", size 9
+font204="宋体", size 9
+font205="宋体", size 9
+font206="宋体", size 9
+font207="宋体", size 9
+font208="宋体", size 9
+font209="宋体", size 9
+font210="宋体", size 9
+font211="宋体", size 9
+font212="宋体", size 9
+font213="宋体", size 9
+font214="宋体", size 9
+font215="宋体", size 9
+font216="宋体", size 9
+font217="宋体", size 9
+font218="宋体", size 9
+font219="宋体", size 9
+font220="宋体", size 9
+font221="宋体", size 9
+font222="宋体", size 9
+font223="宋体", size 9
+font224="宋体", size 9
+font225="宋体", size 9
+font226="宋体", size 9
+font227="宋体", size 9
+font228="宋体", size 9
+font229="宋体", size 9
+font230="宋体", size 9
+font231="宋体", size 9
+font232="宋体", size 9
+font233="宋体", size 9
+font234="宋体", size 9
+font235="宋体", size 9
+font236="宋体", size 9
+font237="宋体", size 9
+font238="宋体", size 9
+font239="宋体", size 9
+font240="宋体", size 9
+font241="宋体", size 9
+font242="宋体", size 9
+font243="宋体", size 9
+font244="宋体", size 9
+font245="宋体", size 9
+font246="宋体", size 9
+font247="宋体", size 9
+font248="宋体", size 9
+font249="宋体", size 9
+font250="宋体", size 9
+font251="宋体", size 9
+font252="宋体", size 9
+font253="宋体", size 9
+font254="宋体", size 9
+font255="宋体", size 9
+
+[DOS Startup]
+;PROPATH=
+;PROMSGS=
+;PROCFG=
+;DLC=
+DLC=C:\DLC
+PROBUILD=C:\DLC\PROBUILD
+PROPATH=.,C:\DLC\PROBUILD\EUCAPP,C:\DLC\PROBUILD\EUCAPP\EUC.PL
+
+[DOS Colors]
+color0=WHITE/BLUE          "NORMAL"
+color1=BLACK/GRAY          "INPUT, UNDERLINE"   
+color2=BLACK/GRAY          "MESSAGES, REVERSE"
+color3=BLUE/WHITE          "HIGHLITE, HELP"
+color4=BLINK-RED/WHITE     "URGENT"
+
+;NORMAL=WHITE/BLUE
+;INPUT=BLACK/GRAY 
+;MESSAGES=BLACK/GRAY 
+[DOS Default Window]
+
+;rows=25
+;rows=50
+[DOS Keys]
+
+;GO=F1,CTRL-X
+[Debug-Init]
+;******************************************************************************
+; THE FOLLOWING INFORMATION IS PRIVATE TO THE DEBUGGER. IT SHOULD NEVER BE
+; MODIFIED EXCEPT BY THE DEBUGGER PROGRAM.
+;
+Location=
+Pane0=1,46," "
+Pane1=1,14,""
+Pane2=1,16,"Commands in Queue: 0"
+Pane3=1,25,""
+DebuggerName=PRODEBUG.EXE
+
+[Debug-Macros]
+Macro0=r, run &file
+Macro1=c, continue
+Macro2=s, step
+Macro3=n, next
+Macro4=b, break &file &line
+Macro5=cb, cancel break &file &line
+Macro6=sb, show breaks
+Macro7=ss, show stack
+Macro8=u, up
+Macro9=d, down
+Macro10=di, display &text
+Macro11=sm, show macros
+
+[Debug-Buttons]
+Button0=Run,run &file
+Button1=Cont,continue
+Button2=Step,step
+Button3=Next,next
+Button4=Break,break &file &line
+Button5=Stack,show stack
+Button6=Up,up
+Button7=Down,down
+Button8=Disp,display &text
+Button9=Exit,exit
+
+[ProADE]
+
+;DividerFgColor=15
+;DividerBgColor=1
+;OKBoxFgColor=1
+;OKBoxBgColor=8
+;FillinFgColor=0
+;FillinBgColor=8
+;Editor4GLFgColor=DEFAULT
+;Editor4GLBgColor=DEFAULT
+;Editor4GLFgSmallColor=0
+;Editor4GLBgSmallColor=8
+;FixedFont=0
+;StandardFont=1
+;Editor4GLFont=2
+[Proedit]
+SaveSettings=yes
+BufList=
+ExitWarning=yes
+SaveBufList=no
+MinimizeBeforeRun=no
+RestoreAfterRun=yes
+PauseAfterRun=yes
+AutoCleanup=yes
+MostRecentlyUsedFileList=yes
+MRUEntries=4
+EditorFont=Default
+MRUFile1=\\qadapp\guicli\src\sosoiq.p
+MRUFile2=F:\hk_src\付款登记簿--导入用友\hkapckrp1b.p
+MRUFile3=F:\hk_src\付款登记簿--导入用友\hkapckrp1a.p
+MRUFile4=F:\hk_src\付款登记簿--导入用友\hkapckrp01.p
+
+[MFGPRO]
+mfguserid=
+
+[WinChar Startup]
+DLC=\\qadapp\progress91d
+PROBUILD=\\qadapp\progress91d\probuild
+PROMSGS=\\qadapp\progress91d\promsgs
+PROPATH=\\qadapp\guicli,\\qadapp\guicli\bbi
+
+[WinChar Colors]
+color0=WHITE/BLUE          "NORMAL"
+color1=BLACK/GRAY          "INPUT, UNDERLINE"
+color2=BLACK/GRAY          "MESSAGES, REVERSE"
+color3=BLUE/WHITE          "HIGHLITE, HELP"
+color4=BLINK-RED/WHITE     "URGENT"
+[ADM]
+Color3DFace=17
+Color3DHighLight=18
+Color3DShadow=19
+[uib]
+[Procomp]
+SaveSettings=yes
+FileSpec01=.,*.p *.w
+DefFileSpec=*.p *.w
+LogFile=compile.log
+ShowStatus=yes
+RemoveOldRs=yes
+IfNoR=no
+SubDirs=yes
+SaveNewRs=yes
+XrefAppend=no
+ListAppend=no
+PageLength=60
+PageWidth=80
+V6Frame=No
+StreamIO=no
+MinRcodeSize=no
+GenerateMD5=no
+[Barcode]
+colwidth = 22.78
+rowheigth = 13.65
+rowstep  = 3.5
