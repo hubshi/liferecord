@@ -1,0 +1,60 @@
+OpenEdge Release 10.1C04 as of Fri May 29 22:13:10 EDT 2009
+   Configuration File:  /app/progress/10c/progress.cfg
+
+         Company Name:  SH
+
+         Product Name:  4GL Development System
+    Installation Date:  Tue Apr 13 16:26:20 2010
+           User Limit:  1
+      Expiration Date:  None
+        Serial Number:  004103582
+      Control Numbers:  Y?ASH - XQP6N - NMDYR
+       Version Number:  10.1C           
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  Client Networking
+    Installation Date:  Tue Apr 13 16:26:20 2010
+           User Limit:  2
+      Expiration Date:  None
+        Serial Number:  004103583
+      Control Numbers:  Z6CR? - 6PRXM - KMHYR
+       Version Number:  10.1C           
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  Query/RESULTS
+    Installation Date:  Tue Apr 13 16:26:20 2010
+           User Limit:  2
+      Expiration Date:  None
+        Serial Number:  004103584
+      Control Numbers:  ZXESH - 6PPXN - 3MDYM
+       Version Number:  10.1C           
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  OE Enterprise RDBMS
+    Installation Date:  Tue Apr 13 16:26:20 2010
+           User Limit:  15
+      Expiration Date:  None
+        Serial Number:  004103585
+      Control Numbers:  Z7AR? - 2P8AN - 54DY8
+       Version Number:  10.1C           
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  OE Application Svr Ent
+    Installation Date:  Tue Apr 13 16:26:20 2010
+           User Limit:  2
+      Expiration Date:  None
+        Serial Number:  004103586
+      Control Numbers:  X7ES? - 6QR2M - K4D?8
+       Version Number:  10.1C           
+        Machine Class:  KB
+          Port Number:  38
+
+
