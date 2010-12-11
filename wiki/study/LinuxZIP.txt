@@ -1,0 +1,7 @@
+Zip和unzip压缩文件
+
+[root@test /root]# zip -r myfile.zip ./*  //将当前目录下的所有文件和文件夹全部压缩成myfile.zip文件,－r表示递归压缩子目录下所有文件.
+[root@test /root]# zip -d myfile.zip smart.txt  //删除压缩文件中smart.txt文件
+[root@test /root]# zip -m myfile.zip ./rpm_info.txt //向压缩文件中myfile.zip中添加rpm_info.txt文件
+ 
+[root@test /root]# unzip -o -d /home/sunny myfile.zip //把myfile.zip文件解压到 /home/sunny/

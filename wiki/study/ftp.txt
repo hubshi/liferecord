@@ -1,0 +1,2 @@
+ftp://mfg:mfgmfg@192.168.0.1/../../backup/tmp/prod1207.bak
+ftp://mfg:mfgmfg@192.168.0.1/../../var/tmp/10c.zip
