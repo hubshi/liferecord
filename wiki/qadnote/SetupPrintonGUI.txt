@@ -1,0 +1,46 @@
+如何在GUI界面下设置printers
+http://www.qadhome.com/htm/MFGPRO/base/577.Htm
+
+Device Pathname: printer Spooler: no 
+
+Printer control 
+
+Win 3.11, Win95, WinNT: Setup the required device according to the installation media supplied with the faxmodem or use Microsoft at Work fax. Make the faxmodem the default printer in Windows Print manager. 
+
+c:windowswin.ini 
+[PrinterPorts] 
+Note: In WIN95 win.ini file, the faxmodem is 
+WinFax=Winfax,FaxModem,15,45 not mapped to a port such as COM1 
+
+[PrinterPorts] 
+WINFAX=WINFAX,COM1:,15,45 
+
+4. Printing to ClipBoard 
+
+(36.13.2) Printer Setup Maintenance 
+Printer Definition 
+
+Output to: Clip Printer type: 
+Description: Windows clipboard Lines/Page: 60 
+Max Pages:0 Scroll Output: no 
+Device Pathname: CLIPBOARD Spooler: no 
+
+Printer control 
+
+Fill in Lines/Page as you like (page-breaks will be added). Paste works OK in Write and in Word, but not in notepad. This works for Progress version 7 + higher only. 
+
+5. Printing to Window 
+
+For 8.3k, and 8.4g, ECO G1MR is necessary before you can print to WINDOW. This ECO includes a utility uxprup.p that will insert the necessary records in the MFG/PROqaddb database in order to print all GUI reports and inquiries to a Notebook-like editor widget. Previously, only so-called "FullGui" reports could be printed in 
+this way. This ECO is not needed for 8.3m, 8.4h, 8.5 and 8.6. 
+
+(36.13.2) Printer Setup Maintenance 
+Printer Definition 
+
+Output to: Window Printer type: 
+Description: Editor Widget Lines/Page: 72 
+Max Pages:0 Scroll Output: no 
+Device Pathname: WINDOW Spooler: no 
+
+Printer control 
+

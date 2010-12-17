@@ -1,0 +1,8 @@
+PROGRESS程序中的.I 写程序时要注意 定义一个变量时最好用以下语句
+http://www.qadhome.com/htm/MFGPRO/develop/585.Htm
+&if defined(shipnbr) = 0 &then
+&scoped-define shipnbr ""
+&endif
+
+因为假如你用 define var a as 很可能调用的.P 调用两次该.I时 ,由于PROGRESS的编译原理是把.I的内容直接放到.P后再编译,这时很明显编译前的.P的内容就是有两行define var a as ,编译就会出错提示重复定义了VAR A
+

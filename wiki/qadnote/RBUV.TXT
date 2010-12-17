@@ -1,0 +1,4 @@
+在制品工序报表中的RBUV类型表示什么意思
+作者：adminmfg 来源：未知 日期：9/1/2010 1:20:29 AM 人气：5 标签： 
+http://www.qadhome.com/htm/MFGPRO/Manufacturing/410.Htm
+一层:RBUV (run labor burden usage variance)

@@ -1,0 +1,10 @@
+一种是单机，即APP和数据库在同一台电脑上。
+-db  /qad/mfgpro/eb21/db/mfgprod -ld qaddb -trig triggers
+-db  /qad/mfgpro/eb21/db/hlpprod -ld qadhelp
+-db  /qad/mfgpro/eb21/db/admprod -ld qadadm -trig triggers
+
+一种是网络型，APP和数据库分开。
+-db  mfgprod -ld qaddb -H 192.168.1.xxx -S mfgprod -trig triggers
+-db  hlpprod -ld qadhelp -H 192.168.1.xxx -S hlpprod -trig triggers
+-db  admprod -ld qadadm -H 192.168.1.xxx -S admprod -trig triggers
+

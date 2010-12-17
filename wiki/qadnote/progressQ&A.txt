@@ -1,0 +1,13 @@
+Q:PROGRESS数据库资源不足
+A:看一下smitty -->System Environments->Change / Show Characteristics of Operating System
+  把maximum number of processoes allowed per user 设1024
+  high water mark 设33
+  low water mark 设24
+
+Q:QAD日期范围的问题
+A:QAD日期范围为100年，起始日期在../client.*中设置。
+  在client.*文件中，将下面中红色字体部分修改为新的起始日期，原系统默认起始日期为1920,100年范围即1920/01/01->2019/12/31.
+  # exec $DLC/bin/_progres &DB etc
+  $DLC/bin/_progres -rereadnolock -c 3 -d mdy -yy 1920 -Bt 350 -D 100 -mmax 3000 -nb 200 -s 128 -noshvarfix -pf /app/mfgpro/qad2008/Production.pf -p mf.p
+  假设新的起始日期设置为1980，那么系统中原来1920/01/01->1979/12/31的日期将显示为"?"号,所以在修改client.*文件时需要同时将系统中的日期修改为1980/01/01->2079/12/31之间。
+

@@ -36,3 +36,5 @@ Q:库存周转率的计算公式
 Q:销售货运单确认rcsois.p出现提示：客户订单soXX,正在被用户占用 Uxx 重新输入
 A: msgid:2622 运行程序utshrel.p删除停顿的QAD_WKFL.
 
+定义变量时加no-undo是何意？
+no-undo,是对于undo,retry这个而言的，一般情况下遇到undo,retry之后，操作会回滚，包括变量值，如果变量使用no-undo的话，虽然回滚，但值不变

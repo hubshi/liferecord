@@ -44,3 +44,8 @@ getFrameTitle("TOTALS",16)
       &NOAPPERROR = true
       &CATCHERROR = true
       }
+turncate()
+round()
+length(pi_desc,"RAW")
+ENTRY(1, aLine)
+Ëæ»úÊý RANDOM ( low , high ) 

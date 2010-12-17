@@ -21,3 +21,11 @@ vt100
 -
 -
 @@end
+@@batchload mgmgmt05.p
+CLIPBORD
+default
+""
+"Windows Clipboard" 60 0 no
+"CLIPBOARD" NO
+-
+@@end

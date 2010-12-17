@@ -1,0 +1,12 @@
+Fixes: In order to determine if a particular directory exists, use the FILE-INFO handle.
+
+For example, the code:
+
+
+/* Set the directory name in question */
+FILE-INFO:FILE-NAME = "dirname".
+/* display the attributes of "dirname" */
+MESSAGE FILE-INFO:FILE-TYPE VIEW-AS ALERT-BOX.
+
+will display 'D' if the directory exists and a '?' if it does not exist.
+
