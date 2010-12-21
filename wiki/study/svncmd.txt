@@ -8,3 +8,5 @@ sc delete svn
 pre-revprop-change.cmd
 #svnsync to googlecode initial command.
 svnsync init https://liferecord.googlecode.com/svn file:///D:/MyDocu~1/lr
+# ÐÞ¸ÄSVNÊôÐÔ
+svn propedit svn:ignore project1 --editor-cmd notepad 
