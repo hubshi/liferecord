@@ -39,3 +39,18 @@ lonkil = rw
 
 导入第一版数据到版本库中。命令“svn import test svn://127.0.0.1/test -m “the first one” –username lonkil –password vcfans.com”，此时我当前路径在F:\MySpace下，该命令将F:\MySpace\test文件结构全部导入到Subversion库中。-m参数表示添加的该版本的注释。 
 到这里我已经简单的将本地建立Subversion仓库的过程介绍结束了，接下来就可以使用了。就可以通过svn://127.0.0.1/test进行update,commit等等操作了。
+
+# pre-commit.cmd 不允许空日志
+@echo off
+set SVN_BINDIR="C:\Program Files\csvn\bin"
+setlocal
+set REPOS=%1
+set TXN=%2
+rem check that logmessage contains at least 10 characters
+%SVN_BINDIR%\svnlook log "%REPOS%" -t "%TXN%" | findstr ".........." > nul
+if %errorlevel% gtr 0 goto err
+exit 0
+:err
+echo 不允许空日志，提交中断! 1>&2
+exit 1
+
