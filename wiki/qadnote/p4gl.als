@@ -52,13 +52,14 @@ GETTABLE(TableName "Table's Name" _det
  OUTPUT TO "%(outputto)".
  FOR EACH %(DataBaseName)._FILE NO-LOCK WHERE _FILE-NAME = "%(TableName)":
      FOR EACH %(DataBaseName)._FIELD OF %(DataBaseName)._FILE BY _ORDER:
-         DISPLAY _ORDER _FIELD-NAME _FORMAT _EXTENT _DATA-TYPE _INITIAL _LABEL _COL-LABEL WITH WIDTH 182 STREAM-IO.
+         DISPLAY _ORDER _FIELD-NAME _FORMAT _EXTENT _DATA-TYPE _INITIAL _LABEL _COL-LABEL _DESC WITH WIDTH 260 STREAM-IO.
      END.
      FOR EACH %(DataBaseName)._index WHERE %(DataBaseName)._index._file-recid = RECID(%(DataBaseName)._file):
           FOR EACH %(DataBaseName)._index-field NO-LOCK WHERE %(DataBaseName)._index-field._index-recid = RECID(%(DataBaseName)._index) %\S
              BREAK BY %(DataBaseName)._index._file-recid:
              IF FIRST-OF(%(DataBaseName)._index._file-recid) THEN
              DISPLAY %(DataBaseName)._index._Index-Name
+                     yes WHEN recid(%(DataBaseName)._index) = _Prime-Index LABEL "Primary-idx"
                      %(DataBaseName)._index._Unique
                      %(DataBaseName)._index._Idxowner %\S
                      %(DataBaseName)._index._Active.
