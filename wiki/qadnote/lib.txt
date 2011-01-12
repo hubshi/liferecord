@@ -49,3 +49,5 @@ round()
 length(pi_desc,"RAW")
 ENTRY(1, aLine)
 Ëæ»úÊý RANDOM ( low , high ) 
+
+input through echo value(tt_f1) no-echo.
