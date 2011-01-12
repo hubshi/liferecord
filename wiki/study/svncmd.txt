@@ -10,3 +10,5 @@ pre-revprop-change.cmd
 svnsync init https://liferecord.googlecode.com/svn file:///D:/MyDocu~1/lr
 # 修改SVN属性
 svn propedit svn:ignore project1 --editor-cmd notepad 
+# svnsync 同步解锁
+svn propdel svn:sync-lock --revprop -r 0 https://ss2k10.googlecode.com/svn
