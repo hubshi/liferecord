@@ -1,6 +1,6 @@
 OpenEdge Release 10.1C04 as of Fri May 29 22:13:10 EDT 2009
    Configuration File:  /app/progress/10c/progress.cfg
-
++LINUX++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
          Company Name:  SH
 
          Product Name:  4GL Development System
@@ -9,7 +9,7 @@ OpenEdge Release 10.1C04 as of Fri May 29 22:13:10 EDT 2009
       Expiration Date:  None
         Serial Number:  004103582
       Control Numbers:  Y?ASH - XQP6N - NMDYR
-       Version Number:  10.1C           
+       Version Number:  10.1C
         Machine Class:  KB
           Port Number:  38
 
@@ -20,7 +20,7 @@ OpenEdge Release 10.1C04 as of Fri May 29 22:13:10 EDT 2009
       Expiration Date:  None
         Serial Number:  004103583
       Control Numbers:  Z6CR? - 6PRXM - KMHYR
-       Version Number:  10.1C           
+       Version Number:  10.1C
         Machine Class:  KB
           Port Number:  38
 
@@ -31,7 +31,7 @@ OpenEdge Release 10.1C04 as of Fri May 29 22:13:10 EDT 2009
       Expiration Date:  None
         Serial Number:  004103584
       Control Numbers:  ZXESH - 6PPXN - 3MDYM
-       Version Number:  10.1C           
+       Version Number:  10.1C
         Machine Class:  KB
           Port Number:  38
 
@@ -42,7 +42,7 @@ OpenEdge Release 10.1C04 as of Fri May 29 22:13:10 EDT 2009
       Expiration Date:  None
         Serial Number:  004103585
       Control Numbers:  Z7AR? - 2P8AN - 54DY8
-       Version Number:  10.1C           
+       Version Number:  10.1C
         Machine Class:  KB
           Port Number:  38
 
@@ -53,8 +53,102 @@ OpenEdge Release 10.1C04 as of Fri May 29 22:13:10 EDT 2009
       Expiration Date:  None
         Serial Number:  004103586
       Control Numbers:  X7ES? - 6QR2M - K4D?8
-       Version Number:  10.1C           
+       Version Number:  10.1C
         Machine Class:  KB
           Port Number:  38
 
+--------------------------------------------------------------------------------
+
+         Product Name:  4GL Development System
+    Installation Date:  Tue Apr 13 16:26:20 2010
+           User Limit:  1
+      Expiration Date:  None
+        Serial Number:  004103587
+      Control Numbers:  YZER? - 6PR2N - N4DYM
+       Version Number:  10.1C
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  Client Networking
+    Installation Date:  Tue Apr 13 16:26:20 2010
+           User Limit:  2
+      Expiration Date:  None
+        Serial Number:  004103588
+      Control Numbers:  Z9CSH - XQREN - 5MNYM
+       Version Number:  10.1C
+        Machine Class:  KB
+          Port Number:  38          
+          
+
+         Product Name:  OE Enterprise RDBMS
+    Installation Date:  Tue Apr 13 16:26:20 2010
+           User Limit:  15
+      Expiration Date:  None
+        Serial Number:  004103589
+      Control Numbers:  X9AR? - TPRAN - N4SY4
+       Version Number:  10.1C
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  OE Application Svr Ent
+    Installation Date:  Tue Apr 13 16:26:20 2010
+           User Limit:  2
+      Expiration Date:  None
+        Serial Number:  004103590
+      Control Numbers:  X8ARH - 6Q62N - 3MNY4
+       Version Number:  10.1C
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  Query/RESULTS
+    Installation Date:  Tue Apr 13 16:26:20 2010
+           User Limit:  2
+      Expiration Date:  None
+        Serial Number:  004103593
+      Control Numbers:  XZESH - XQ8EM - 5MHYM
+       Version Number:  10.1C
+        Machine Class:  KB
+          Port Number:  38
+          
+          
++WIN++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++          
+
+
+Configuration File:  	C:\Program Files\OpenEdge\PROGRESS.CFG
+
+Company Name:  	ss
+
+Product Name:  	OE Studio
+Installation Date:  	Wed Jan 19 10:09:08 2011
+User Limit:  	1
+Expiration Date:  	None
+Serial Number:  	004103591
+Control Numbers:  	X?ESS - 6QG6N - M4CY2
+Version Number:  	10.1C           
+Machine Class:  	KB
+Port Number:  	31
+
+
+Product Name:  	Client Networking
+Installation Date:  	Wed Jan 19 10:09:08 2011
+User Limit:  	11
+Expiration Date:  	None
+Serial Number:  	004103592
+Control Numbers:  	Z7GSS - XPEAN - N4CYJ
+Version Number:  	10.1C           
+Machine Class:  	KB
+Port Number:  	31
+
+Product Name:  	OE Studio
+Installation Date:  	Wed Jan 19 10:09:08 2011
+User Limit:  	1
+Expiration Date:  	None
+Serial Number:  	004103594
+Control Numbers:  	X?ES9 - XPG2M - MMC?2
+Version Number:  	10.1C           
+Machine Class:  	KB
+Port Number:  	31
 
