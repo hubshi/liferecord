@@ -1,0 +1,14 @@
+在安装JDK   (Java   Development   Kit)或JRE   (Java   Runtime   Environment)时，这个Redhat   package文件的默认安装路径是/usr/java。如果你要安装在其它路径下，例如要放到/usr/local/home   目录下，安装时要敲的指令就是：
+rpm   -i   --badreloc   --relocate   /usr/java=/usr/local/home   j2sdk_1_3_0-linux.rpm
+
+安装完后，所有可执行文件就被安装在该路径下的/bin子目录中。然后将这目录加进帐号原来的PATH中，如果用的是bash   shell，其指令是：
+export   PATH   =   /usr/java/jdk1.3/bin:$PATH
+
+如果要确定是否设定成功，只要打进java   -version指令，看看是否能出现正确的版本号。
+
+在装完JRE后，Java   Plug-in也自动被安装在JRE的目录下，为了让Netscape   Browser找到这个Java   Plug-in，我们必须将环境参数NPX_PLUGIN_PATN指到文件javaplugin.so所在目录上。指令是：
+export   NPX_PLUGIN_PATH   =   /usr/java/jdk1.3/jre/plugin/i386
+
+如果接着你要设定Java   Plug-in的property，只要执行Control   Panel程序即可。这个程序位于jre/bin目录下。
+
+如果上面的步骤都顺利，你就可以在Linux中写Java程序、执行Java程序，并在Netscape   Browser中执行最新版的Java   Applets了。
