@@ -1,0 +1,157 @@
+Linux操作系统下设置Telnet方法介绍ZDNet软件频道　时间：2007-11-26　作者：skid | 赛迪网　我要评论()
+本文关键词：设置 Telnet Linux Windows Windows
+本文介绍Linux 下telnet的设置方法。
+Linux 下Telnet的设置
+
+　　Telnet服务的配置步骤如下:
+
+    一、安装Telnet软件包(通常要两个）
+
+　　1、 Telnet-clIEnt (或 Telnet)，这个软件包提供的是 Telnet 客户端程序；
+
+　　2、 Telnet-server ，这个软件包提供的是 Telnet 服务器端程序；
+
+　　安装之前先检测是否这些软件包已安装，方法如下：
+
+　　[root@echo root]#rpm –q Telnet或[root@wljs root]#rpm –q Telnet-client
+
+　　[root@echo root]#rpm –q Telnet-server
+
+　　如果没有检测到软件包，需要进行安装，red hat Linux 9默认已安装了Telnet软件包，一般只要安装Telnet-server软件包。
+
+　　1、在red hat Linux 9的安装盘3中获取Telnet-server-0.17-25.i386.rpm软件包。
+
+　　2、安装软件包
+
+　　[root@echo root]#rpm –i Telnet-server-0.17-25.i386.rpm
+
+    二、启动Telnet服务
+
+　　1、开启服务
+
+　　方法一：使用ntsysv,在出现的窗口之中，将 Telnet前面*加上，然后按下 OK 。
+
+　　方法二：编辑 /etc/xinetd.d/Telnet
+
+　　[root@echo root]# vi /etc/xinetd.d/Telnet
+
+　　找到 disable = yes 将 yes 改成 no 。
+
+　　2、激活服务
+
+　　[root@echo root]# service xinetd restart
+
+    三、测试服务
+
+　　[root@echo root]#Telnet ip(或者hostname）
+
+　　如果配置正确，系统提示输入远程机器的用户名和密码
+
+　　Login:
+
+　　PassWord:
+
+　　注：默认只允许普通用户 　
+
+    四、设置Telnet端口
+
+　　#vi /etc/services
+
+　　进入编辑模式后查找Telnet(vi编辑方式下输入/Telnet)
+
+　　会找到如下内容：
+
+　　Telnet 23/tcp
+
+　　Telnet 23/udp
+
+　　将23修改成未使用的端口号(如：2000)，退出vi，重启Telnet服务，Telnet默认端口号就被修改了。
+
+    五、Telnet服务限制
+
+　　Telnet是明文传送口令和数据的，如果你对其默认的设置不满意，有必要对其服务范围进行限制。假设你的主机的ip是210.45.160.17，就可以按如下方式设置了。
+
+　　#vi /etc/xinetd.d/Telnet
+　　service Telnet
+
+　　{
+　　disable　　　　 = no #激活 Telnet 服务,no
+　　bind 　　　　　 = 210.45.160.17 #your ip
+　　only_from 　　　= 210.45.0.0/16 #只允许 210.45.0.0 ~ 210.45.255.255 这个网段进入
+　　only_from 　　　= .edu.cn #只有教育网才能进入！
+　　no_access 　　　= 210.45.160. #这两个ip不可登陆
+　　access_times　　= 8:00-12:00 20:00-23:59 # 每天只有这两个时间段开放服务
+　　......
+　　}
+　　
+    六、Telnet root用户的登入
+
+　　Telnet 不是很安全，默认的情况之下不允许 root 以 Telnet 进入 Linux 主机 。若要允许root用户登入，可用下列方法：
+
+　　[root @echo /root]# vi /etc/pam.d/login
+
+　　#auth required pam_securetty.so #将这一行加上注释！
+
+　　或
+
+　　[root@echo root]# mv /etc/securetty /etc/securetty.bak
+
+　　这样， root 就可以直接进入 Linux 主机了。不过，建议不要这样做。也可以在普通用户进入后，切换到root用户,拥有root的权限。
+
+　　注：在我的FC4里不用安装Telnet服务器,因为已经有了krb5-Telnet.直接进入第二步
+
+　　vi /etc/xinetd.d/krb5-Telnet 就可以了。
+
+##############################################################################
+
+教你在Linux下安装telnet服务器
+[日期：2008-11-07] 来源：Linux公社  作者：Linux编辑
+
+1、检测
+
+安装之前先检测是否这些软件包已安装，方法如下：[root@localhost root]#rpm -q telnet或[root@localhost root]#rpm -q telnet-client
+
+[root@localhost root]#rpm -q telnet-server
+
+如果没有检测到软件包，需要进行安装，据说Red Hat Linux 9默认已安装了telnet软件包，不知道为什么我的没有，还好没关系，只是在Linux上安装telnet的服务器，就只安装telnet-server软件包。网上搜索一下，不难找的。当然，前提是你的Linux能上网。
+
+
+2、安装软件包
+
+[root@localhost root]#rpm -i telnet-server-0.17-25.i386.rpm
+
+3、开启服务
+
+方法一：使用ntsysv,在出现的窗口之中，将 telnet前面*加上，然后按Tab切换到确认按键，确认。
+
+方法二：编辑 /etc/xinetd.d/telnet
+
+[root@localhost root]# vi /etc/xinetd.d/telnet
+
+找到 disable = yes 将 yes 改成 no 。
+
+方法三：chkconfig telnet on　　//该命令修改了/etc/xinetd.d/telnet的配置，设置disable=no
+
+4、激活服务
+
+telnet-server不作为独立的服务器程序运行，而是受xinetd程序的控制，启动配置文件为/etc/xinetd.d/telnet，默认xinetd程序并不启动该服务，所以修改了配置文件后要重启xinted
+
+[root@localhost root]# service xinetd restart
+
+5、测试服务
+
+[root@localhost root]#telnet ip(或者hostname）
+
+如果配置正确，系统提示输入远程机器的用户名和密码
+
+Login:
+
+Password:
+
+注：默认只允许普通用户
+
+6、Telnet到服务器
+
+我是在虚拟机下安装的Linux，主机是winXP，主机下运行CMD，输入：telnet 192.168.181.6（就是你虚拟机的IP地址），一般到这里系统提示输入远程机器的用户名和密码，但是不知道为什么我的XP一直不能telnet到服务器，找了N多方法，有些说要关闭XP的防火墙，但是我关了也不行，最后终于。。。嘿嘿！下面是重点！把Linux 的 iptables 停掉！输入：service iptables stop  再次到主机telnet，成功！最后我再试了开启防火墙，还是可以telnet！
+
+终于解决这个问题！！开心激动啊！

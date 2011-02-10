@@ -1,0 +1,9 @@
+http://developer.51cto.com/art/200906/128576.htm
+为Linux配置Java Home变量
+
+Java_Home=/app/tools/java/jdk1.6.0_23
+JRE_HOME=$Java_Home/jre
+CLASSPATH=.:$Java_Home/lib:$JRE_HOME/lib:$CLASSPATH
+PATH=$Java Home/bin:$JRE_HOME/bin:$PATH
+然后编辑export语句，在最后加上Java Home CLASSPATH JRE_HOME
+

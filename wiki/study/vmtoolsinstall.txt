@@ -1,0 +1,74 @@
+windows VMware tools安装步骤：
+（1）主系统windows下,在CD-ROM虚拟光驱中选择使用ISO镜像，找到VMWARE TOOLS 安装文件，如D:\VMware\VMware Workstation\Programs\windows.iso
+（2）启动进入子系统windows
+（3）退出到主系统windows,在虚拟机菜单栏中点击  虚拟机-> 安装 VMWARE TOOLS 子菜单,会弹出对话框，点击"确认" 安装
+         PS：注意此时子系统的CD/DVD（IDE）必须确保连接，并且映射到主系统的CD-ROM虚拟光驱。
+（4）此时，它会自动运行安装，你只管按“下一步”就可以安装完成了，如果它不自动运行的话，那你就进入光驱（G:）盘，找到一个stuep.exe文件双击安装就好，就这简单。
+
+linux VMware tools安装步骤：
+(1) 在CD-ROM虚拟光驱中选择使用ISO镜像，找到VMWARE TOOLS 安装文件，如D:\VMware\VMware Workstation\Programs\linux.iso
+(2) 以ROOT身份进入LINUX
+(3) 进入linux新建一个终端，输入 /sbin/telinit 3 进入纯文本模式,然后在纯文本模式下再次用root身份登陆
+(4）退出到windows,在虚拟机菜单栏中点击   虚拟机-> 安装 VMWARE TOOLS 子菜单,会弹出对话框，点击"确认" 安装
+(5) 挂载光驱 mount /dev/cdrom /mnt/cdrom （注意命令中输入的空格）这时，你的linux.iso里面的文件就相当于windows光盘里面的文件了
+(6) 使用 cd /mnt/cdrom 进入光驱，输入ls命令你会查看到有个*.tar.gz格式的文件（如vmware-linux-tools.tar.gz），然后输入命令CP vmware-linux-tools /tmp/将它复制到/tmp/目录下
+（7）输入命令 cd /tmp 进入/tmp目录
+（8）输入命令tar zxf vmware-linux-tools.tar.gz 将刚刚复制的vmware-linux-tools.tar.gz 解压，默认解压到vmware-linux-tools目录下（与文件名同名）此时就会多出一个命名为vmware-linux-tools文件夹，这里和windows 里面的解压结果一样。
+[size=+0]（9）输入命令 cd vmware-linux-tools 进入解压后的目录
+(10) 输入命令 ./*.pl 运行安装VMware tools （*.pl文件在前面有提过）
+（11）在运行安装过程中，它会一步一步的有问题提出要你回应，此过程中，你只要见到问题后面显示[yes]、[no]、[yes/no]的都输入yes，然后回车,其他的问题后面不管[ ]里面是什么直接回车就好，不要输入。
+（12）最后它会输出1——15个分辨率让你输入数字选择，根据你的显示器来选择分辨率吧
+（13）好了，安装完成，输入命令 startx 回到linux图像界面吧。
+
+在安装VMware-tools时遇到了以下问题：
+
+Before you can compile modules, you need to have the following installed...
+
+make
+gcc
+kernel headers of the running kernel
+
+
+Searching for GCC...
+The path "" is not valid path to the gcc binary.
+Would you like to change it? [yes]
+
+怎么路径为“”呢，然后在虚拟机linux系统里GCC，没有安装~装个吧。于是就在WMware Workstation 7里重新加载当时装RHEL5.4时的ISO文件了！
+
+打开Virtual Machines Settings面板（如果不在全屏状态下，就右击RHEL5.4上面的标签，点击最下面的Settings，在Hardware里单击CD/DVD，然后在右边Use ISO image file旁边单击brows选择你当时安装RHEL5.4时的ISO文件；如果在全屏模式下，就在上面的工具栏里，点击VM->Removable->CD/DVD,下面同上述）。
+
+然后再重新connect（加载）驱动DVD就可以了。
+
+在安装盘里把gcc*.rpm，kernel-devel-*.rpm都安装。方法是在把这些文件复制到随便一个地方。
+
+然后再打开一个终端，进入这个目录，输入以下命令
+
+rpm -ivh gcc*.rpm --nodeps
+
+rpm -ivh kernel*.rpm --nodeps
+
+安装后进入刚才的终端里按回车，
+
+What is the location of the gcc program on your machine? /usr/bin/gcc
+
+The path "/usr/bin/gcc" appears to be a valid path to the gcc binary.
+Would you like to change it? [no]
+
+Searching for a valid kernel header path...
+The path "" is not valid.
+Would you like to change it? [yes]
+
+What is the location of the directory of C header files that match your running
+kernel? /lib/modules/2.6.18-164.el5xen/build/include
+
+The path "/lib/modules/2.6.18-164.el5xen/build/include" appears to be a valid
+path to the kernel headers of the running kernel.
+Would you like to change it? [no]
+
+Using 2.6.x kernel build system.
+make: Entering directory `/tmp/vmware-root/modules/vmmemctl-only'
+make -C /lib/modules/2.6.18-164.el5xen/build/include/.. SUBDIRS=$PWD SRCROOT=$PWD/. \
+MODULEBUILDDIR= modules
+make[1]: Entering directory `/usr/src/kernels/2.6.18-164.el5-xen-i686'
+CC [M] /tmp/vmware-root/modules/vmmemctl-only/backdoorGcc32.o
+搞定了~
