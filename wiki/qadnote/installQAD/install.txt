@@ -3,6 +3,11 @@ proutil mfgundef -C convchar convert undefined
 install -remote x:\mgsvr\guicli
 proutil admtrain -C truncate Bi
 
+10.1C版本以后不再需要这样做,新版的装netui时,不再支持gb2312,用cp936即可.
+但是10.1C版本以后光盘上的db是iso8859-1编码的,需要转换成对应内码
+cd /progress
+./bin/proutil ./empty8.db -C convchar convert undefined
+./bin/proutil ./empty8.db -C convchar convert cp936
 
 wk0305.ini Production database paramer file.
 wk0306.ini Training and Demonstration Dbs Parameter file.
