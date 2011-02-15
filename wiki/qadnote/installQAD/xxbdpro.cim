@@ -1,0 +1,10 @@
+@@batchload mgmemt.p
+ch
+36.15.2
+2
+"CIM 数据装入处理程序" "" "xxbdpro.p" "mgbdpro.hlp"
+@@end
+@@batchload mgupmt.p
+"*" "36.15.2" 2
+cim
+@@end
