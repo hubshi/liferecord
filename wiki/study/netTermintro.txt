@@ -1,0 +1,587 @@
+NetTerm简介测试资料 2007-10-25 12:40:56 阅读312 评论0   字号：大中小 订阅 
+
+NetTerm简介 
+http://luoman.apple.blog.163.com/blog/static/47740521200792504056236/
+
+
+NetTerm是一个使用方便，功能强大的终端仿真软件。可以帮我们
+将普通的PC机仿真成为一台UNIX系统的远程终端；可以帮助我们
+方便地访问Internet上的BBS资源。它对中文的兼容性也很强。
+NetTerm需要在Windows环境下运行，目前的最高版本是4.2，其中
+又分为16位（for Windows 3.X）和32位(for Windows 95)两种版本。
+NetTerm的主要功能包括：
+(1) NetTerm作为一个网络终端仿真软件，不仅可以做为一个Telnet客
+户软件工作在本地的以太网中，也可以作为一个拔号程序工作在使用
+Winsock产品（如Trumpet）的网络中。
+(2) NetTerm提供了 VT-52,VT-100,VT-102,VT-220,VT-320,ANSI,ANSI-BBS,
+SCO- ANSI,QNX-2,IBM-3101,IBM-3151,IBM-3161,IBM-316，
+IBM-3163，IBM FTTERM，Televideo 925,Wyse 50，以及
+Nixdolf BA-80 终端仿真模式。做为一个Telnet客户软件，
+NetTerm也支持rlogin。
+(3) NetTerm也适用于做为拔号公告牌系统和一些在线服务的仿真终
+端，它支持ANSI标准下的图形和色彩显示。
+(4) NetTerm可以作为你的个人Internet拔号器，使用通用的Trumpet 
+Winsock连接你的Internet服务提供者。在NetTerm中提供了连接SLIP
+和PPP的服务提供者（如Compuserve）的自动拔号scripts的范例。
+(5) NetTerm支持在以太网中和公告牌系统中使用最流行的那些文件
+传输协议，如zmodem,xmodem和kermit。也就是说，你可以使用
+Telnet连接一台Unix主机并通过zmodem传递文件。这既可以在局域
+网内实现，也可以在拔号网上实现。
+(6) 使用NetTerm的好处是它既能够作为一个拔号软件又能作为一个
+Telnet客户程序。NetTerm还拥有转换域名地址为IP地址的工具。
+(7) NetTerm能够支持你在本地的计算机上显示和编辑Unix主机上的文
+本文件，并将编辑结果存回主机。
+(8) NetTerm还包含有Finger,Resolver和FTP Server工具。
+(9) NetTerm还能自动识别URL。只要用鼠标右键单击任何
+URL，NetTerm就会调出你所设定的WWW浏览器并自动连接这个
+URL所指向的网页。
+(10)NetTerm现在支持标准的TIS防火墙和SOCKS防火墙。
+(11)NetTerm现在支持S/KEY和OPIE口令加密。这个选项要使用
+一个由David Ayles worth所写的winkey.exe程序。
+(12)NetTerm同时具有16位和32位的版本。
+(13)NetTerm提供了一种新的灵活的方式来编辑主机文件--SmartEdit。
+SmartEdit是主机文件编辑的第二步，它支持二进制文件以及文本文件。
+新的"se"UNIX脚本能用标准zmodem协议将任何文件发送到你本地的
+计算机上，并通知NetTerm启动与其文件类型相关联的程序对它进行
+编辑。一旦编缉完成，NetTerm就会将修改过的文件上载。由于使用
+了标准zmodem协议，所有相关的标准选项都能被遵守。 这意味着在
+32位的版本中它能识别长文件名。
+(14)NetTerm现在能够支持文本块的操作了。只须按下shift键，然后
+用鼠标左键选取块的左上角，用鼠标右键选取块的右下角，就能将块
+拷贝到剪裁板上。
+(15) NetTerm可以从一个WWW浏览器中被调用。
+(16) NetTerm被作为一个shareware软件发布。注册信息被包括在智
+能化的在线帮助里。 
+
+NetTerm设定： 
+
+NetTerm 改版的太快, 旧的设定未必管用. 在此将目前 4.10 最新版做
+一完整解说.先讲讲基本的设定, 其它较少用到或较复杂的部份容後再
+表.
+[NetTerm 4.10]
+用 Archie 找 nt32410.exe 或是 nt32410i.exe, 多一个 I 代表附
+Install Shield(安装移除精灵), 另外还要抓 cnt32410.exe 
+(中文闪烁乱码修正 & 中文化) 
+
+[安装] 
+
+待 NetTerm 安装完毕後. 执行 cnt32410.exe 会解出
+patch.exe, patchdll.exe.先将这两个档移到 NetTerm 的目录下 
+欲中文化, 执行 patch.exe 会修改 netterm.exe (旧档备份为 .old)
+欲修正中文闪烁乱码, 执行 patchdll.exe 会修改 isivideo.dll (也会备份)
+如果改完不想中文化 (我就很不习惯:P), 那把 *.old 还原档名就好. 
+
+[破解]
+注册机请找各大 HACKER 版, 懒人先用这个. HELPsRegister NetTerm
+Registration code 填 8391u923 / Your full name 填 register人家软体
+写的这麽勤, 觉得好用的话可以去注册鼓励一下. 
+
+[连线设定] 
+
+以下步骤请照顺序做有它的道理在. 为求解说方便用选单, 熟练後用
+按图示较快. 
+
+设定 FilesPhone Directory 有些技巧的, 首先把它预设的那些垃圾一
+个个 Delete.然後建立一个新的预设值 (看到最後会解释为什麽, 请先
+照做.) 
+
+Host Name: Telnet default
+Host IP: bbs.nsysu.ntu.edu.tw (先填哪都行,看你想上哪)
+Telnet Port: 23 别动它, 除非你要上一些不寻常的站^_^
+Emulation: ANSI 或是 ANSI_BBS
+Connection: TCP/IP
+Keys: VT220 
+
+按 ADD 加入, 好! 现在先按 Connect 连上去再说, 找间不会踢人的
+慢慢玩. 
+
+开始调整一些设定, 可以用的更舒服. 
+
+·字型 OptionssSetupsFont
+调个看得顺眼的字型. 
+
+·颜色 OptionssSetupsScreen Colors
+注意 Allow Graphics rendition code of 0 to reset to default 一定要
+打勾!!
+其它两个框框不用打勾.
+要调背景色, 选 Background Color 里的 Text, 然後按 Change Color, 
+选取你要的颜色, 然後按确定.
+要调文字颜色, 选 Text 里的 Attributes, 然後按 Change Color, 方法
+同上. 
+
+·小技巧 OptionssSetupsDeskTop Settings Backspace is Delete 在
+工作站上会方便许多.
+Scrollback 改成 0 lines 视窗不需卷动可加快速度.
+Exit NetTerm on Disconnect 打勾 Logout 後会自动关闭 NetTerm, 方
+便多了.
+·声音 OptionssSetupsGlobal Settings
+记得 Bell On 打勾才能听到别人 Call In. 它是用 WAV 档, 用的是 "预设
+的音效" 的声音, 不是下面 FTP 的设定!
+·WindowsSave Current Window Positon 调个好位子记起来, 下次都会
+这样摆.
+当你将 Telnet default 设的很满意之後, 才来增加你要上的地方. 为什麽
+呢? 因为这样才能把 Telnet default 的设定移植过去新的设定, 否则每开
+一个要重来不累死才怪. 注意! 要重新开启 NetTerm 才能 ADD, 按上面
+的 "电话" (Connect) 是不行的. 我也建议尽量不要按上面的按钮 (有时会
+发生一些问题), 连线按 NetTerm 图示比较好. 用久了会知道哪些动作要
+避免, 否则会强制关闭
+登记新的连线前记得先选 Telnet default, 才会把设定移植过去.现在只要
+把 HostName, Host/IP 改成你要的就行.
+Ex. HostName: 清华资科 (建议不要用中文, 有时会误判.)
+Host/IP: bbs.cs.nthu.edu.tw 
+
+按 ADD 加上就能用并保持原来的设定. 
+
+下次若安装更新的版本时, NetTerm.ini 千万别覆盖 (它会问), 否则
+重来...
+其目录下的 Logo.bmp 可以随你换 (用别的 BMP 盖过), 换个养眼的
+也不错^O^ 
+
+NetTerm使用技巧： 
+
+☆英文丢失现象
+如果你用netterm发现有英文丢失，但是中文没有事，请把字体换成
+isi_ansi不要使用预定义的isi_oem。
+☆增加pgup,pgdn功能
+很多网友一定不习惯用和P进行上下翻页，如果能使用pgup和
+pgdn就好了。
+那么就在phonebook里Keys的定义换成vt320
+☆颜色不对
+如果发现netterm的颜色很奇怪，比如十大新闻的蓝色一全屏都是，而
+不是应有的一行一行的，那么试试把Emulation换成ansi_bbs，不要
+使用vt100。
+☆copy paste死机
+有时大篇的paste文章会出现死机问题，这时选options->tools->floating 
+input把文章整个paste到那个floating input的小窗口里，然后点send，
+这样就不会死机了。这个对于发表长文章十分有用，尤其我们现在又取
+消了email post..
+☆log功能
+如果你想把聊天室里的聊天过程记录下来，那么使用File->Session 
+Logging，选好文件名，等记录完毕了，再选一下那个菜单，就可以
+停止记录了。不用怕死机或断线现象，因为logging是实时的，随时都往
+文件里写的。 
+
+NetTerm使用提示： 
+
+第一次安装Netterm时，不妨采用2.88版本的，它的基本功能和3.22也
+差不多，而且有个比3.x版本的优越的地方：在Phone Directory里，删
+里面的地址项时可以连续按 Delete键将原来附的国外的很多的地址(根
+本很难连上,放在那里影响你的视线)一口气删了。 
+
+由于刚刚说的原因，第一步应该选将所有地址除留下一个外全部删掉；
+第二步应该将那个剩下的地址item(我一般是留下Telnet default这个)改为
+你常用的BBS的地址(我就是设为厦大BBS了;)，记得将Host/IP设为正确
+的IP或者DNS地址(比如202.121.0.13或者bbs.xmu.edu.cn), 将Telnet
+Port 设为23, 将Emulation设为ANSI或者Vt220,vt100什么的，将keys设成
+Vt220(这个一定要是vt220)，将Connection设为TCPIP
+第三步是设置desktop的选项, 你可以通过按最右边的那个工具图标进入
+desktop的设置对话框，或者由OptionssSetupsDesktop Settings进入，
+其实主要得设置Backspace的使用，要选择Delete而不是缺省的
+Backspace，这样的话，你就可以象在通常情况下一样使用Backspace
+键删除敲错的键；
+第四步就是设置bell on等general设置，对于使用Netterm2.8以上(不包
+括)的用户来说，第一次使用是一定要记得将OptionssSetupsGlobal 
+Settingssgenaral里的 "bellon"选项选中，缺省是不选的。如果不选的
+话，则别人给你发讯息什么的你的Netterm就不会发出声音进行提示。
+第五步则是在你已经设置好全部参数的这个地址item上将上面的
+Host name和Host/IP两项改为其他的BBS的地址，然后按最左下角的
+Add按钮将新的地址添加入Phone directory里去(注意这项操作得在
+disconnect的状态下进行，也就是Netterm窗口的做下角的小圆球标志
+为红色,否则那些个Add, delete按钮是灰色不可操作)
+OK, 如果你正确地操作以上步骤，那么就请放心地使用Netterm遨游
+BBS吧:) 
+
+Netterm的FTP功能： 
+
+Netterm自带一个netftpd.exe的软件, 此软件可以把你的计算机虚拟
+成一个FTP服务器, 具体的做法是点击Netterm上的"启动FTP服务器"
+图标(也可以直接运行netftpd.exe), 这时netftpd就开始工作了.
+netftpd看上去像一个文本编辑器,首先它会显示出你的主机名和主机
+的IP地址,这个IP地址也就是别人访问你FTP服务器时的IP地址, 然后它
+就开始纪录别人访问你时的一切信息,如别人来自何处,在你的计算机上
+传输了多少字节的数据等.
+netftpd的设置也很简单, 在菜单"选项"那一栏点击"显示连接情况",这
+时会显示出访问者的IP地址和连接中的传输情况. 点击"设置使用者目
+录", 这时你就可以设置各个使用者访问你计算机时的初始路径. 点击
+"设置使用者权限", 你可以设置你的 FTP服务器的访问权限, 如是否允
+许匿名访问, 访问时需不需要口令,是否拥有可写权等. 点击 "设置使用者
+口令" , 你可以设置多个访问者的连接名,然后根据连接名的不同来分别
+设置权限和口令. 这样, 不同的人访问你的计算机所享受的"待遇"也就不
+同了.
+如果你想关闭你的FTP服务器,你只需要退出netftpd就行了. 
+
+ 
+ 
+
+
+
+
+  
+
+
+NetTerm是一个使用方便，功能强大的终端仿真软件。可以帮我们
+
+将普通的PC机仿真成为一台UNIX系统的远程终端；可以帮助我们
+
+方便地访问Internet上的BBS资源。它对中文的兼容性也很强。
+
+NetTerm需要在Windows环境下运行，目前的最高版本是4.2，其中
+
+又分为16位（for Windows 3.X）和32位(for Windows 95)两种版本。
+
+NetTerm的主要功能包括：
+
+(1) NetTerm作为一个网络终端仿真软件，不仅可以做为一个Telnet客
+
+户软件工作在本地的以太网中，也可以作为一个拔号程序工作在使用
+
+Winsock产品（如Trumpet）的网络中。
+
+(2) NetTerm提供了 VT-52,VT-100,VT-102,VT-220,VT-320,ANSI,ANSI-BBS,
+
+SCO- ANSI,QNX-2,IBM-3101,IBM-3151,IBM-3161,IBM-316，
+
+IBM-3163，IBM FTTERM，Televideo 925,Wyse 50，以及
+
+Nixdolf BA-80 终端仿真模式。做为一个Telnet客户软件，
+
+NetTerm也支持rlogin。
+
+(3) NetTerm也适用于做为拔号公告牌系统和一些在线服务的仿真终
+
+端，它支持ANSI标准下的图形和色彩显示。
+
+(4) NetTerm可以作为你的个人Internet拔号器，使用通用的Trumpet 
+
+Winsock连接你的Internet服务提供者。在NetTerm中提供了连接SLIP
+
+和PPP的服务提供者（如Compuserve）的自动拔号scripts的范例。
+
+(5) NetTerm支持在以太网中和公告牌系统中使用最流行的那些文件
+
+传输协议，如zmodem,xmodem和kermit。也就是说，你可以使用
+
+Telnet连接一台Unix主机并通过zmodem传递文件。这既可以在局域
+
+网内实现，也可以在拔号网上实现。
+
+(6) 使用NetTerm的好处是它既能够作为一个拔号软件又能作为一个
+
+Telnet客户程序。NetTerm还拥有转换域名地址为IP地址的工具。
+
+(7) NetTerm能够支持你在本地的计算机上显示和编辑Unix主机上的文
+
+本文件，并将编辑结果存回主机。
+
+(8) NetTerm还包含有Finger,Resolver和FTP Server工具。
+
+(9) NetTerm还能自动识别URL。只要用鼠标右键单击任何
+
+URL，NetTerm就会调出你所设定的WWW浏览器并自动连接这个
+
+URL所指向的网页。
+
+(10)NetTerm现在支持标准的TIS防火墙和SOCKS防火墙。
+
+(11)NetTerm现在支持S/KEY和OPIE口令加密。这个选项要使用
+
+一个由David Ayles worth所写的winkey.exe程序。
+
+(12)NetTerm同时具有16位和32位的版本。
+
+(13)NetTerm提供了一种新的灵活的方式来编辑主机文件--SmartEdit。
+
+SmartEdit是主机文件编辑的第二步，它支持二进制文件以及文本文件。
+
+新的"se"UNIX脚本能用标准zmodem协议将任何文件发送到你本地的
+
+计算机上，并通知NetTerm启动与其文件类型相关联的程序对它进行
+
+编辑。一旦编缉完成，NetTerm就会将修改过的文件上载。由于使用
+
+了标准zmodem协议，所有相关的标准选项都能被遵守。 这意味着在
+
+32位的版本中它能识别长文件名。
+
+(14)NetTerm现在能够支持文本块的操作了。只须按下shift键，然后
+
+用鼠标左键选取块的左上角，用鼠标右键选取块的右下角，就能将块
+
+拷贝到剪裁板上。
+
+(15) NetTerm可以从一个WWW浏览器中被调用。
+
+(16) NetTerm被作为一个shareware软件发布。注册信息被包括在智
+
+能化的在线帮助里。 
+
+NetTerm设定： 
+
+NetTerm 改版的太快, 旧的设定未必管用. 在此将目前 4.10 最新版做
+
+一完整解说.先讲讲基本的设定, 其它较少用到或较复杂的部份容後再
+
+表.
+
+[NetTerm 4.10]
+
+用 Archie 找 nt32410.exe 或是 nt32410i.exe, 多一个 I 代表附
+
+Install Shield(安装移除精灵), 另外还要抓 cnt32410.exe 
+
+(中文闪烁乱码修正 & 中文化) 
+
+[安装] 
+
+待 NetTerm 安装完毕後. 执行 cnt32410.exe 会解出
+
+patch.exe, patchdll.exe.先将这两个档移到 NetTerm 的目录下 
+
+欲中文化, 执行 patch.exe 会修改 netterm.exe (旧档备份为 .old)
+
+欲修正中文闪烁乱码, 执行 patchdll.exe 会修改 isivideo.dll (也会备份)
+
+如果改完不想中文化 (我就很不习惯:P), 那把 *.old 还原档名就好. 
+
+[破解]
+
+注册机请找各大 HACKER 版, 懒人先用这个. HELPsRegister NetTerm
+
+Registration code 填 8391u923 / Your full name 填 register人家软体
+
+写的这麽勤, 觉得好用的话可以去注册鼓励一下. 
+
+[连线设定] 
+
+以下步骤请照顺序做有它的道理在. 为求解说方便用选单, 熟练後用
+
+按图示较快. 
+
+设定 FilesPhone Directory 有些技巧的, 首先把它预设的那些垃圾一
+
+个个 Delete.然後建立一个新的预设值 (看到最後会解释为什麽, 请先
+
+照做.) 
+
+Host Name: Telnet default
+
+Host IP: bbs.nsysu.ntu.edu.tw (先填哪都行,看你想上哪)
+
+Telnet Port: 23 别动它, 除非你要上一些不寻常的站^_^
+
+Emulation: ANSI 或是 ANSI_BBS
+
+Connection: TCP/IP
+
+Keys: VT220 
+
+按 ADD 加入, 好! 现在先按 Connect 连上去再说, 找间不会踢人的
+
+慢慢玩. 
+
+开始调整一些设定, 可以用的更舒服. 
+
+·字型 OptionssSetupsFont
+
+调个看得顺眼的字型. 
+
+·颜色 OptionssSetupsScreen Colors
+
+注意 Allow Graphics rendition code of 0 to reset to default 一定要
+
+打勾!!
+
+其它两个框框不用打勾.
+
+要调背景色, 选 Background Color 里的 Text, 然後按 Change Color, 
+
+选取你要的颜色, 然後按确定.
+
+要调文字颜色, 选 Text 里的 Attributes, 然後按 Change Color, 方法
+
+同上. 
+
+·小技巧 OptionssSetupsDeskTop Settings Backspace is Delete 在
+
+工作站上会方便许多.
+
+Scrollback 改成 0 lines 视窗不需卷动可加快速度.
+
+Exit NetTerm on Disconnect 打勾 Logout 後会自动关闭 NetTerm, 方
+
+便多了.
+
+·声音 OptionssSetupsGlobal Settings
+
+记得 Bell On 打勾才能听到别人 Call In. 它是用 WAV 档, 用的是 "预设
+
+的音效" 的声音, 不是下面 FTP 的设定!
+
+·WindowsSave Current Window Positon 调个好位子记起来, 下次都会
+
+这样摆.
+
+当你将 Telnet default 设的很满意之後, 才来增加你要上的地方. 为什麽
+
+呢? 因为这样才能把 Telnet default 的设定移植过去新的设定, 否则每开
+
+一个要重来不累死才怪. 注意! 要重新开启 NetTerm 才能 ADD, 按上面
+
+的 "电话" (Connect) 是不行的. 我也建议尽量不要按上面的按钮 (有时会
+
+发生一些问题), 连线按 NetTerm 图示比较好. 用久了会知道哪些动作要
+
+避免, 否则会强制关闭
+
+登记新的连线前记得先选 Telnet default, 才会把设定移植过去.现在只要
+
+把 HostName, Host/IP 改成你要的就行.
+
+Ex. HostName: 清华资科 (建议不要用中文, 有时会误判.)
+
+Host/IP: bbs.cs.nthu.edu.tw 
+
+按 ADD 加上就能用并保持原来的设定. 
+
+下次若安装更新的版本时, NetTerm.ini 千万别覆盖 (它会问), 否则
+
+重来...
+
+其目录下的 Logo.bmp 可以随你换 (用别的 BMP 盖过), 换个养眼的
+
+也不错^O^ 
+
+NetTerm使用技巧： 
+
+☆英文丢失现象
+
+如果你用netterm发现有英文丢失，但是中文没有事，请把字体换成
+
+isi_ansi不要使用预定义的isi_oem。
+
+☆增加pgup,pgdn功能
+
+很多网友一定不习惯用和P进行上下翻页，如果能使用pgup和
+
+pgdn就好了。
+
+那么就在phonebook里Keys的定义换成vt320
+
+☆颜色不对
+
+如果发现netterm的颜色很奇怪，比如十大新闻的蓝色一全屏都是，而
+
+不是应有的一行一行的，那么试试把Emulation换成ansi_bbs，不要
+
+使用vt100。
+
+☆copy paste死机
+
+有时大篇的paste文章会出现死机问题，这时选options->tools->floating 
+
+input把文章整个paste到那个floating input的小窗口里，然后点send，
+
+这样就不会死机了。这个对于发表长文章十分有用，尤其我们现在又取
+
+消了email post..
+
+☆log功能
+
+如果你想把聊天室里的聊天过程记录下来，那么使用File->Session 
+
+Logging，选好文件名，等记录完毕了，再选一下那个菜单，就可以
+
+停止记录了。不用怕死机或断线现象，因为logging是实时的，随时都往
+
+文件里写的。 
+
+NetTerm使用提示： 
+
+第一次安装Netterm时，不妨采用2.88版本的，它的基本功能和3.22也
+
+差不多，而且有个比3.x版本的优越的地方：在Phone Directory里，删
+
+里面的地址项时可以连续按 Delete键将原来附的国外的很多的地址(根
+
+本很难连上,放在那里影响你的视线)一口气删了。 
+
+由于刚刚说的原因，第一步应该选将所有地址除留下一个外全部删掉；
+
+第二步应该将那个剩下的地址item(我一般是留下Telnet default这个)改为
+
+你常用的BBS的地址(我就是设为厦大BBS了;)，记得将Host/IP设为正确
+
+的IP或者DNS地址(比如202.121.0.13或者bbs.xmu.edu.cn), 将Telnet
+
+Port 设为23, 将Emulation设为ANSI或者Vt220,vt100什么的，将keys设成
+
+Vt220(这个一定要是vt220)，将Connection设为TCPIP
+
+第三步是设置desktop的选项, 你可以通过按最右边的那个工具图标进入
+
+desktop的设置对话框，或者由OptionssSetupsDesktop Settings进入，
+
+其实主要得设置Backspace的使用，要选择Delete而不是缺省的
+
+Backspace，这样的话，你就可以象在通常情况下一样使用Backspace
+
+键删除敲错的键；
+
+第四步就是设置bell on等general设置，对于使用Netterm2.8以上(不包
+
+括)的用户来说，第一次使用是一定要记得将OptionssSetupsGlobal 
+
+Settingssgenaral里的 "bellon"选项选中，缺省是不选的。如果不选的
+
+话，则别人给你发讯息什么的你的Netterm就不会发出声音进行提示。
+
+第五步则是在你已经设置好全部参数的这个地址item上将上面的
+
+Host name和Host/IP两项改为其他的BBS的地址，然后按最左下角的
+
+Add按钮将新的地址添加入Phone directory里去(注意这项操作得在
+
+disconnect的状态下进行，也就是Netterm窗口的做下角的小圆球标志
+
+为红色,否则那些个Add, delete按钮是灰色不可操作)
+
+OK, 如果你正确地操作以上步骤，那么就请放心地使用Netterm遨游
+
+BBS吧:) 
+
+Netterm的FTP功能： 
+
+Netterm自带一个netftpd.exe的软件, 此软件可以把你的计算机虚拟
+
+成一个FTP服务器, 具体的做法是点击Netterm上的"启动FTP服务器"
+
+图标(也可以直接运行netftpd.exe), 这时netftpd就开始工作了.
+
+netftpd看上去像一个文本编辑器,首先它会显示出你的主机名和主机
+
+的IP地址,这个IP地址也就是别人访问你FTP服务器时的IP地址, 然后它
+
+就开始纪录别人访问你时的一切信息,如别人来自何处,在你的计算机上
+
+传输了多少字节的数据等.
+
+netftpd的设置也很简单, 在菜单"选项"那一栏点击"显示连接情况",这
+
+时会显示出访问者的IP地址和连接中的传输情况. 点击"设置使用者目
+
+录", 这时你就可以设置各个使用者访问你计算机时的初始路径. 点击
+
+"设置使用者权限", 你可以设置你的 FTP服务器的访问权限, 如是否允
+
+许匿名访问, 访问时需不需要口令,是否拥有可写权等. 点击 "设置使用者
+
+口令" , 你可以设置多个访问者的连接名,然后根据连接名的不同来分别
+
+设置权限和口令. 这样, 不同的人访问你的计算机所享受的"待遇"也就不
+
+同了.
+
+如果你想关闭你的FTP服务器,你只需要退出netftpd就行了. 
+
+ 
+ 
