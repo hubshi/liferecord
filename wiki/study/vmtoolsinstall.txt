@@ -14,7 +14,7 @@ linux VMware tools安装步骤：
 (6) 使用 cd /mnt/cdrom 进入光驱，输入ls命令你会查看到有个*.tar.gz格式的文件（如vmware-linux-tools.tar.gz），然后输入命令CP vmware-linux-tools /tmp/将它复制到/tmp/目录下
 （7）输入命令 cd /tmp 进入/tmp目录
 （8）输入命令tar zxf vmware-linux-tools.tar.gz 将刚刚复制的vmware-linux-tools.tar.gz 解压，默认解压到vmware-linux-tools目录下（与文件名同名）此时就会多出一个命名为vmware-linux-tools文件夹，这里和windows 里面的解压结果一样。
-[size=+0]（9）输入命令 cd vmware-linux-tools 进入解压后的目录
+（9）输入命令 cd vmware-linux-tools 进入解压后的目录
 (10) 输入命令 ./*.pl 运行安装VMware tools （*.pl文件在前面有提过）
 （11）在运行安装过程中，它会一步一步的有问题提出要你回应，此过程中，你只要见到问题后面显示[yes]、[no]、[yes/no]的都输入yes，然后回车,其他的问题后面不管[ ]里面是什么直接回车就好，不要输入。
 （12）最后它会输出1——15个分辨率让你输入数字选择，根据你的显示器来选择分辨率吧
