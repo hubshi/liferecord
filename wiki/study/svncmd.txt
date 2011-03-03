@@ -5,8 +5,9 @@ sc create svn binpath= "c:\progra~1\csvn\bin\svnserve.exe --service --root d:\my
 # delete svn windows service
 sc delete svn
 #svn initial hooks command file name
-pre-revprop-change.cmd
+pre-revprop-change.cmd   ### exit 0;
 #svnsync to googlecode initial command.
+#svnsync init dest src   ### initial format
 svnsync init https://liferecord.googlecode.com/svn file:///D:/MyDocu~1/lr
 # ÐÞ¸ÄSVNÊôÐÔ
 svn propedit svn:ignore project1 --editor-cmd notepad 

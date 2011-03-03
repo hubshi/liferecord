@@ -155,3 +155,10 @@ Password:
 我是在虚拟机下安装的Linux，主机是winXP，主机下运行CMD，输入：telnet 192.168.181.6（就是你虚拟机的IP地址），一般到这里系统提示输入远程机器的用户名和密码，但是不知道为什么我的XP一直不能telnet到服务器，找了N多方法，有些说要关闭XP的防火墙，但是我关了也不行，最后终于。。。嘿嘿！下面是重点！把Linux 的 iptables 停掉！输入：service iptables stop  再次到主机telnet，成功！最后我再试了开启防火墙，还是可以telnet！
 
 终于解决这个问题！！开心激动啊！
+
+7. telnet 连接不上可能的问题
+   /etc/hosts：
+   改
+   127.0.0.1       localhost.localdomain localhost
+   成
+   127.0.0.1       localhost.localdomain localhost hostname 
