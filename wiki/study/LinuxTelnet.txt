@@ -162,3 +162,27 @@ Password:
    127.0.0.1       localhost.localdomain localhost
    成
    127.0.0.1       localhost.localdomain localhost hostname 
+
+http://linux.chinaunix.net/bbs/thread-992235-1-1.html
+一般telnet服务不成功有这几种情况：
+
+第一，需要确保防火墙没有对23端口有阻塞，执行一下iptables -F或者service iptables stop看看情况。
+第二，确定是否root无法telnet，还是一般用户也无法telnet：
+在REDHAT的高版本系统上，需要修改/etc/pam.d/login-->注释第一行以及/etc/securitty添加pts/0，pts/1等安全终端以允许root和普通用户都能登录；
+第三，确认开启的是telnet服务还是kerberos的telnet服务，方法是检查/etc/xinetd.d/telnet，正常telnet服务应该是：
+[root@dhcp-0-195 ~]# cat /etc/xinetd.d/telnet 
+# default: on
+# description: The telnet server serves telnet sessions; it uses \
+#       unencrypted username/password pairs for authentication.
+service telnet
+{
+        flags           = REUSE
+        socket_type     = stream        
+        wait            = no
+        user            = root
+        server          = /usr/sbin/in.telnetd
+        log_on_failure  += USERID
+        disable         = no
+}
+第四，在某些系统版本上需要修改/etc/hosts文件，在里面添加telnet客户端和服务器的主机名称和IP对应关系。
+我个人觉得你的问题可能和这个有一定关系。 
