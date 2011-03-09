@@ -1,0 +1,26 @@
+安装wds后如何直接启用默认的搜索助理
+http://www.51nb.com/forum/tid667404,1,112
+
+自动安装了WDS(windows desktop search)后，在Explorer中只要按下Ctrl+F，就会调出不太令人习惯的wds搜索面板，而不是默认的搜索助理(带小狗的那种)，感觉不爽，网上搜了一下，发现了一个解决办法。
+只需修改下注册表，具体键值如下：
+HKEY_CURRENT_USER\Software\Microsoft\Windows Desktop Search\DS
+ShowStartSearchBand = DWORD:0
+
+其他解决方案可以参考：http://coreygilmore.com/blog/200 ... rch-as-the-default/
+
+Restore the Classic Search Pane
+
+You'll need to make a few registry changes if you want WDS to stop flaunting its existence. The keys you need to change are below, or you can copy+paste the code snippet, or download a registry file (restore_full_windows_classic_search.reg).
+
+Remove the WINKEY+F binding
+HKEY_CURRENT_USER\Software\Microsoft\Windows Desktop Search\DB
+UseWinKey = DWORD:0
+
+Don't the WDS Pane if you hit CTRL+F in an Explorer window
+HKEY_CURRENT_USER\Software\Microsoft\Windows Desktop Search\DS
+ShowStartSearchBand = DWORD:0
+
+Use the Classic Search pane, not the Search Assistant dog
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\CabinetState
+Use Search Asst = DWORD:0
+

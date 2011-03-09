@@ -11,3 +11,9 @@ cd /progress
 
 wk0305.ini Production database paramer file.
 wk0306.ini Training and Demonstration Dbs Parameter file.
+
+
+SQL_CLIENT_CHARSET
+GB2312
+
+$DLC/bin/proserve dbname -m3 -Ma 6 -Mpb 5 -N tcp -S 50119 -ServerType SQL
