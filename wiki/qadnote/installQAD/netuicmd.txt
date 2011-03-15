@@ -1,0 +1,12 @@
+/app/tools/progress/101c04/bin/proadsv -start
+# /app/tools/progress/101c04/bin/proadsv -query
+nsman -name NS1 -start
+# nsman -name NS1 -query
+wtbman -name uiconfig_WS -start
+# wtbman -name uiconfig_WS -query
+# wtbman -name uiconfig_WS -stop
+asbman -name uiconfig_AS -start
+# asbman -name uiconfig_AS -query
+# asbman -name uiconfig_AS -stop
+/app/tools/tomcat/bin/startup.sh
+# /app/tools/tomcat/bin/shutdown.sh
