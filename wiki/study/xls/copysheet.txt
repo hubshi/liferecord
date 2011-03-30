@@ -1,0 +1,16 @@
+'vba如何实现将一个EXCEL文件中(关闭的文件)的SHEET页复制到当前的EXCEL中
+Sub copySheet()
+    Dim wkbk As Workbook
+    Set wkbk = Workbooks.open("源文件.xls")  '先打开要复制的文件
+    wkbk.sheets(1).Copy thisworkbook.sheets(1) '再将此文件中第一个工作表复制到当前工作簿的第一个工作表前
+End Sub
+
+这样是最简单的代码了，但是有些限制：如果工作表的某些单元格中字符数超过255个，则副本的该单元格中只保留前255个字符。
+
+如果复制源文件中第一个工作表内容到当前工作簿第一个工作表中，用下列代码：
+Sub copySheet()
+Dim wkbk As Workbook
+Set wkbk = Workbooks("book2") '先打开要复制的文件
+wkbk.Sheets(1).UsedRange.Copy '复制源文件中第一个工作表的内容
+ThisWorkbook.Sheets(1).Range("A1").Paste '粘贴到当前工作簿第一个工作表中
+End Sub
