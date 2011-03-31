@@ -1,0 +1,15 @@
+CollabNetSubversionEdge-1.3.2_linux-x86.tar.gz。
+
+在Red Hat Enterprise Linux5.3上安装。
+
+
+1、安装和运行用户必须不是root用户。
+2、安装了python2.4包后，必须把安装目录下的lib/modules下的mod_python.so创建。
+根据安装的python的版本，复制相应的so包。
+cp mod_python.so.2.4 mod_python.so
+已有的包包括mod_python.so.2.4
+mod_python.so.2.5
+mod_python.so.2.6
+mod_python.so.2.7
+
+复制完成后，就可以启动了。

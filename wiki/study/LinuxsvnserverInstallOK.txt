@@ -1,0 +1,66 @@
+ Linux SVN服务器CollabNet Subversion搭建
+
+http://blog.csdn.net/liuzhengkang/archive/2010/09/24/5903867.aspx
+1.    下载安装Svn服务器
+（2）安装CollabNet Subversion之前必须先安装JDK1.6和python2.4 ~ 2.6。
+JDK1.6的安装：
+1、检查是否安装了jdk,在终端输入java -version.
+2、若已安装且版本低于1.6，则先删除jdk。
+3、下载当前最新版本jdk-6u21-linux-i586-rpm.bin。
+4、安装，打开终端：
+         $ chmod +x jdk-6u21-linux-i586-rpm.bin    //给jdk-6u20-linux-i586-rpm可执行属性
+    $ ./jdk-6u21-linux-i586-rpm.bin           //解压并安装Jdk，然后默认回车即可
+5、配置环境变量
+         $ vim /etc/profile
+//在最后面加上：
+         JAVA_HOME=/usr/java/jdk1.6.0_21
+         JAVA_BIN=/usr/java/jdk1.6.0_21/bin
+         PATH=$PATH:$JAVA_HOME/bin
+         CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+         export JAVA_HOME JAVA_BIN PATH CLASSPATH
+6、最后使配置立即生效：source /etc/profile
+
+Python的安装：
+1、下载python-2.4.3-27.el5.i386.rpm；
+2、在终端输入:rpm -ivh python-2.4.3-27.el5.i386.rpm 即可。
+
+（3）以超级用户登录系统，设置我们安装CollabNet Subversion目录/opt的读写权限，设置svn群组下的用户对该文件具有读写权限，
+
+最后点击“对包含的文件应用权限”按钮。
+       把svn群组下的用户加入到sudo组，打开/etc/sudoers文件，找到root ALL=(ALL) ALL，在下一行加入svnuser ALL=(ALL) ALL，强制保存退出。
+
+1、$ cd /opt
+2、$ tar zxf CollabNetSubversionEdge-1.2.0_linux-x86.tar.gz
+// 之后会在当前文件夹中创建csvn文件。
+3、$ cd csvn
+4、$ sudo bin/csvn install   //为了让svn随系统的启动而自动运行，我们执行此安装命令。并需要配置“data/conf/csvn.conf”文件下的JAVA_HOME和RUN_AS_USER这2个参数值。JAVA_HOME=/usr/java/jdk1.6.0_21;   RUN_AS_USER=svnuser
+5、$ bin/csvn start         //启动svn，必须确定当前是svnuser用户而不是超级用户root
+6、$bin/csvn console    //如果第5步不能启动，尝试该操作
+
+4.    安装过程出错问题汇总
+
+1、- Exit status=1 Process err output: httpd: Syntax error on line 72 of /opt/csvn/data/conf/httpd.conf: Syntax error on line 23 of /opt/csvn/data/conf/svn_viewvc_httpd.conf: Cannot load /opt/csvn/lib/modules/mod_python.so.2.4 into server: libpython.so.2.4.1.0: cannot open shared object file: No such file or directory
+原因：没有先安装python-2.4.3-27.el5.i386.rpm，在/usr/lib/文件夹里找不到libpython。
+
+2、ERROR services.CommandLineService - Exit status=1 Process error: httpd: bad user name 7230
+原因：当前csvn start的用户为超级管理员root，不能使用root用户启动程序。
+
+3、user is not in the sudoers file. This incident will be reported.
+原因：当前用户不属于sudoer组。
+解决方法：
+（1）$where is sudoers －－－－－－－找出文件所在的位置，默认都是/etc/sudoers
+#chmod u+w /etc/sudoers    以超级用户登录su -root ，修改文件权限即添加文件
+拥有这的写权限 限，ls -al /etc/sudoers 可以查看原文件的权限。
+（2）vim /etc/sudoers 编辑文件，在root ALL=(ALL)ALL行下添加XXX ALL=(ALL)ALL，XXX
+为你的用户名。添加方法：找到root行，按下”i“键进入编辑模式添加即可！编辑好
+后esc键进入一般模式，“:w!"，":q!"保存退出！
+（3）最后， #chmod u－w /etc/sudoers 回到文件的原权限！
+
+4、sudo: /etc/sudoers is mode 0640, should be 0440
+原因：/etc/sudoer 的权限为 0440时才能正常使用，否则sudo命令就不能正常使用。
+解决方法：
+（1）、Ctrl+Alt+F1   进入文本模式。用超级用户登录，如root
+（2）、输入：chmod 0440 /etc/sudoers           //回车
+（3）、exit 退出
+（4）、Ctrl+Alt+F7 返回图形模式。
+（5）、在试试sudo命令，可以用了
