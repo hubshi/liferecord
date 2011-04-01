@@ -1,0 +1,8 @@
+net term fast key
+Notepad		@notepad.exe
+FTP		ftp localhost 2021^M
+Start Local X	@C:\Program Files\StarNet\X-Win32 5.0\xwin32.exe
+Screen 80x 24	resize -s 24 80^M
+Screen 132x24	resize -s 24 132^M
+Language	~396
+Logoff		exit^M
