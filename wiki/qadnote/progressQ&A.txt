@@ -11,3 +11,46 @@ A:QAD日期范围为100年，起始日期在../client.*中设置。
   $DLC/bin/_progres -rereadnolock -c 3 -d mdy -yy 1920 -Bt 350 -D 100 -mmax 3000 -nb 200 -s 128 -noshvarfix -pf /app/mfgpro/qad2008/Production.pf -p mf.p
   假设新的起始日期设置为1980，那么系统中原来1920/01/01->1979/12/31的日期将显示为"?"号,所以在修改client.*文件时需要同时将系统中的日期修改为1980/01/01->2079/12/31之间。
 
+ Amy  16:32:12
+How to change the date format in MFG/PRO eB2?
+
+
+Solution ID: qad7332
+Usage:  61
+Status:  Verified
+Last Modified:  01/31/2008
+Goal:  How to change the date format in MFG/PRO eB2?
+Fact:  MFG/PRO eB2 and above
+Fact:  QAD Desktop 2 All versions
+Fact:  2.14.1 Country Code Maintenance
+Fact:  adctrymt.p
+Fact:  36.3.18 User Maintenance
+Fact:  mgurmt.p
+Fact:  GUI
+Fact:  CHUI
+Fact:  dmy
+Fact:  mdy
+Fact:  locale.dat
+Fact:  European Date Format
+Fact:  date format
+Symptom:  Supporting multiple date formats in eB2 with QAD Desktop 2
+Fix:  Starting in eB2, each user is defined with a locale that sets their date and number formats. The locale.dat file contains the available locales. The default file contains the languages and countries for which MFG/PRO is translated. For example. the French entry is :
+FR,fr,FR,,dmy,European
+
+The below steps show an example of setting up a European date display for a user in Australia:
+
+1) Create a country code under 2.14.1 Country Code Maintenance (adctrymt.p) for the particular country.  In this example, Australia is AUS.
+
+Enter AUS for the Country Code, with alternate code of AU. (the alternate code should be an ISO standard 2-letter country code)
+
+2) Create a user under 36.3.18 User Maintenance (mgcn023.w) with language of US and country code of AUS.
+
+3) Edit the locale.dat file and change the follow line:
+US,en,AU,,mdy,American
+to:
+US,en,AU,,dmy,American
+Note: the locale.dat file is located in the root MFG/PRO installation directory in CHUI . For GUI, this file is located in GUI installation directory (e.g. c:\qadguicli)
+4) Ensure that the locale.dat file is on the PROPATH
+
+修改progress安装目录下的startup.pf文件和mfgpro安装目录下的locale.dat
+gzsupport/softspeed5389#
