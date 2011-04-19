@@ -1,0 +1,25 @@
+
+Configuration File:  	\\192.168.0.100\app\PROGRESS\DLC91D\progress.cfg
+
+Company Name:  	hp15
+
+Product Name:  	ProVISION
+Installation Date:  	Sat Aug 09 23:42:13 2008
+User Limit:  	1
+Expiration Date:  	None
+Serial Number:  	003419892
+Control Numbers:  	X9ERS - XPE6N - MMCYP
+Version Number:  	9.1D            
+Machine Class:  	KB
+Port Number:  	31
+
+Product Name:  	Client Networking
+Installation Date:  	Sat Aug 09 23:42:13 2008
+User Limit:  	20
+Expiration Date:  	None
+Serial Number:  	003419893
+Control Numbers:  	X9CR9 - XQZXN - 34MYP
+Version Number:  	9.1D            
+Machine Class:  	KB
+Port Number:  	31
+

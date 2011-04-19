@@ -1,0 +1,49 @@
+
+   Configuration File:  progress.cfg
+
+         Company Name:  Showa
+
+         Product Name:  4GL Development
+    Installation Date:  Wed Dec 17 13:27:42 2008
+           User Limit:  1
+      Expiration Date:  None
+        Serial Number:  003419894
+      Control Numbers:  ?ZAR? - 6PR6N - N4DYM
+       Version Number:  9.1D            
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  Query/RESULTS
+    Installation Date:  Wed Dec 17 13:27:42 2008
+           User Limit:  40
+      Expiration Date:  None
+        Serial Number:  003419895
+      Control Numbers:  ZHER? - 6QPEM - 3MD?R
+       Version Number:  9.1D            
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  Enterprise DB
+    Installation Date:  Wed Dec 17 13:27:42 2008
+           User Limit:  40
+      Expiration Date:  None
+        Serial Number:  003419896
+      Control Numbers:  YHESH - XPPEN - KMH?R
+       Version Number:  9.1D            
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  WebSpeed Trans Svr
+    Installation Date:  Wed Dec 17 13:27:42 2008
+           User Limit:  20
+      Expiration Date:  None
+        Serial Number:  003419897
+      Control Numbers:  YZCSH - 2P8XD - JMN?9
+       Version Number:  9.1D            
+        Machine Class:  KB
+          Port Number:  38
+
+
