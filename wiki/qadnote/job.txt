@@ -1,0 +1,10 @@
+Job Description for Help Associate 
+1.Minimum 3-4 years QAD MFG/Pro experience 
+2.Progress 4GL programming experience with ability to develop new programs,Performance tuning, bug fixing & testing. 
+3.Progress DB Administration experience is a plus. 
+4.Experience in using UNIX / Windows / Browser based MFG/Pro systems. 
+Job Description for Functional Consultant (Implementation) 
+1.Minimum 3-4 years QAD MFG/Pro experience 
+2.Involved in at least 3 full implementation cycle involving the modules : Distribution, Manufacturing and Finance Chinese accounting module 
+3.Experience in using UNIX / Windows / Browser based MFG/Pro systems. 
+4.Progress 4GL programming experience is a plus. 

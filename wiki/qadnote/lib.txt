@@ -51,3 +51,19 @@ ENTRY(1, aLine)
 Ëæ»úÊý RANDOM ( low , high ) 
 
 input through echo value(tt_f1) no-echo.
+
+/*Ð´common*/
+mpmpmt.p
+             if mpd_cmtindx <> 0 then
+	                 comments = yes.
+              else
+                 comments = no.
+              update comments with frame d.
+              if comments then do:
+                 cmtindx = mpd_cmtindx.
+                 global_ref = mpd_nbr + mpd_type.
+                 {gprun.i ""gpcmmt01.p"" "(input ""mpd_det"")"}
+                 mpd_cmtindx = cmtindx.
+                 view frame a.
+                 view frame b.
+              end.
