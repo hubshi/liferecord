@@ -1,0 +1,123 @@
+QAD MFG/PRO eb2 bi超过2GB限制修复办法
+
+1. 建临时st文件
+$ cd /usr/mfgpro/eb2
+$ vi tmp.st
+
+b db/ f 2048000
+b db/
+
+2. 重建数据库结构,增加bi area. (默认路径/usr/mfgpro/eb2)
+$ cd /usr/mfgpro/eb2
+$ prostrct add db/mfgpak7 tmp.st
+
+Formatting extents:
+   size                area name   path name
+ 256000    Primary Recovery Area /usr/mfgpro/eb2/db/mfgpak7.b4
+
+注: add操作表示在指定数据库上增加bi area(根据tmp.st,一个为2GB,另一个初始大小没有限制).
+
+3.
+$ cd /usr/mfgpro/eb2
+$ proutil db/mfgpak7 -C truncate bi
+  proutil /app/mfgpro/eb21/db/mfgprod -C truncate bi
+
+
+4.
+$ prostrct remove db/mfgpak7 bi Primary Recovery Area
+注: 每执行一次,将会把最后一个bi文件removed.
+
+
+$ prostrct list db/mfgpak7
+$
+
+
+##################################
+   size                area name   path name
+ 262096    Primary Recovery Area /usr/mfgpro/eb2/db/mfgpak9.b1 00:00:26
+ 256000    Primary Recovery Area /usr/mfgpro/eb2/db/mfgpak9.b2 00:00:26
+ 262144    Primary Recovery Area /usr/mfgpro/eb2/db/mfgpak9.b3 00:00:26
+ 256000    Primary Recovery Area /usr/mfgpro/eb2/db/mfgpak9.b4 00:00:26
+ 256000    Primary Recovery Area /usr/mfgpro/eb2/db/mfgpak9.b5 00:00:28
+      4    Primary Recovery Area /usr/mfgpro/eb2/db/mfgpak9.b6 00:00:00
+      4              Schema Area /usr/mfgpro/eb2/db/mfgpak9.d1 00:00:00
+     16              TRANSACTION /usr/mfgpro/eb2/db/mfgpak9_7.d1 00:00:00
+ 256000              TRANSACTION /usr/mfgpro/eb2/db/mfgpak9_7.d2 00:00:26
+      4              TRANSACTION /usr/mfgpro/eb2/db/mfgpak9_7.d3 00:00:00
+     16          TRANSACTION_IDX /usr/mfgpro/eb2/db/mfgpak9_8.d1 00:00:00
+      4          TRANSACTION_IDX /usr/mfgpro/eb2/db/mfgpak9_8.d2 00:00:01
+     16                   STATIC /usr/mfgpro/eb2/db/mfgpak9_9.d1 00:00:00
+      4                   STATIC /usr/mfgpro/eb2/db/mfgpak9_9.d2 00:00:00
+     16               STATIC_IDX /usr/mfgpro/eb2/db/mfgpak9_10.d1 00:00:00
+      4               STATIC_IDX /usr/mfgpro/eb2/db/mfgpak9_10.d2 00:00:00
+     16                  HISTORY /usr/mfgpro/eb2/db/mfgpak9_11.d1 00:00:00
+      4                  HISTORY /usr/mfgpro/eb2/db/mfgpak9_11.d2 00:00:00
+     16              HISTORY_IDX /usr/mfgpro/eb2/db/mfgpak9_12.d1 00:00:00
+      4              HISTORY_IDX /usr/mfgpro/eb2/db/mfgpak9_12.d2 00:00:00
+     16                REFERENCE /usr/mfgpro/eb2/db/mfgpak9_13.d1 00:00:00
+      4                REFERENCE /usr/mfgpro/eb2/db/mfgpak9_13.d2 00:00:00
+     16            REFERENCE_IDX /usr/mfgpro/eb2/db/mfgpak9_14.d1 00:00:00
+      4            REFERENCE_IDX /usr/mfgpro/eb2/db/mfgpak9_14.d2 00:00:00
+     16                 WORKFILE /usr/mfgpro/eb2/db/mfgpak9_15.d1 00:00:00
+      4                 WORKFILE /usr/mfgpro/eb2/db/mfgpak9_15.d2 00:00:00
+     16             WORKFILE_IDX /usr/mfgpro/eb2/db/mfgpak9_16.d1 00:00:00
+      4             WORKFILE_IDX /usr/mfgpro/eb2/db/mfgpak9_16.d2 00:00:00
+     16                  CONTROL /usr/mfgpro/eb2/db/mfgpak9_17.d1 00:00:00
+      4                  CONTROL /usr/mfgpro/eb2/db/mfgpak9_17.d2 00:00:00
+     16              CONTROL_IDX /usr/mfgpro/eb2/db/mfgpak9_18.d1 00:00:00
+      4              CONTROL_IDX /usr/mfgpro/eb2/db/mfgpak9_18.d2 00:00:00
+     16                 GLRPWRTR /usr/mfgpro/eb2/db/mfgpak9_19.d1 00:00:00
+      4                 GLRPWRTR /usr/mfgpro/eb2/db/mfgpak9_19.d2 00:00:00
+     16             GLRPWRTR_IDX /usr/mfgpro/eb2/db/mfgpak9_20.d1 00:00:00
+      4             GLRPWRTR_IDX /usr/mfgpro/eb2/db/mfgpak9_20.d2 00:00:00
+     16                INTRASTAT /usr/mfgpro/eb2/db/mfgpak9_21.d1 00:00:00
+      4                INTRASTAT /usr/mfgpro/eb2/db/mfgpak9_21.d2 00:00:00
+     16            INTRASTAT_IDX /usr/mfgpro/eb2/db/mfgpak9_22.d1 00:00:00
+      4            INTRASTAT_IDX /usr/mfgpro/eb2/db/mfgpak9_22.d2 00:00:00
+     16                      GRS /usr/mfgpro/eb2/db/mfgpak9_23.d1 00:00:00
+      4                      GRS /usr/mfgpro/eb2/db/mfgpak9_23.d2 00:00:00
+     16                  GRS_IDX /usr/mfgpro/eb2/db/mfgpak9_24.d1 00:00:00
+      4                  GRS_IDX /usr/mfgpro/eb2/db/mfgpak9_24.d2 00:00:00
+     16                   TRHIST /usr/mfgpro/eb2/db/mfgpak9_25.d1 00:00:00
+      4                   TRHIST /usr/mfgpro/eb2/db/mfgpak9_25.d2 00:00:00
+     16               TRHIST_IDX /usr/mfgpro/eb2/db/mfgpak9_26.d1 00:00:00
+      4               TRHIST_IDX /usr/mfgpro/eb2/db/mfgpak9_26.d2 00:00:00
+     16                  TRGLDET /usr/mfgpro/eb2/db/mfgpak9_27.d1 00:00:00
+      4                  TRGLDET /usr/mfgpro/eb2/db/mfgpak9_27.d2 00:00:00
+     16              TRGLDET_IDX /usr/mfgpro/eb2/db/mfgpak9_28.d1 00:00:00
+      4              TRGLDET_IDX /usr/mfgpro/eb2/db/mfgpak9_28.d2 00:00:00
+     16                   GLTDET /usr/mfgpro/eb2/db/mfgpak9_29.d1 00:00:00
+      4                   GLTDET /usr1. 建临时st文件
+$ cd /usr/mfgpro/eb2
+$ vi tmp.st
+
+b db/ f 2048000
+b db/
+
+2. 重建数据库结构,增加bi area. (默认路径/usr/mfgpro/eb2)
+$ cd /usr/mfgpro/eb2
+$ prostrct add db/mfgpak7 tmp.st
+
+Formatting extents:
+   size                area name   path name
+ 256000    Primary Recovery Area /usr/mfgpro/eb2/db/mfgpak7.b4
+
+注: add操作表示在指定数据库上增加bi area(根据tmp.st,一个为2GB,另一个初始大小没有限制).
+
+3.
+$ cd /usr/mfgpro/eb2
+$ proutil db/mfgpak7 -C truncate bi
+  proutil /app/mfgpro/eb21/db/mfgprod -C truncate bi
+
+
+4.
+$ prostrct remove db/mfgpak7 bi Primary Recovery Area
+注: 每执行一次,将会把最后一个bi文件removed.
+
+
+$ prostrct list db/mfgpak7
+$
+
+----------------------------
+
+Thank qinmai188
