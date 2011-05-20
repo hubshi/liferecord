@@ -48,22 +48,38 @@ turncate()
 round()
 length(pi_desc,"RAW")
 ENTRY(1, aLine)
-随机数 RANDOM ( low , high ) 
+随机数 RANDOM ( low , high )
 
 input through echo value(tt_f1) no-echo.
 
 /*写common*/
 mpmpmt.p
-             if mpd_cmtindx <> 0 then
-	                 comments = yes.
-              else
-                 comments = no.
-              update comments with frame d.
-              if comments then do:
-                 cmtindx = mpd_cmtindx.
-                 global_ref = mpd_nbr + mpd_type.
-                 {gprun.i ""gpcmmt01.p"" "(input ""mpd_det"")"}
-                 mpd_cmtindx = cmtindx.
-                 view frame a.
-                 view frame b.
-              end.
+   if mpd_cmtindx <> 0 then
+      comments = yes.
+   else
+      comments = no.
+   update comments with frame d.
+   if comments then do:
+      cmtindx = mpd_cmtindx.
+      global_ref = mpd_nbr + mpd_type.
+      {gprun.i ""gpcmmt01.p"" "(input ""mpd_det"")"}
+      mpd_cmtindx = cmtindx.
+      view frame a.
+      view frame b.
+   end.
+
+/*产生单号  GN */
+注意：seq-internal = yes
+/*GN*/ {mfdeclre.i}
+/*GN*/ define variable v_number as character format "x(12)".
+/*GN*/ define variable errorst as logical.
+/*GN*/ define variable errornum as integer.
+/*GN*/ define variable xx as character initial "xxwa_det".
+/*GN*/
+/*GN*/ {gprun.i ""gpnrmgv.p"" "(xx,input-output v_number, output errorst
+/*GN*/                           ,output errornum)" }
+/*GN*/
+/*GN*/ message "v_number:" v_number skip
+/*GN*/        "errorst:" errorst skip
+/*GN*/       "errornum:" errornum
+/*GN*/ view-as alert-box.
