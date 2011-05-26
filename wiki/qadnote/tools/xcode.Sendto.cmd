@@ -14,7 +14,7 @@ rem copy src to srcdir
 mkdir %src%
 rem All program
 
-if %tpe:~-2,1%==. (copy /y %1 %src%\) else (if %tpe:~-3,1%==. (copy /y %1 %src%\) else (if %tpe:~-4,1%==. (copy /y %1 %src%\) else (copy /y %1\*.* %src%\)))
+if %tpe:~-2,1%==. (copy /y %1 %src%\) else (if %tpe:~-3,1%==. (copy /y %1 %src%\) else (if %tpe:~-4,1%==. (copy /y %1 %src%\) else (copy /y %1\*.? %src%\)))
 
 rem Xcode.
 cd /d %src%

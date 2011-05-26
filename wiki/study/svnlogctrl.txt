@@ -1,0 +1,28 @@
+不少开发员提交修改的时候都不写注释，导致查看历史时很费劲，也不太符合规范。有的公司要求每次提交修改时都写上bug号或者任务描述，那么如何在工具上防止开发员们不写注释呢？   利用svn的pre-commit钩子可简单实现此要求。 进入仓库project1/hooks目录
+
+不少开发员提交修改的时候都不写注释，导致查看历史时很费劲，也不太符合规范。有的公司要求每次提交修改时都写上bug号或者任务描述，那么如何在工具上防止开发员们不写注释呢？ 
+
+  利用svn的pre-commit钩子可简单实现此要求。 
+
+进入仓库project1/hooks目录，找到pre-commit.tmpl文件，重命名，去掉后缀.tmpl。 
+编辑pre-commit文件： 
+
+将： 
+$SVNLOOK log -t "$TXN" "$REPOS" | 
+   grep "[a-zA-Z0-9]" > /dev/null || exit 1 
+commit-access-control.pl "$REPOS" "$TXN" commit-access-control.cfg || exit 1 
+这三行注释掉（前面加#符号）， 
+在此位置添加如下几行： 
+
+LOGMSG=`$SVNLOOK log -t "$TXN" "$REPOS" | grep "[a-zA-Z0-9]" | wc -c` 
+if [ "$LOGMSG" -lt 5 ];#要求注释不能少于5个字符，您可自定义 
+then 
+  echo -e "nLog message cann't be empty! you must input more than 5 chars as comment!." 1>&2 
+  exit 1 
+fi 
+
+保存，退出。 
+给pre-commit添加可执行权限： 
+chmod +x pre-commit 
+
+配置结束，可以使用了。 
