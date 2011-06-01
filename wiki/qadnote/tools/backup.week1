@@ -1,0 +1,15 @@
+/app/scripts/stop.Production
+/app/scripts/stop.Demonstration
+rm -rf /backup/week1/*
+/app/progress/dlc91d/bin/procopy /db/prod/mfgprod /backup/week1/mfgbak
+/app/progress/dlc91d/bin/procopy /db/prod/admprod /backup/week1/admbak
+/app/scripts/start.Production
+#rm -rf /test/db/demo/mfgdemo*
+#rm -rf /test/db/demo/admdemo*
+#/app/progress/dlc91d/bin/procopy /backup/week1/mfgbak /test/db/demo/mfgdemo
+#/app/progress/dlc91d/bin/procopy /backup/week1/admbak /test/db/demo/admdemo
+/app/scripts/start.Demonstration
+#bash /app/scripts/startsrv.Production &>/dev/null &
+bash /app/scripts/startsrv.Production &>/app/scripts/null.txt &
+rm -rf /erp100/week1/*
+cp -rf /backup/week1/* /erp100/week1/

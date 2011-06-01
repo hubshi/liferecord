@@ -1,0 +1,33 @@
+#!/bin/sh
+clear
+sel=1
+echo ""
+echo "**********************MFG/PRO eB2*********************"
+echo ""
+echo "		1-启动 Production 数据库"
+echo "		2-启动 Demonstration 数据库"
+echo "		3-启动 Training 数据库"
+echo "		4-启动 2011年04月 备份数据库"
+echo "  =================================================== "
+echo "		5-关闭 Production 数据库"
+echo "		6-关闭 Demonstration 数据库"
+echo "		7-关闭 Training 数据库"
+echo "		8-关闭 2011年04月 备份数据库"
+echo "  =================================================== "
+echo "		a-Login 2011年04月 备份数据库"
+echo "		0-Exit"
+echo ""
+echo "*************************End*************************"
+echo "Type your choice [ 0=Exit] 0\c"
+read sel
+case $sel in
+""1) /app/scripts/start.Production;;
+  2) /app/scripts/start.Demonstration;;
+  3) /app/scripts/start.Training;;
+  4) /app/scripts/start.201104;;
+  5) /app/scripts/stop.Production;;
+  6) /app/scripts/stop.Demonstration;;
+  7) /app/scripts/stop.Training;;
+  8) /app/scripts/stop.201104;;
+  a) /app/scripts/client.201104;;
+esac
