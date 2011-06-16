@@ -1,0 +1,7 @@
+Linux常用的日志文件和相关命令 (2007-11-28 16:36) 转载
+lastlog命令
+　　lastlog文件在每次有用户登录时被查询。可以使用lastlog命令检查某特定用户上次登录的时间，并格式化输出上次登录日志/var/log/lastlog的内容。它根据UID排序显示登录名、端口号（tty）和上次登录时间。如果一个用户从未登录过，lastlog显示**Never logged**。注意需要以root身份运行该命令，
+另外，可加一些参数，例如，'last -u 102'命令将报告UID为102的用户；'last -t 7'命令表示限制为上一周的报告。
+　　进程统计
+　　UNIX可以跟踪每个用户运行的每条命令，如果想知道昨晚弄乱了哪些重要的文件，进程统计子系统可以告诉你。它还对跟踪一个侵入者有帮助。与连接时间日志不同，进程统计子系统默认不激活，它必须启动。在Linux系统中启动进程统计使用accton命令，必须用root身份来运行。accton命令的形式为：accton file，file必须事先存在。先使用touch命令创建pacct文件：touch /var/log/pacct，然后运行accton：accton /var/log/pacct。一旦accton被激活，就可以使用lastcomm命令监测系统中任何时候执行的命令。若要关闭统计，可以使用不带任何参数的accton命令。
+　　lastcomm命
