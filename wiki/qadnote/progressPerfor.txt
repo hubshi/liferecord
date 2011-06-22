@@ -1,0 +1,74 @@
+PROGRESS数据库性能调整攻略
+
+本攻略一概不说明为什么，只让你怎么做！
+1、优化应用程序，创建合理的索引
+这个应该不算“数据库”方面的性能调整，确切说应该属于“算法的优化”，可参考算法优化方面的文章！
+2、数据Extent分开存放，就是所谓的异步IO
+包括硬件层次的阵列，操作系统层次的Raid0，或者数据库Extent存放在不同的物理硬盘，都算！
+实际上使用时可能出现的情况很多，需要具体问题具体分析。 
+//以上2点，当我没说；另外，以下说明均基于操作系统环境：HP-UX11i
+3、设置数据库的Block Size为8KB 
+①Block size 必须是2的整数倍，一般是1024 / 2048 / 4096 / 8192中选一个，原则是OS File System Block Size的1-2倍。查看FS的Block Size可以用：
+# fstyp -v /dev/vg01/mfg
+# df -g
+注意：for vxfs filesystems the 'f_bsize' parameter shows the maximum block size, while the 'f_frsize' parameter shows the actual block size. ///懒得翻译了，别告诉我这句英语你看不懂。 
+②通常HP-UX环境下文件系统（FS）默认block size具有如下的对应关系：
+FS size <= 8GB --->1024 Kb
+FS size > 8 & <= 16 --->2048 Kb
+FS size > 16 & <= 32 --->4096 Kb
+FS size > 32 GB --->8192 Kb
+可以通过newfs命令加-b参数来指定文件系统的block size，比如： 
+# newfs -F vxfs -b 2048 /dev/VG_NAME/rLV_NAME 
+③数据库的Block Size只能在创建数据库时指定，例：
+# /mfg/dlc91/bin/prostrct create prod prod.st -blocksize 8192
+·关于怎么查看Block Size（可以在线运行）：
+# /mfg/dlc91/bin/promon prod
+选择7，可以看到Database Block Size，BI Cluster Size和BI Block Size等。
+4、设置BI Cluster Size为16M
+增大BI Cluster Size时，一个要考虑的是你的硬盘空间是否足够（通常不是问题就是了）！
+关闭数据库，执行： 
+# /mfg/dlc91/bin/proutil prod -C truncate bi -bi 16384
+其中，16384就是BI Cluster Size，单位是K！必须是16 * （2的N次方)：16 - 262128，就是16K到256M，通常设置512-16384，默认是512。 
+5、设置BI Block Size为8K
+跟DB的BlockSize是一样的道理，如何设置？关闭数据库服务，输入如下命令：
+# /mfg/dlc91/bin/proutil prod -C truncate bi -biblocksize size
+其中 size 可以是0 , 1 , 2 , 4 , 8,单位是KB.
+6、设置 AI Block Size = BI Block Size 
+7、Set -bibufs to 25
+-bibufs也是一个数据库启动参数，设置BI的Buffer Cache，适当加大有助于提高BI的IO性能，但是要占用内存，占用内存数=bibufs * BI Block Size
+所以适当增加即可，建议25，如果内存够大，那么根据如下原则增大：
+查看数据库的BI Log Activity，如果Empty Buffer waits不为0，就加大该值。
+8、Run BIW if use. 
+///说实在，没啥必要，数据库性能如果很差，分析原因再怎么轮也轮不到这个，同理AIW！ 
+9、Run AIW if use. 
+///同BIW 
+10、Run at least one APW. 
+# /mfg/dlc91/bin/proapw prod
+注意每开启一个APW占用一个-n的users资源，但是APW不计License，所以可以根据APW数，增加-n启动参数的值。
+11、多处理器时注意合理设置 -spin参数
+官方建议值是CPU个数 * 2000 或者 4000 或者 6000，各种说法都有，个人建议：
+从0开始，每次加1000这样调试，直到获取最好性能。我觉得这个值肯定没有一个固定的范围，有时可能很大比如200万。
+这个参数在数据库启动里面设，跟-B -L什么的类似，也可以在线修改：
+promon数据库然后输入R&D，选择4修改参数，再选择4！
+12、BI 和 DB分开存放 
+说明：理论上可以，但经实际测试分析，这点小伎俩对DB性能提升几乎发挥不了什么作用 :p 
+13、AI extents的处理 
+//同12点
+14、尽量避免使用Raid5模式
+说明：建议使用类似Raid0+1的模式，不用Raid5！
+15、别同时运行其它重量级的服务
+说明：从经济角度出发，很能会让一台服务器运行多种服务，比如邮件、WEB等，但是建议不要，仅仅是建议！
+16、伪交换区的影响
+说明：swapmem_on=1时，开启伪交换区，但是在某些情况下会对应用程序性能造成很大的下降！
+在HP-UX环境下查看是否开启伪交换可以用这个命令：
+# sysdef|grep "mem_on"
+解决办法：设置swapmem_on=0（注意OS需要重启）
+注意：不要随意更改swapmen_on=0，对于大内存而交换区相对设置比较小的状况下，需要联系root或者咨询HP-UX方面的专家，以确定是否可以修改！
+·如果不懂得如何修改HP-UX的内核参数，建议参加HP-UX的基础研修，否则你作为DB的管理员将让人很不放心！
+17、增大数据库的Buffer Cache
+数据库的-B启动参数，指定了数据库的Buffer Cache的大小，最大是500000，占用内存数计算方法：
+Buffer Cache = n * DB Block Size，所以当DB Block Size是8K时，Buffer Cache最大可以设置到4GB。
+原则上Buffer Cache越大越好（跟文件系统的Buffer Cache不一样），但是需要考虑可用物理内存的限定！
+关于如何增加可用物理内存（不买硬件），通常会让很多管理员忽视的一个，就是文件系统开的Buffer Cache过大， 不但没用而且浪费物理内存。你可以先看看：
+# sysdef |grep "dbc_max_pct"
+这个内核参数指定了文件系统Buffer Cache的最大值，就是物理内存 * ( dbc_max_pct / 100)，HP-UX11i以上默认dbc_max_pct是50，也就是物理内存一半......实际上，文件系统Buffer Cache不是越大越好，经验值是300-500M之间，再大了反而降低性能。所以，你一定要调整这个值，使得文件系统的Buffer在300－500M之间！这样做以后，你的可用物理内存通常能增加30％－40％！！！
