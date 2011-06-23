@@ -11,8 +11,17 @@ mkdir /d %xrc%\xrc
 
 rem copy src to srcdir
 mkdir %src%
-copy /y D:\ss2k10\trunk\common\xxlbliq\*.p %src%\
-rem copy /y D:\ss2k10\trunk\showa\xxpk\xxlnwkmt\*.i %src%\  
+
+copy /y D:\ss\trunk\showa\xxptmt04\xxptmt*.? %src%\ 
+
+rem copy /y D:\ss\trunk\watson\xxsosois\xxmfnp01.i %src%\ 
+rem copy /y D:\ss\trunk\watson\xxsosois\xxmfnp01sosois.i %src%\ 
+rem copy /y D:\ss\trunk\watson\xxsosois\xxsoise01.p %src%\ 
+rem copy /y D:\ss\trunk\watson\xxsosois\xxsoise02.p %src%\ 
+rem copy /y D:\ss\trunk\watson\xxsosois\xxsosois.p %src%\ 
+rem copy /y D:\ss\trunk\watson\xxsosois\xxsosoisd.p %src%\ 
+rem copy /y D:\ss\trunk\watson\xxsosois\xxsosoism.p %src%\ 
+
 rem Xcode.
 cd /d %src%
 %xcode%\xcode -d %xrc%\xrc xx*.p
