@@ -1,19 +1,31 @@
 rem 把这个档案加入右键菜单可以方便上传到ftpserver.
-set xrc=C:\qadguicli
-set tpe=%1
-cd /d %xrc%\xrc
-rem echo open 222.85.150.27> %xrc%\~ftp.txt
-echo open 192.168.0.92> %xrc%\~ftp.txt
-rem echo demo>> %xrc%\~ftp.txt
-rem echo demo>> %xrc%\~ftp.txt
-echo admin>> %xrc%\~ftp.txt
-echo admin>> %xrc%\~ftp.txt
-rem echo lcd %xrc%\xrc>> %xrc%\~ftp.txt
-rem  echo cd /home/demo/xrc>> %xrc%\~ftp.txt
-echo cd /var/tmp/xrc>> %xrc%\~ftp.txt
-echo bin>> %xrc%\~ftp.txt
-rem echo prompt off>> %xrc%\~ftp.txt
-if %tpe:~-2,1%==. (echo put %1 >> %xrc%\~ftp.txt) else (if %tpe:~-3,1%==. (echo put %1 >> %xrc%\~ftp.txt) else (if %tpe:~-4,1%==. (echo put %1 >> %xrc%\~ftp.txt) else (echo mput %1\*.*>> %xrc%\~ftp.txt)))
-echo bye>> %xrc%\~ftp.txt
-ftp -i -s:%xrc%\~ftp.txt
-del /s/q/f/a %xrc%\~ftp.txt
+rem "注：vfile=含目录的文件名,目录名，%1(send to)"
+
+rem showa set vlcd=c:\qadguicli\xrc
+rem showa set vcd=/var/tmp/xrc
+rem showa set vhostip=192.168.0.92
+rem showa set vusr=admin
+rem showa set vpasswd=plan2011
+rem showa set vfile=%1
+rem showa set vworkdir=c:\qadguicli
+
+set vlcd=c:\qadguicli\xrc
+set vcd=/var/tmp
+set vhostip=192.168.20.9
+set vusr=mfg
+set vpasswd=
+set vfile=%1
+set vworkdir=c:\qadguicli
+
+cd /d %vlcd%
+echo open %vhostip%> %vworkdir%\~ftp.txt 
+echo %vusr%>> %vworkdir%\~ftp.txt
+echo %vpasswd%>> %vworkdir%\~ftp.txt
+echo cd %vcd%>> %vworkdir%\~ftp.txt
+echo bin>> %vworkdir%\~ftp.txt
+rem echo prompt off>> %vworkdir%\~ftp.txt
+if %vfile:~-2,1%==. (echo put %1 >> %vworkdir%\~ftp.txt) else (if %vfile:~-3,1%==. (echo put %1 >> %vworkdir%\~ftp.txt) else (if %vfile:~-4,1%==. (echo put %1 >> %vworkdir%\~ftp.txt) else (echo mput %1\*.*>> %vworkdir%\~ftp.txt)))
+echo bye>> %vworkdir%\~ftp.txt
+
+ftp -i -s:%vworkdir%\~ftp.txt
+del /s/q/f/a %vworkdir%\~ftp.txt

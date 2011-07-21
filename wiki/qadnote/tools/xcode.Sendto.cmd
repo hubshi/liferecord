@@ -1,31 +1,37 @@
 rem @echo off
-set tpe=%1
-set xrc=c:\qadguicli
-set xcode=C:\qadguicli\proedit
+set vfile=%1
+set xrc=c:\qadguicli\xrc
 set src=C:\qadguicli\garbage\src
 set cim=C:\qadguicli\garbage\cim
+set gui=c:\qadguicli\garbage\gui
+set wkdir=c:\qadguicli
+set xcode=C:\qadguicli\proedit
+
 del %src%\*.* /s/q/f/a
-del %xrc%\xrc\*.* /s/q/f/a
-rem rd %xrc%\xrc
-mkdir %xrc%\garbage\src
-mkdir /d %xrc%\xrc
+del %xrc%\*.* /s/q/f/a
+del %cim%\*.* /s/q/f/a
+
+mkdir %src%
+mkdir %xrc%
+mkdir %cim%
 
 rem copy src to srcdir
-mkdir %src%
+
 rem All program
 
-if %tpe:~-2,1%==. (copy /y %1 %src%\) else (if %tpe:~-3,1%==. (copy /y %1 %src%\) else (if %tpe:~-4,1%==. (copy /y %1 %src%\) else (copy /y %1\*.* %src%\)))
+if %vfile:~-2,1%==. (copy /y %vfile% %src%\) else (if %vfile:~-3,1%==. (copy /y %vfile% %src%\) else (if %vfile:~-4,1%==. (copy /y %vfile% %src%\) else (copy /y %vfile%\*.* %src%\)))
 
 rem Xcode.
 cd /d %src%
-%xcode%\xcode -d %xrc%\xrc xx*.p
-%xcode%\xcode -d %xrc%\xrc xx*.i
-%xcode%\xcode -d %xrc%\xrc xx*.v
+copy %src%\*.cim %xrc%\p.cim
+%xcode%\xcode -d %xrc% *.p
+%xcode%\xcode -d %xrc% *.i
+%xcode%\xcode -d %xrc% *.v
 
 goto exitme
 
 rem convert.
-mkdir %xrc%\gui
+mkdir %gui%
 if %1=="A" goto exitme
 echo srcSearchPath=%src%> %xrc%\convert.tmp
 echo targetDir=%xrc%\gui>> %xrc%\convert.tmp
