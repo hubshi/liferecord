@@ -1,0 +1,58 @@
+Version:8.3.4.007
+
+
+========================================================================
+还原注册信息 - CuteFTP
+========================================================================
+
+方法 1（首选）
+
+1) 必要时重新安装 CuteFTP
+2) 连接到 Internet
+3) 打开 CuteFTP
+4) 在“试用”对话框中，单击“注册”，或者从菜单栏中选择“帮助”->“注册购买的拷贝”
+5) 按照注册向导中的步骤操作。下面提供了您的序列号
+
+		序列号：ABCDEFG2E6AZQD
+
+方法 2
+
+要从 Value.dat 文件还原：
+
+1) 在系统中找到备份的 Value.dat 文件
+2) 将 Value.dat 复制到剪贴板
+3) 将其粘贴到本程序的注册数据文件夹
+4) 启动 CuteFTP，此时应已完成注册
+本程序在这台计算机上的注册数据文件夹为：C:\Documents and Settings\All Users\Application Data\GlobalSCAPE\CuteFTP 8 Professional
+在 Windows XP 上，此文件夹通常是：C:\Documents and Settings\All Users\Application Data\GlobalSCAPE\CuteFTP 8 Lite
+在 Windows Vista 上，此文件夹通常是：C:\ProgramData\GlobalSCAPE\CuteFTP 8 Lite
+
+方法 3
+
+要从 key.reg 备份文件还原（只限于系统管理员）：
+
+1) 在系统中找到 key.reg
+2) 双击 key.reg
+3) 当系统提示时，选择“是”
+4) 启动 CuteFTP，此时应已完成注册
+
+如果使用提供的序列号注册失败，请确保安装的版本与购买的版本相同。
+
+========================================================================
+还原站点管理器
+========================================================================
+
+要还原站点管理器（包括书签和自定义命令）：
+
+1) 找到备份的 sm.dat（也可能包括用于自定义命令的 commands.dat）
+2) 将 sm.dat（和 commands.dat）复制到剪贴板
+3) 将它们粘贴到本程序的安装文件夹中，并覆盖安装程序所提供的默认 sm.dat（和 commands.dat）文件
+4) 当应用程序首次加载时，将会使用此文件
+
+如果已运行过一次本程序，请将这两个文件粘贴到应用程序数据文件夹中：
+
+Windows NT 用户：[Windows 目录]\Profiles\[用户名]\Application Data\GlobalSCAPE\[产品名]\[版本号]
+-或者-
+Windows 2000/XP 用户：Documents and Settings\[用户名]\Application Data\GlobalSCAPE\[产品名]\[版本号]
+
+如果需要进一步的说明，请访问我们的支持页面：http://www.globalscape.com/support。
