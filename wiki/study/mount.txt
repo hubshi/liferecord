@@ -1,0 +1,2 @@
+mount UNC file.
+mount -t cifs //172.16.8.31/soft /mnt/soft
