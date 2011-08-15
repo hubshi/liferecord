@@ -4,6 +4,7 @@ set xcode=C:\qadguicli\proedit
 set xrc=c:\qadguicli\xrc
 set src=C:\qadguicli\garbage\src
 set cim=C:\qadguicli\garbage\cim
+set gui=C:\qadguicli\garbage\gui
 
 del %src%\*.* /s/q/f/a
 del %xrc%\*.* /s/q/f/a
@@ -12,8 +13,7 @@ mkdir %src%
 mkdir %xrc%
 mkdir %cim%
 
-copy /y "D:\ss\trunk\showa\xxpk\xxrepkup1\xx*.?" %src%\
-copy /y "D:\ss\trunk\showa\xxpk\xxcomm\xx*.i" %src%\
+call %wkdir%\cpfile.cmd
 
 rem Xcode.
 cd /d %src%
@@ -23,10 +23,10 @@ cd /d %src%
 copy %cim%\*.cim %xrc%\p.cim
 
 rem convert.
-mkdir %xrc%\gui
+mkdir %gui%
 if %1=="A" goto exitme
 echo srcSearchPath=%src%> %xrc%\convert.tmp
-echo targetDir=%xrc%\gui>> %xrc%\convert.tmp
+echo targetDir=%xrc%\..\gui>> %xrc%\convert.tmp
 echo workDir=%xrc%>> %xrc%\convert.tmp
 %xcode%\convert.exe -r -ini=%xrc%\convert.tmp %src%\*.p>%xrc%\convert.log
 %xcode%\convert.exe -r -ini=%xrc%\convert.tmp %src%\*.i>>%xrc%\convert.log

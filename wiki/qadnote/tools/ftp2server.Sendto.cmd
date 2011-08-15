@@ -1,23 +1,15 @@
 rem 把这个档案加入右键菜单可以方便上传到ftpserver.
-rem "注：vfile=含目录的文件名,目录名，%1(send to)"
+rem "注：vfile=含目录的文件名,目录名,%1(send to)"
 
 rem showa set vlcd=c:\qadguicli\xrc
 rem showa set vcd=/var/tmp/xrc
 rem showa set vhostip=192.168.0.92
 rem showa set vusr=admin
 rem showa set vpasswd=plan2011
-rem showa set vfile=%1
+rem showa set vfile=c:\qadguicli\xrc
 rem showa set vworkdir=c:\qadguicli
 
-rem set vlcd=c:\qadguicli\xrc
-rem set vcd=/var/tmp/xrc
-rem set vhostip=222.85.150.27
-rem set vusr=mfg
-rem set vpasswd=mfgmfg
-rem set vfile=c:\qadguicli\xrc
-rem set vworkdir=c:\qadguicli
-
-rem sinpo ftp parameter
+rem shinpo ftp server.
 set vlcd=c:\qadguicli\xrc
 set vcd=/var/tmp/xrc
 set vhostip=222.85.150.27
