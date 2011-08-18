@@ -13,6 +13,7 @@ move *.bak .\garbage\%fold%\
 move *.xls? .\garbage\%fold%\
 move *.csv .\garbage\%fold%\
 move *.t .\garbage\%fold%\
+move *.txt .\garbage\%fold%\
 move *.cim .\garbage\%fold%\
 move .\garbage\src\*.* .\garbage\%fold%\
 move xrc\*.* .\garbage\%fold%\
