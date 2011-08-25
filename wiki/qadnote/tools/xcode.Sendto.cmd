@@ -1,4 +1,5 @@
 rem @echo off
+rem 说明：vFile要加密的路径或文件可以是%1,%2如果为空则不转换为GUI程序其他任何值都要转换
 set vfile=%1
 set xrc=c:\qadguicli\xrc
 set src=C:\qadguicli\garbage\src
@@ -27,17 +28,18 @@ copy %src%\*.cim %xrc%\p.cim
 %xcode%\xcode -d %xrc% *.p
 %xcode%\xcode -d %xrc% *.i
 %xcode%\xcode -d %xrc% *.v
+%xcode%\xcode -d %xrc% *.t
 
-goto exitme
+if %2=="" goto exitme
 
-rem convert.
+rem convert if %2<>"".
+
 mkdir %gui%
-if %1=="A" goto exitme
-echo srcSearchPath=%src%> %xrc%\convert.tmp
-echo targetDir=%xrc%\gui>> %xrc%\convert.tmp
-echo workDir=%xrc%>> %xrc%\convert.tmp
-%xcode%\convert.exe -r -ini=%xrc%\convert.tmp %src%\xx*.p>%xrc%\convert.log
-%xcode%\convert.exe -r -ini=%xrc%\convert.tmp %src%\xx*.i>>%xrc%\convert.log
-rem del %xrc%\convert.tmp /s/q/f/a
+echo srcSearchPath=%src%> %wkdir%\convert.tmp
+echo targetDir=%wkdir%\gui>> %wkdir%\convert.tmp
+echo workDir=%wkdir%>> %wkdir%\convert.tmp
+%xcode%\convert.exe -r -ini=%wkdir%\convert.tmp %src%\xx*.p>%wkdir%\convert.log
+%xcode%\convert.exe -r -ini=%wkdir%\convert.tmp %src%\xx*.i>>%wkdir%\convert.log
+rem del %wkdir%\convert.tmp /s/q/f/a
 
 :exitme
