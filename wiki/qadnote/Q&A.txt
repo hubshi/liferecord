@@ -54,3 +54,7 @@ A:display时报表宽度太大,最大为320.
 
 Q:3of9.TTF 格式条码为何无法扫描
 A:3of9.TTF的条码中文字必须用*括起来才可以正常扫描.
+
+Q:中国财务位置格式的2个描述放在那里？
+A:QAD_WKFL KEY1 = fm_desc QAD_KEY2 = fm.
+

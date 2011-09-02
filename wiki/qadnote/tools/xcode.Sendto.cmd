@@ -1,5 +1,4 @@
 rem @echo off
-rem 说明：vFile要加密的路径或文件可以是%1,%2如果为空则不转换为GUI程序其他任何值都要转换
 set vfile=%1
 set xrc=c:\qadguicli\xrc
 set src=C:\qadguicli\garbage\src
@@ -32,7 +31,7 @@ copy %src%\*.cim %xrc%\p.cim
 
 if %2=="" goto exitme
 
-rem convert if %2<>"".
+rem convert.
 
 mkdir %gui%
 echo srcSearchPath=%src%> %wkdir%\convert.tmp

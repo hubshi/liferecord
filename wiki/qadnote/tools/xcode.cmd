@@ -19,6 +19,8 @@ rem Xcode.
 cd /d %src%
 %xcode%\xcode -d %xrc% *.p
 %xcode%\xcode -d %xrc% *.i
+%xcode%\xcode -d %xrc% *.v
+%xcode%\xcode -d %xrc% *.t
 
 copy %cim%\*.cim %xrc%\p.cim
 
