@@ -1,0 +1,16 @@
+unix 打印机
+1.重启服务
+#/etc/rc.d/init.d/cups restart
+
+2.查看打印机
+#lpstat -a
+
+3.查看打印队列
+#lpq -a
+
+4.删除打印作业
+#lprm 
+
+5.清除打印队列
+#cancel -a
+

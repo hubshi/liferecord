@@ -1,0 +1,10 @@
+禁止yum-updatesd服务
+CentOS 5有一个新的守护进程叫做yum-updatesd，它替代了老的cron中yum的更新脚本.这个(新)脚本会频繁的检查更新，并根据配置下载或安装它们。然而,这个守护进程对server来说并不好，因为它并不是在固定的时间运行，它有可能在服务器一天当中最忙的时候下载和更新软件。所以，需要禁止这个服务
+#查看运行情况
+[root@ e ~]# service yum-updatesd status
+yum-updatesd (pid 5814) is running…
+#关闭服务
+[root@ e ~]# service yum-updatesd stop
+Stopping yum-updatesd: [ OK ]
+#禁止服务随机启动
+[root@ e ~]# chkconfig –level 35 yum-updatesd off
