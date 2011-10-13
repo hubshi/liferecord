@@ -23,7 +23,7 @@ http://qadhome.com/htm/MFGPRO/base/639.Htm
 "用户" "密码"
 "05"
 .36.14.13
-- "test"/*批处理标志
+- "test" /*批处理标志
 .
 .
 y
@@ -81,7 +81,7 @@ fi
 #
 cd /app/mfgpro/eb21 # change to home directory
  
-# exec $DLC/bin/_progres &DB etc
+# exec $DLC/bin/_progres &DB etc   "-b 参数说明是以批次方式执行的."
 $DLC/bin/_progres -c 30 -b /app/mfgpro/eb21/db/mfgprod.db -d mdy -yy 1920 -Bt 350 -D 100 -mmax 3000 -nb 200 -s 128 -noshvarfix  -p /app/mfgpro/eb21/auto/batch.p -pf /app/mfgpro/eb21/Production.pf;
 
 

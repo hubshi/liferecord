@@ -53,4 +53,5 @@ Note: the locale.dat file is located in the root MFG/PRO installation directory 
 4) Ensure that the locale.dat file is on the PROPATH
 
 修改progress安装目录下的startup.pf文件和mfgpro安装目录下的locale.dat
+
 gzsupport/softspeed5389#
