@@ -1,2 +1,4 @@
-application	account 		pwd
-新浪微博 	nd4zu7-1@yiii.net	1....2
+application	account 			pwd
+新浪微博 	nd4zu7-1@yiii.net		1....2
+导航犬		12665504(nd4zu7-1@yiii.net)	1....2
+91记账		yunzy@softspeed.com.cn		0......1
