@@ -1,0 +1,73 @@
+
+Configuration File:  	d:\app\progress\91e\PROGRESS.CFG
+
+Company Name:  	ts
+
+Product Name:  	ProVISION
+Installation Date:  	Sat Aug 19 14:07:28 2006
+User Limit:  	1
+Expiration Date:  	None
+Serial Number:  	003705560
+Control Numbers:  	X8AR9 - XQG6N - MMCYP
+Version Number:  	9.1E            
+Machine Class:  	KB
+Port Number:  	31
+
+Product Name:  	Client Networking
+Installation Date:  	Sat Aug 19 14:07:28 2006
+User Limit:  	5
+Expiration Date:  	None
+Serial Number:  	003705561
+Control Numbers:  	X9GR9 - 6PXXN - NMG?J
+Version Number:  	9.1E            
+Machine Class:  	KB
+Port Number:  	31
+
+Product Name:  	Query/RESULTS
+Installation Date:  	Sat Aug 19 14:07:28 2006
+User Limit:  	6
+Expiration Date:  	None
+Serial Number:  	003705562
+Control Numbers:  	XYASS - 6PXXM - KMCYP
+Version Number:  	9.1E            
+Machine Class:  	KB
+Port Number:  	31
+
+
+Configuration File:  D:\PROGRESS\dlc91d\progress.cfg
+
+Company Name:  ts
+
+Product Name:  ProVISION
+Installation Date:  Thu Mar 24 09:31:27 2005
+ User Limit:  1
+Expiration Date:  None
+Serial Number:  003532526
+Control Numbers:  X9ASS - 6PG2N - 44C?J
+Version Number:  9.1D            
+Machine Class:  KB
+Port Number:  31
+
+
+Product Name:  Client Networking
+Installation Date:  Thu Mar 24 09:31:27 2005
+ User Limit:  9
+Expiration Date:  None
+Serial Number:  003532527
+Control Numbers:  Z8CS9 - XQEAM - N4GYP
+Version Number:  9.1D            
+Machine Class:  KB
+Port Number:  31
+
+
+Product Name:  Query/RESULTS
+Installation Date:  Thu Mar 24 09:31:27 2005
+ User Limit:  10
+Expiration Date:  None
+Serial Number:  003532528
+Control Numbers:  XXARS - XPGAM - K4GYP
+Version Number:  9.1D            
+Machine Class:  KB
+Port Number:  31
+
+

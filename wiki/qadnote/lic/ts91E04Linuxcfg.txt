@@ -1,0 +1,71 @@
+
+   Configuration File:  /app/progress/91e/progress.cfg
+
+         Company Name:  TS
+
+         Product Name:  4GL Development System
+    Installation Date:  Mon Oct 27 09:51:08 2008
+           User Limit:  1
+      Expiration Date:  None
+        Serial Number:  003713499
+      Control Numbers:  ?ZES? - XPR2M - 5MH?M
+       Version Number:  9.1E            
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  Client Networking
+    Installation Date:  Mon Oct 27 09:51:08 2008
+           User Limit:  9
+      Expiration Date:  None
+        Serial Number:  003713500
+      Control Numbers:  Z9GR? - XPPEN - 5MD?M
+       Version Number:  9.1E            
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  Query/RESULTS
+    Installation Date:  Mon Oct 27 09:51:08 2008
+           User Limit:  10
+      Expiration Date:  None
+        Serial Number:  003713501
+      Control Numbers:  XXERH - 6QREM - KMD?M
+       Version Number:  9.1E            
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  Enterprise DB
+    Installation Date:  Mon Oct 27 09:51:08 2008
+           User Limit:  20
+      Expiration Date:  None
+        Serial Number:  003713502
+      Control Numbers:  YZERH - XQ6TN - KMSYM
+       Version Number:  9.1E            
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  Progress AppServer
+    Installation Date:  Mon Oct 27 09:51:08 2008
+           User Limit:  1
+      Expiration Date:  None
+        Serial Number:  003713503
+      Control Numbers:  ZZCRH - XPR6C - 44DY9
+       Version Number:  9.1E            
+        Machine Class:  KB
+          Port Number:  38
+
+
+         Product Name:  WebSpeed Trans Svr
+    Installation Date:  Mon Oct 27 09:51:08 2008
+           User Limit:  1
+      Expiration Date:  None
+        Serial Number:  003713504
+      Control Numbers:  YZCRH - 2QPTC - 4MH?5
+       Version Number:  9.1E            
+        Machine Class:  KB
+          Port Number:  38
+
+

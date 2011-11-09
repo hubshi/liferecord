@@ -1,0 +1,41 @@
+lvlarrp.p                                             36.16.10.3 许可应用程序报表                                     日期: 11/11/02
+页:      1                                            广州提爱思-test-2011-8-19                                       时间: 16:29:40
+
+应用程序     许可                                许可         Appln         许可 安装      安装      截止     审计         审计
+描述         代码                                类型         版本          数量 日期/时间 人        日期     截止日期  天数/号
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+AUDIT        MCDFN MC971 MC820 M95B1 MC8H1 2BQ5L 名称为       eB2.1            1 09/02/13  sys       09/02/23 10/02/13
+License Audit                                                                   09:36:15                                     1
+
+CONSIGNMENT  P1RDY P16DY P1RDZ P6N9Y P1R4Y 007GD 名称为       eB2.1           30 07/11/24  sys                10/02/13       90
+Consignment Inventory                                                           09:10:57                                     3
+
+ECOMMERCE    PK32P PL92P PK36Q PQ4ZP PK3BP 0LW04 名称为       eB2.1           42 10/09/01  sys                11/09/01       90
+EDI ECommerce                                                                   10:41:25
+
+FA           PK8PF PL2PF PK8KD PKMGF PK8YF 0LQMZ 名称为       eB2.1           42 10/09/01  sys                11/09/01       90
+Fixed Assets                                                                    10:42:38
+
+MFG/PRO      PK5H9 PLHH9 PK5C8 PJ&V9 PK579 0LTFV 名称为       eB2.1           42 10/09/01  sys                11/09/01       90
+MFG/PRO Foundation                                                              10:39:32
+
+RELMGMT      PK5L9 PLHL9 PK5Q8 PJW79 PK5V9 0LTJV 名称为       eB2.1           42 10/09/01  sys                11/09/01       90
+Release Management                                                              10:43:27
+
+SSD          PK71C PLF1C PK75B PLDLC PK79C 0LR3S 名称为       eB2.1           42 10/09/01  sys                11/09/01       90
+Shared Services Domain                                                          10:44:09
+
+
+
+                                                           报表结束
+lvlarrp.p                                             36.16.10.3 许可应用程序报表                                     日期: 11/11/02
+页:      2                                            广州提爱思-test-2011-8-19                                       时间: 16:29:40
+
+
+
+
+报表选择条件:                           报表提交人:                sys
+
+             应用程序:                      至: 
+                 仅显示活动许可: Yes                             输出: window
+                                                           批处理标志: 
