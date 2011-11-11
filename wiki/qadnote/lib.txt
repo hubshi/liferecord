@@ -83,3 +83,10 @@ mpmpmt.p
 /*GN*/        "errorst:" errorst skip
 /*GN*/       "errornum:" errornum
 /*GN*/ view-as alert-box.
+
+mrmprp1a.p
+display
+  getTermLabel("GROSS_REQUIREMENTS",13) format "x(13)"
+  req[1] format "->>>>>>>>9"
+  req[2 for 12] skip.
+
