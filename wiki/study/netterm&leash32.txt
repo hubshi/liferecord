@@ -1,0 +1,6 @@
+NetTerm不启动Leash32的方法。
+2009-11-01 19:53
+http://hi.baidu.com/hilenx/blog/item/4537face4408740993457eaf.html
+安装了NetTerm 5.4之后，发现每回telnet一个主机的时候，Leash32这个东西总会启动，对我而言没什么用处。网上竟然没有找到关闭的方法……也许只是我没找到而已……
+研究一下，原来真的很简单…… 打开【选项】菜单，选择【Security】，选择第一项【Security Management Wizard】，其实这三项随便选，如果没装Kerberos那个就选一或三项。在左侧【SHH】选择【Protocol】，右侧会有【Secure telnet style host server】这个，下面的选项选择【SRP】这个就行了。再试试，是不是讨人眼的Leash没反应了~~：）
+PS：比较麻烦的一点是，第一次连接的话还是会出问题，设置一下，第二次就没问题了。谁有更好的方法可以告诉我，3Q！

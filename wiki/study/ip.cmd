@@ -9,7 +9,7 @@ if /i "%1" == "" goto office
 if /i "%1" == "/o" goto office
 if /i "%1" == "/?" goto helpme
 if /i "%1" == "/h" goto helpme
-if /i "%1" == "/x" goto roger
+if /i "%1" == "/ts" goto ts
 if /i "%1" == "/r" goto roger
 if /i "%1" == "/c" goto clear
 
@@ -38,12 +38,13 @@ echo set wins name="LAN" source=dhcp >> c:\~ip.txt
 echo popd >> c:\~ip.txt
 goto setip
 
-:roger
+:ts
 echo pushd interface ip > c:\~ip.txt
 echo # roger's home >> c:\~ip.txt
-echo set address name="WIRELESS" source=static addr=192.168.0.52 mask=255.255.255.0 >> c:\~ip.txt
-echo set address name="WIRELESS" gateway=192.168.0.1 gwmetric=0 >> c:\~ip.txt
-echo set dns name="WIRELESS" source=static addr=192.168.0.1 register=PRIMARY >> c:\~ip.txt
+echo set address name="WIRELESS" source=static addr=10.96.6.17 mask=255.255.0.0 >> c:\~ip.txt
+echo set address name="WIRELESS" gateway=10.96.1.200 gwmetric=0 >> c:\~ip.txt
+echo set dns name="WIRELESS" source=static addr=202.96.128.86 register=PRIMARY >> c:\~ip.txt
+echo add dns name="WIRELESS" addr=202.96.129.166 index=2 >> c:\~ip.txt
 echo set wins name="WIRELESS" source=static addr=none >> c:\~ip.txt
 echo popd >> c:\~ip.txt
 goto setip
