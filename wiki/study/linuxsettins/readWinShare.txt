@@ -1,0 +1,10 @@
+从freebsd访问windows共享目录
+http://www.linuxdiyf.com/viewarticle.php?id=87830
+首先在win中设置共享目录，删除共享目录访问者everyone
+重新赋予新的带有密码的用户如（user）密码（user）
+#smbclient -U user //192.168.0.2/downs
+password:(输入user回车即可)
+
+# Mount to windows shared directory
+mount -t smbfs -o username=administrator,passwd=plan //192.168.0.111/label /var/tmp/label
+//192.168.0.111/label /admin/label smbfs defaults,auto,username=administrator,passwd=plan 0 0
