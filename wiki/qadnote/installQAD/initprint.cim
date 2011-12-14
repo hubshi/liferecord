@@ -9,7 +9,7 @@ wy60prt
 Printer
 default
 vt100prt
-- 66 0 no
+- 9999 0 no
 /dev/tty no
 -
 @@end
