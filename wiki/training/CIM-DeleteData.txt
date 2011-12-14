@@ -1,0 +1,16 @@
+CIM_LOAD 批次删除格式
+1. x跟在第一屏的最后且不能用双引号引起来
+2. 其他屏都以-代替
+3. 注意确认屏.
+
+.......sample.......
+@@batchload ppvpmt.p
+"M10139-340-A" "J19X004" "" x
+-
+y
+@@end
+@@batchload ppcpmt.p
+"" "NATO-10000" x
+-
+y
+@@END
