@@ -63,3 +63,6 @@ A:.1.4.16物料库存数据里有空地点数据引起.
 
 Q:程序慢有什么办法？
 A:在编写程序时,一些大数据量的表(诸如tr_hist,abs_mstr,gltr_hist,ih_hist,idh_hist等),尽量不用BUFF, 而是先用临时表表抽取合适的数据记录. 不然多用户同时用时,内存占用太大. 
+
+Q: showa条码注册码是什么？ 
+A: ~report name = 广州昭和汽车零部件有限公司  usrw_charfld[1]=yeajibhbjcoblliefj
