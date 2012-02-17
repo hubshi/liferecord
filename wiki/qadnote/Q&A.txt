@@ -66,3 +66,9 @@ A:ÔÚ±àĞ´³ÌĞòÊ±,Ò»Ğ©´óÊı¾İÁ¿µÄ±í(ÖîÈçtr_hist,abs_mstr,gltr_hist,ih_hist,idh_histµ
 
 Q: showaÌõÂë×¢²áÂëÊÇÊ²Ã´£¿ 
 A: ~report name = ¹ãÖİÕÑºÍÆû³µÁã²¿¼şÓĞÏŞ¹«Ë¾  usrw_charfld[1]=yeajibhbjcoblliefj
+
+Q: Batch RunºÍmanual input µÄ³ÌĞò»á²»Í¬Âğ£¿
+A: ÓĞÉÙÊı²»Í¬¡£¿ÉÒÔÓÃÒÔÏÂ´úÂë²âÊÔBatch RunµÄForm
+   {mfdeclre.i}
+   batchrun = yes.
+   {gprun.i ""poporc.p""}
