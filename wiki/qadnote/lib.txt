@@ -90,3 +90,11 @@ display
   req[1] format "->>>>>>>>9"
   req[2 for 12] skip.
 
+for first pin_mstr where pin_product = pApplication no-lock: end.
+if available pin_mstr and pin_mstr.pin_hwm < hwm_cnt then do:
+   find current pin_mstr exclusive-lock no-error.
+   pin_hwm = hwm_cnt.
+   if recid(pin_mstr) = -1 then .
+end.
+
+

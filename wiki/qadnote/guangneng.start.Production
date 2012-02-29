@@ -1,0 +1,19 @@
+#!/bin/sh
+# file: start.tpl
+# Script to start database servers.
+ 
+# tokens:
+# &DLC = Progress Directory
+# &LOOP-DB-START = start of database loop
+# &LOOP-DB-END = end of database loop
+# &START-SERVER = command line to start current DB in database loop
+ 
+DLC=/app/progress/10b;export DLC
+PATH=$PATH:$DLC;export PATH
+PROMSGS=$DLC/promsgs;export PROMSGS
+PROTERMCAP=$DLC/protermcap;export PROTERMCAP
+
+$DLC/bin/proserve /db/prod/mfgprod -L 500000 -n 100 -Mn 51 -Ma 5 -Mpb 20 -c 350 -B 250000 -S 51100 -minport 51200 -maxport 51500 -N TCP -ServerType 4GL
+$DLC/bin/_mprosrv /db/prod/hlpprod -L 40000 -n 100 -c 350 -B 30000 -S 52100 -minport 52200 -maxport 52500 -N TCP -ServerType 4GL
+$DLC/bin/_mprosrv /db/prod/admprod -L 40000 -n 100 -c 350 -B 30000 -S 53100 -minport 53200 -maxport 53500 -N TCP -ServerType 4GL
+$DLC/bin/_mprosrv /db/prod/mfgprod -m3 -Ma 5 -Mpb 30 -n 100 -c 350 -S 25014 -minport 51600 -maxport 51800 -N TCP -ServerType SQL

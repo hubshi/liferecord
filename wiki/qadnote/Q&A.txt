@@ -72,3 +72,11 @@ A: 有少数不同。可以用以下代码测试Batch Run的Form
    {mfdeclre.i}
    batchrun = yes.
    {gprun.i ""poporc.p""}
+
+Q:18.22.13 倒冲事务的物料清单从哪里来的
+A:1. PM_code = "L"
+  2. 14.13.1 设置工艺流程
+  3. BOM设置要回冲的工序
+
+Q:在CHAR上的程序怎么能在WEBUI上运行？
+A:在mgpgmimt.p-36.3.21.1 程序信息维护里注册
