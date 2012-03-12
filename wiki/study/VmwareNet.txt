@@ -1,3 +1,18 @@
+ 
+vmware下redhat linux 9使用NAT共享主机IP上网 收藏
+VMware提供:桥接,Host Only和NAT三种连网方式. 我个人认为NAT方式较简单,用它来共享主机的IP,适合那种每台主机只允许一个IP的情况。具体设置如下：
+ 
+1、VMware网络连接选择的是NAT方式。
+2、VMware网络设置里的NAT项中查看VMnet8，NAT的网关设置为192.168.X.2。
+3、在windows中，查看所有的网络连接，你应该发现除了原有的网卡之外，又多了Vmnet1和Vmnet8。vmnet1是hostonly的接口，而Vmnet8是就是我们要使用的NAT的网络接口。
+4、在windows主机上用ipconfig查看VMnet8的IP地址，一般是192.168.X.1。此时VMnet8的设置应该是自动获取IP，现在改成静态IP，并把此IP直接填入VMnet8里，不设网关。
+6、在linux下把网卡IP设置成和VMnet8一个网段的IP（192.168.X.Z/255.255.255.0)
+7、在linux下网关设置成刚才查看的那个IP192.168.X.2即可。
+8、在linux下DNS和windows主机的一样。
+9、在linux下运行命令service network restart重新启动linux的网络服务。
+10、在linux下ping 192.168.x.1，在windows下ping 192.168.x.z 成功后证明主机和虚拟机已经可以互相访问了，现在也可以实现虚拟机共享主机ip上网了。
+
+
 http://tech.hexun.com/2009-03-03/115202845.html
 网络进阶：VMware三种网络模式根本区别
 2009年03月03日06:33　　来源： 我有话说　查看评论(2) 好文我顶(2) 　　提到VMware大家就想起了虚拟机技术，虚拟机技术在最近的几年中得到了广泛的发展，一些大型网络服务商都开始采用虚拟机技术，不仅节省了投资成本，更节约了能源的消耗。

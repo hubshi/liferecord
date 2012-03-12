@@ -28,7 +28,10 @@ getFrameTitle("TOTALS",16)
     input from value(fname).
     output to value(fname + ".out") keep-messages.
     hide message no-pause.
-    {gprun.i ""ppcsbtld.p""}
+    cimrunprogramloop:
+    do on stop undo cimrunprogramloop,leave cimrunprogramloop:
+          {gprun.i ""ppcsbtld.p""}
+    end.
     hide message no-pause.
     output close.
     input close.
