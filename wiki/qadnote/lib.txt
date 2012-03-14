@@ -6,6 +6,8 @@ validate(v_date <> "" ,"message information")
 &IF DEFINED(GPLABEL_I)=0 &THEN
 &GLOBAL-DEFINE GPLABEL_I
 
+mfdecgui.i global_program_name global_program_rev
+
 fill(" ",25)
 
 {pxmsg.i &MSGNUM=4693 &ERRORLEVEL=1 &MSGBUFFER=lit-text}
