@@ -11,7 +11,7 @@ mfdecgui.i global_program_name global_program_rev
 fill(" ",25)
 
 {pxmsg.i &MSGNUM=4693 &ERRORLEVEL=1 &MSGBUFFER=lit-text}
-{pxmsg.i &MSGNUM=80402 &ERRORLEVEL={&INFORMATION-RESULT} &CONFIRM=yn}
+{pxmsg.i &MSGNUM=80402 &ERRORLEVEL={&INFORMATION-RESULT} &CONFIRM=yn} 
 {mfmsg.i 5543 3}
 {mfmsg01.i 5544 2 yn}
 
@@ -101,5 +101,10 @@ if available pin_mstr and pin_mstr.pin_hwm < hwm_cnt then do:
    pin_hwm = hwm_cnt.
    if recid(pin_mstr) = -1 then .
 end.
+/**label reference******************
+mrmprp11.p   D)日/W)周/M)月: W
+	     按I)零件或B)物料单/配料排序: I)零件号
 
-
+wocswip.p    D)细节/S)汇总: D)细节
+bmcsru01.p   A)全部/C)仅限变更: A)全部
+************************************/
