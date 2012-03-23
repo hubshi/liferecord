@@ -1,6 +1,8 @@
 EXECNAME
 {gpcdget.i "UT"}
 
+{gprun.i ""gpgetver.p"" "(input 4,output ver)"}
+
 validate(v_date <> "" ,"message information")
 
 &IF DEFINED(GPLABEL_I)=0 &THEN

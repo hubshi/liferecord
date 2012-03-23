@@ -1,6 +1,16 @@
 DVMP DEFINE VARIABLE %\c AS MEMPTR    NO-UNDO.
 IOPWH DEFINE INPUT-OUTPUT PARAMETER %\c AS WIDGET    NO-UNDO.
 IPHN DEFINE INPUT  PARAMETER %\c AS HANDLE    NO-UNDO.
+PRU(procedurename "Procedure Name" usrProc
+          )
+ PROCEDURE %(procedurename):
+ /* -----------------------------------------------------------
+    Purpose:
+    Parameters:  <none>
+    Notes:
+  -------------------------------------------------------------*/
+ %\c
+ END PROCEDURE. /* PROCEDURE %(procedurename)*/
 ONB ON '%\c':U OF %\S
     DO:
     %\iRETURN.
@@ -25,6 +35,7 @@ DWH DO WHILE (%\c):
     END.
 PSU PUT STREAM %\c UNFORMATTED
     %\iSKIP.
+DVL DEFINE VARIABLE %\c LIKE NO-UNDO.
 CIMBD DEFINE VARIABLE fname AS CHARACTER NO-UNDO.
       DEFINE VARIABLE msage AS CHARACTER NO-UNDO.
       DEFINE VARIABLE fid   AS INTEGER  NO-UNDO.
@@ -40,7 +51,6 @@ CIMBD DEFINE VARIABLE fname AS CHARACTER NO-UNDO.
       ELSE DO:
       %\S
       END.
-DVL DEFINE VARIABLE %\c LIKE NO-UNDO.
 OPMP DEFINE OUTPUT PARAMETER %\c AS MEMPTR    NO-UNDO.
 DIW display %\c with width 200 stream-io. %\S
 IPLG DEFINE INPUT  PARAMETER %\c AS LOGICAL   NO-UNDO.
@@ -79,6 +89,19 @@ GETTABLE(TableName "Table's Name" _det
  END.
  OUTPUT CLOSE.
  %\S
+FUU(functionName "Function Name?" usrFunction
+         retrunType "Returns Type?" CHARACTER
+         parameter1Name "Parameter1 Name?" p1
+         parameter1Type "Parameter1 Type?" CHARACTER
+         )
+ FUNCTION %(functionName) RETURNS %(retrunType)(%(parameter1Name) as %(parameter1Type)).
+  /* -----------------------------------------------------------
+     Purpose:
+     Parameters:  <none>
+     Notes:
+   -------------------------------------------------------------*/
+   %\c
+ END FUNCTION. /*FUNCTION %(functionName)*/
 CDI COLOR DISPLAY INPUT %\c .
 DVRI DEFINE VARIABLE %\c AS ROWID     NO-UNDO.
 PUS PUT UNFORMAT %\c SKIP.
