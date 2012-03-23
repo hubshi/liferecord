@@ -2,7 +2,7 @@ DVMP DEFINE VARIABLE %\c AS MEMPTR    NO-UNDO.
 IOPWH DEFINE INPUT-OUTPUT PARAMETER %\c AS WIDGET    NO-UNDO.
 IPHN DEFINE INPUT  PARAMETER %\c AS HANDLE    NO-UNDO.
 PRU(procedurename "Procedure Name" usrProc
-          )
+    )
  PROCEDURE %(procedurename):
  /* -----------------------------------------------------------
     Purpose:
@@ -89,19 +89,6 @@ GETTABLE(TableName "Table's Name" _det
  END.
  OUTPUT CLOSE.
  %\S
-FUU(functionName "Function Name?" usrFunction
-         retrunType "Returns Type?" CHARACTER
-         parameter1Name "Parameter1 Name?" p1
-         parameter1Type "Parameter1 Type?" CHARACTER
-         )
- FUNCTION %(functionName) RETURNS %(retrunType)(%(parameter1Name) as %(parameter1Type)).
-  /* -----------------------------------------------------------
-     Purpose:
-     Parameters:  <none>
-     Notes:
-   -------------------------------------------------------------*/
-   %\c
- END FUNCTION. /*FUNCTION %(functionName)*/
 CDI COLOR DISPLAY INPUT %\c .
 DVRI DEFINE VARIABLE %\c AS ROWID     NO-UNDO.
 PUS PUT UNFORMAT %\c SKIP.
@@ -114,6 +101,20 @@ OUT(tableName "Table Name" tmp_tab
  output close.
 IPCH DEFINE INPUT  PARAMETER %\c AS CHARACTER NO-UNDO.
 IPWH DEFINE INPUT  PARAMETER %\c AS WIDGET    NO-UNDO.
+FUU(functionName "Function Name?" usrFunction
+    retrunType "Returns Type?" CHARACTER
+    parameter1Name "Parameter1 Name?" p1
+    parameter1Type "Parameter1 Type?" CHARACTER
+    )
+ FUNCTION %(functionName) RETURNS %(retrunType)(%(parameter1Name) as %(parameter1Type)):
+  /* -----------------------------------------------------------
+     Purpose:
+     Parameters:  <none>
+     Notes:
+   -------------------------------------------------------------*/
+   %\c
+   return .
+ END FUNCTION. /*FUNCTION %(functionName)*/
 IPDE DEFINE INPUT  PARAMETER %\c AS DECIMAL   NO-UNDO.
 &IFND &IF (DEFINED %\c = 0) &THEN
       &ENDIF
@@ -184,28 +185,28 @@ MES?(returnvariable "please giveme return variable" ret
  DEFINE VARIABLE ret AS LOGICAL   NO-UNDO.
  MESSAGE "%\c" VIEW-AS ALERT-BOX QUESTION BUTTONS YES-NO title "" UPDATE %(returnvariable).
 &GL &GLOBAL-DEFINE %\c
-IOPHN DEFINE INPUT-OUTPUT PARAMETER %\c AS HANDLE    NO-UNDO.
 &IF &IF %\c &THEN
     &ENDIF
+IOPHN DEFINE INPUT-OUTPUT PARAMETER %\c AS HANDLE    NO-UNDO.
 MES MESSAGE "%\c" %\i VIEW-AS ALERT-BOX INFO BUTTONS OK.
 IOPIN DEFINE INPUT-OUTPUT PARAMETER %\c AS INTEGER   NO-UNDO.
+MSG MESSAGE %\c VIEW-AS ALERT-BOX INFO BUTTONS OK.
 FNW(table "Table Name" 
     )
  FOR EACH %(table) NO-LOCK WHERE %\C:
      display %(table).
  END.
-MSG MESSAGE %\c VIEW-AS ALERT-BOX INFO BUTTONS OK.
 &IFD &IF (DEFINED %\c <> 0) &THEN
      &ENDIF
 OPIN DEFINE OUTPUT PARAMETER %\c AS INTEGER   NO-UNDO.
 IOPLG DEFINE INPUT-OUTPUT PARAMETER %\c AS LOGICAL   NO-UNDO.
-DVCH DEFINE VARIABLE %\c AS CHARACTER NO-UNDO.
 DVWH DEFINE VARIABLE %\c AS WIDGET    NO-UNDO.
+DVCH DEFINE VARIABLE %\c AS CHARACTER NO-UNDO.
 DVDE DEFINE VARIABLE %\c AS DECIMAL   NO-UNDO.
-&FR {&FRAME-NAME} %\c
 DERR DO ON ERROR UNDO, LEAVE:
      %\i%\c
      END.
+&FR {&FRAME-NAME} %\c
 WRESIZE(WinName "WIndow name" cwin
         FrameName "Frame Name" f1
         tabName "Table Name" brTab
@@ -217,15 +218,15 @@ WRESIZE(WinName "WIndow name" cwin
  FRAME %(FrameName):VIRTUAL-HEIGHT-CHARS = %(WinName):HEIGHT NO-ERROR.
  %(tabName):HEIGHT = %(WinName):HEIGHT - 6.64 NO-ERROR.
  %\S
+OPLG DEFINE OUTPUT PARAMETER %\c AS LOGICAL   NO-UNDO.
 FEW(table "Table Name" 
     )
  FOR EACH %(table) EXCLUSIVE-LOCK WHERE  :
      display %(table) .
      update %\c.
  END.
-OPLG DEFINE OUTPUT PARAMETER %\c AS LOGICAL   NO-UNDO.
-IPDT DEFINE INPUT  PARAMETER %\c AS DATE      NO-UNDO.
 IOPMP DEFINE INPUT-OUTPUT PARAMETER %\c AS MEMPTR    NO-UNDO.
+IPDT DEFINE INPUT  PARAMETER %\c AS DATE      NO-UNDO.
 DFOR DO FOR %\c:
      %\i
      END.
@@ -234,7 +235,6 @@ GBC(col "Whitch bolumns?" 1
     )
  DEFINE VARIABLE br-col AS WIDGET.   %\S
  br-col = %\c:GET-BROWSE-COLUMN(%(col)) in frame fmain  .
-IOPRI DEFINE INPUT-OUTPUT PARAMETER %\c AS ROWID     NO-UNDO.
 hQuery(hQuery "query WIDGET-HANNDLE variable name" hQuery
        strSQL "query SQL string" strSQL
        brList "Browse List Name" brList
@@ -245,8 +245,9 @@ hQuery(hQuery "query WIDGET-HANNDLE variable name" hQuery
      %(strSQL) = "for each %\c no-lock ".
      %(hQuery):QUERY-PREPARE(%(strSQL)) NO-ERROR.
      %(hQuery):QUERY-OPEN NO-ERROR.
-OPCH DEFINE OUTPUT PARAMETER %\c AS CHARACTER NO-UNDO.
+IOPRI DEFINE INPUT-OUTPUT PARAMETER %\c AS ROWID     NO-UNDO.
 OPWH DEFINE OUTPUT PARAMETER %\c AS WIDGET    NO-UNDO.
+OPCH DEFINE OUTPUT PARAMETER %\c AS CHARACTER NO-UNDO.
 OPDE DEFINE OUTPUT PARAMETER %\c AS DECIMAL   NO-UNDO.
 IPTF %\L INPUT FROM "%\c".
           REPEAT:

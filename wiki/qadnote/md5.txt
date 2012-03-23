@@ -1,0 +1,134 @@
+http://communities.progress.com/pcom/thread/9818?tstart=-1#9818
+
+Chad Thomson
+4 发贴自 
+2007-9-11
+2007-8-16 上午11:00
+dotNet Compatible MD5 Hashing
+OE 10.0B05
+Linux
+ 
+In the application I am supporting, I have a need to receive an XML message from a dotNet application. 
+ 
+The packet/transport of data does not necessarily need to be encrypted, but the current design has the packet containing a "string" that will be validated by the OE application.  Should the string be validated the request will continue.
+ 
+In an effort to produce a quick solution, I chose to the OE MD5-Digest function, thinking "... surely, since MD5 is a standard, we'll both produce the same hash".
+ 
+Here is a snippet of what I'm dealing with:
+ 
+ 
+Notice the resulting strings are very similar.  The OE version is padded with "020010".
+ 
+What is this padding?
+Why is it there?
+ 
+Any suggestions regarding simple hashing that would be dotNet compatible would be appreciated.
+ 
+Chad.
+ 
+
+Salvador Vinals
+295 发贴自 
+2007-9-11
+2007-8-22 上午11:36   回复： Chad Thomson
+Re: dotNet Compatible MD5 Hashing
+"020010" is prepended because you are using the string function on a raw field. 
+ 
+Try this:
+ 
+/* */
+def var x as raw.
+def var y as longchar.
+def var z as char.
+ 
+x = md5-digest("asdf").
+y = hex-encode(x).
+z = y.
+ 
+display z format "x(40)".
+/* */
+ 
+Hope it helps
+ 
+
+Chad Thomson
+4 发贴自 
+2007-9-11
+2007-8-22 下午1:33   回复： Salvador Vinals
+Re: dotNet Compatible MD5 Hashing
+Thanks, Salvador.
+ 
+"020010" is prepended because you are using the
+string function on a raw field. 
+ 
+This answers the first part of my question.
+ 
+In your example, you use the HEX-ENCODE function.
+I don't believe this function exists under v10.0B.
+ 
+I would most-likely be receiving the md5 digest into a memptr (or [long]char).
+ 
+In v10.0B, how would you recommend that I compare two MD5 values -- one from OpenEdge and the other from an in-bound "char" value?
+ 
+OR
+Perhaps there is another hashing technique that both is common to ABL and web clients (dotNet, etc)?
+ 
+
+Salvador Vinals
+295 发贴自 
+2007-9-11
+2007-8-23 上午8:52   回复： Chad Thomson
+Re: dotNet Compatible MD5 Hashing
+Yes, HEX-ENCODE/DECODE were introduced in 10.1A.
+ 
+With a release prior to 10.1A you could do the equivalent of the ABL HEX-ENCODE function:
+ 
+Extract each byte of the raw variable used to hold the result of the md5-digest function and convert it to two hexadecimal digits. to be appended to a char variable.  Something like:
+ 
+/* */
+def var x as raw.
+def var y as char.
+def var d as char init "0123456789abcdef".
+ 
+def var i as int.
+def var b as int.
+def var d0 as int.
+def var d1 as int.
+ 
+x = md5-digest("asdf").
+y = "".
+ 
+do i = 1 to length(x):
+   b = getbyte (x, i).
+   d0 = trunc (b / 16, 0).
+   d1 = b mod 16.
+ 
+   y = y + substr(d, d0 + 1, 1) + substr(d, d1 + 1, 1).
+end.
+ 
+ 
+display y format "x(40)".
+/* */
+ 
+HIH
+ 
+
+Chad Thomson
+4 发贴自 
+2007-9-11
+2007-8-27 上午10:41   回复： Salvador Vinals
+Re: dotNet Compatible MD5 Hashing
+Yes, HEX-ENCODE/DECODE were introduced in 10.1A.
+ 
+With a release prior to 10.1A you could do the
+equivalent of the ABL HEX-ENCODE function:
+ 
+Extract each byte of the raw variable used to hold
+the result of the md5-digest function and convert it
+to two hexadecimal digits. to be appended to a char
+variable.  Something like:
+ 
+ 
+Thanks.  This will work nicely.
+ 
+Chad.
