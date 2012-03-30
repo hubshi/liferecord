@@ -1,6 +1,6 @@
 EXECNAME
 {gpcdget.i "UT"}
-
+ {mfphead2.i} 和  {mfphead.i} 是有区别的
 {gprun.i ""gpgetver.p"" "(input 4,output ver)"}
 
 validate(v_date <> "" ,"message information")
