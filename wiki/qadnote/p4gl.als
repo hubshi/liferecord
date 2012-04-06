@@ -1,7 +1,6 @@
 DVMP DEFINE VARIABLE %\c AS MEMPTR    NO-UNDO.
 IOPWH DEFINE INPUT-OUTPUT PARAMETER %\c AS WIDGET    NO-UNDO.
 IPHN DEFINE INPUT  PARAMETER %\c AS HANDLE    NO-UNDO.
-<<<<<<< .mine
 PRUCEDURE(procedurename "Procedure Name" usrProc
           )
  PROCEDURE %(procedurename):
@@ -12,7 +11,6 @@ PRUCEDURE(procedurename "Procedure Name" usrProc
   -------------------------------------------------------------*/
  %\c
  END PROCEDURE.
-=======
 PRU(procedurename "Procedure Name" usrProc
     )
  PROCEDURE %(procedurename):
@@ -23,7 +21,6 @@ PRU(procedurename "Procedure Name" usrProc
   -------------------------------------------------------------*/
  %\c
  END PROCEDURE. /* PROCEDURE %(procedurename)*/
->>>>>>> .r311
 ONB ON '%\c':U OF %\S
     DO:
     %\iRETURN.
