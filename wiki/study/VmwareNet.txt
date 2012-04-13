@@ -1,3 +1,7 @@
+当我们复制或改变了一个虚拟机的位置之后，再启动虚拟机时会提示：
+I moved it    I copied it
+如果选择moved的话网卡的mac地址会保持不变，如果选择copied的话网卡的mac地址就会变化；所以需要修改网络配置才能正常通讯！
+
  
 vmware下redhat linux 9使用NAT共享主机IP上网 收藏
 VMware提供:桥接,Host Only和NAT三种连网方式. 我个人认为NAT方式较简单,用它来共享主机的IP,适合那种每台主机只允许一个IP的情况。具体设置如下：

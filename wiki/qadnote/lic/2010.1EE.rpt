@@ -1,0 +1,182 @@
+lvlarrp.p 2+                                   36.16.10.3 Licensed Application Report                                 Date: 04/10/12
+Page:    1                                                      QMS US                                                Time: 20:39:54
+
+Application  License                             License      Appln     Licensed Installed Installed Expiry   Audit       Audit
+Description  Code                                Type         Version      Count Date/Time By        Date     Due Date Days/No.
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+MFG/PRO      0r5fw 0rjfw 0r54x 0v&sw 0r54y psthg Named        eB3             20 10/05/10  demo               10/05/11       90
+Enterprise Application                                                          01:08:37
+
+SSD          zllfk zl7fk zll5l zkrzk zll4l 9kdh0 Named        eB3             20 10/05/10  demo               10/05/11       90
+Shared Services Domain                                                          01:09:21
+
+
+
+                                                           End of Report
+lvlarrp.p 2+                                   36.16.10.3 Licensed Application Report                                 Date: 04/10/12
+Page:    2                                                      QMS US                                                Time: 20:39:54
+
+
+
+
+Report Criteria:                        Report Submitted By:       mfg
+
+
+        Application:                      To:
+
+    Show Only Active Licenses: Yes
+                                                             Output: lic
+                                                           Batch ID:
+lvlarrp.p 2+                                   36.16.10.3 Licensed Application Report                                 Date: 04/10/12
+Page:    1                                                      QMS US                                                Time: 20:50:56
+
+Application  License                             License      Appln     Licensed Installed Installed Expiry   Audit       Audit
+Description  Code                                Type         Version      Count Date/Time By        Date     Due Date Days/No.
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+AIM          49mgy 490gy 49m9z 48yty 49m7y k8cdd Named        eB3             20 10/04/10  mfg                10/04/11
+Warehouse Management                                                            17:49:32
+
+AUDIT        p1xds p19ds p1xdr p3&1s p1x5s 002gc Named        eB3             20 10/04/10  mfg                10/04/11
+License Audit                                                                   17:51:34
+
+COMPLIANCE   p549d p5&9d p54bf p37vd p540d 04vcy Named        eB3             20 10/04/10  mfg                10/04/11
+Compliance                                                                      17:52:13
+
+CONF         p1w7t p187t p1w6v p061t p1wgt 00358 Named        eB3             20 10/04/10  mfg                10/04/11
+Configurator                                                                    17:53:39
+
+CONF         ZZPN4 ZY0TQ ZZKKP ZY8WQ ZZKLP 9YFR5 Named        eB3             50 03/20/09  demo      08/01/09 03/20/10
+Configurator                                                                    22:46:06
+
+CONSIGNMENT  0r14f 0rn4f 0r1fd 0zd1f 0r1fh psy6z Named        eB3             20 10/04/10  mfg                10/04/11
+Consignment Inventory                                                           17:54:21
+
+*ECOMMERCE    ZL7Y5 ZK7Y5 ZL7P4 ZP035 ZL7Q4 9KRWQ Named        eB3             32 04/10/12  mfg                04/10/13       90
+EDI ECommerce                                                                   20:46:50
+
+ECOMMERCE    zlh9s zlv9s zlh1r zp8ms zlh0r 9k&cc Named        eB3             20 10/04/10  mfg                10/04/11
+EDI ECommerce                                                                   17:55:06
+
+ECONTROL     0r4dw 0r&dw 0r45x 0w&rw 0r45y psvgg Named        eB3             20 10/04/10  mfg                10/04/11
+Enhanced Controls                                                               17:56:00
+
+FA           zll2m zl72m zllbn zlhtm zllcn 9kd06 Named        eB3             20 10/04/10  mfg                10/04/11
+Fixed Assets                                                                    17:57:13
+
+FSS          mh&&0 mh4&0 mh&n1 mgw40 mh&s0 2ghkk Named        eB3             20 10/04/10  mfg                10/04/11
+Field Service Scheduler                                                         17:58:11
+
+KBMGMT       pqwh6 pq8h6 pqwc7 pmxj6 pqw66 0p3fm Named        eB3             20 10/04/10  mfg                10/04/11
+Lean Manufacturing                                                              18:00:16
+
+LA           p1xbm p19bm p1xcn p10gm p1x3m 00286 Named        eB3             20 10/04/10  mfg                10/04/11
+Logistics Accounting                                                            18:01:00
+
+MAINT        pqllg pmqlg pqlqh pny5g pqltg 0pdjw Named        eB3            100 03/30/10  mfg                03/30/11
+Active Maintenance                                                              18:02:53
+
+MAINT        PQLLG PMQLG PQLQH PNY5G PQLTG 0PDJW Named        eB3            100 03/30/10  demo               03/30/11
+Active Maintenance                                                              15:14:08
+
+*MFG/PRO      ZL88W ZK88W ZL80X Z&XWW ZL81X 9KQBG Named        eB3             32 04/10/12  mfg                04/10/13       90
+Enterprise Application                                                          20:46:06
+
+MFG/PRO      0r5fw 0rjfw 0r54x 0v&sw 0r54y psthg Named        eB3             20 10/05/10  mfg                10/05/11
+Enterprise Application                                                          01:08:37
+
+MFG/PRO      P1LDL P1PJM P1QJN P225M P1QRM 008L6 Named        eB3              1 10/01/10  demo      10/11/10
+MFG/PRO Foundation                                                              16:13:20
+
+lvlarrp.p 2+                                   36.16.10.3 Licensed Application Report                                 Date: 04/10/12
+Page:    2                                                      QMS US                                                Time: 20:50:56
+
+Application  License                             License      Appln     Licensed Installed Installed Expiry   Audit       Audit
+Description  Code                                Type         Version      Count Date/Time By        Date     Due Date Days/No.
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+MFG/PRO      p6r19 p62n2 p6wp3 p5912 p6ww2 073q& Named        eB3             30 12/19/08  demo      12/31/09 12/19/09
+MFG/PRO Foundation                                                              20:50:11
+
+MFG/PRO      jlwvw jwdhq jlr9p j&fvq jlr6q 7k7f5 Named        eB3            500 12/05/08  demo      12/31/09 12/05/09
+MFG/PRO Foundation                                                              00:30:59
+
+MFG/PRO      p12p2 pgkyw p16zx p2lbw p16qw 00swg Named        eB3            500 01/11/08  demo      12/31/08 01/10/09
+MFG/PRO Foundation                                                              01:55:58
+
+MFG/PRO      P12K2 PGKTW P16VX P2LGW P16KW 00SRG Named        eB2.1          500 12/01/06  mfg       12/31/08 12/01/07
+MFG/PRO Foundation                                                              08:39:21
+
+*PROPLUS      ZL8&8 ZK8&8 ZL8R9 Z&P&8 ZL8S9 9KQKT Named        eB3             32 04/10/12  mfg                04/10/13       90
+PRO/PLUS                                                                        20:47:36
+
+PROPLUS      p17gd p1lgd p17df p2sgd p177d 00rdy Named        eB3             20 10/04/10  mfg                10/04/11
+PRO/PLUS                                                                        18:03:38
+
+QADCC        j7x0j j790j j7x6& j5nfj j7x9j 76223 Named        eB3             20 10/04/10  mfg                10/04/11
+QAD Credit Card                                                                 18:08:31
+
+QLINQ        p58mc p5wmc p58qb p76sc p58xc 04qps Named        eB3             20 10/04/10  mfg                10/04/11
+Qlinq                                                                           18:09:08
+
+*RELMGMT      ZL8DW ZK8DW ZL84X Z&JRW ZL85X 9KQGG Named        eB3             32 04/10/12  mfg                04/10/13       90
+Release Management                                                              20:48:23
+
+RELMGMT      p1t64 p1g64 p1t75 p23k4 p1th4 0054p Named        eB3             20 10/04/10  mfg                10/04/11
+Release Management                                                              18:09:50
+
+*SSD          ZLB2Y ZKB2Y ZLBBZ ZK1&Y ZLBCZ 9KN0D Named        eB3             32 04/10/12  mfg                04/10/13       90
+Shared Services Domain                                                          20:49:07
+
+SSD          zllfk zl7fk zll5l zkrzk zll4l 9kdh0 Named        eB3             20 10/05/10  mfg                10/05/11
+Shared Services Domain                                                          01:09:21
+
+SSD          P1XPJ P1RCP P1SCQ P0KSP P1S2P 00694 Named        eB3              1 10/01/10  demo      10/11/10
+Shared Services Domain                                                          16:13:20
+
+SSD          p3s62 pdgvk p3tsl p2j9k p3tkk 025s0 Named        eB3            500 01/11/08  demo      12/31/07 01/10/09
+Shared Services Domain                                                          01:56:37
+
+SSD          6SP36 6P6CR 6SKDS 6RSSR 6SK3R &RF9B Named        eB2.1          500 12/01/06  mfg       12/31/08 12/01/07
+Shared Services Domain                                                          08:41:19
+
+*SSM          ZLB32 ZKB32 ZLBC3 ZK6N2 ZLBB3 9KN1& Named        eB3             32 04/10/12  mfg                04/10/13       90
+Service and Support                                                             20:49:49
+
+SSM          zllkp zl7kp zlltq zkz4p zllvq 9kd&4 Named        eB3             20 10/04/10  mfg                10/04/11
+Service and Support                                                             18:11:08
+
+*SUPCHAIN     ZL712 ZK712 ZL793 ZQ9Q2 ZL783 9KR3& Named        eB3             32 04/10/12  mfg                04/10/13       90
+Supply Chain Planning                                                           20:50:26
+
+lvlarrp.p 2+                                   36.16.10.3 Licensed Application Report                                 Date: 04/10/12
+Page:    3                                                      QMS US                                                Time: 20:50:56
+
+Application  License                             License      Appln     Licensed Installed Installed Expiry   Audit       Audit
+Description  Code                                Type         Version      Count Date/Time By        Date     Due Date Days/No.
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+SUPCHAIN     j7vby j7hby j7vdz j3nwy j7v3y 7648d Named        eB3             20 10/04/10  mfg                10/04/11
+Supply Chain Planning                                                           18:11:52
+
+VERTEX       mhg8g mht8g mhgfh mdbpg mhg1g 2gjbw Named        eB3             20 10/04/10  mfg                10/04/11
+Sales and Use Tax                                                               18:12:55
+
+WAVE         j7yp7 j7bp7 j7y&6 j6497 j7yz7 761mn Named        eB3             20 10/04/10  mfg                10/04/11
+Warehouse Wave Planning                                                         18:14:28
+
+
+
+                                                           End of Report
+lvlarrp.p 2+                                   36.16.10.3 Licensed Application Report                                 Date: 04/10/12
+Page:    4                                                      QMS US                                                Time: 20:50:56
+
+
+
+
+Report Criteria:                        Report Submitted By:       mfg
+
+
+        Application:                      To:
+
+    Show Only Active Licenses: No
+                                                             Output: LIC
+                                                           Batch ID:
+

@@ -1,0 +1,44 @@
+【问题描述】
+http://space.itpub.net/519536/viewspace-464295
+1.Linux系统中含有中文内容的文件名显示乱码；
+2.使用vi编辑器查看中文内容为乱码；
+3.sqlplus进入到数据库中查看中文内容为乱码；
+4.putty中中文内容显示为乱码。
+
+【问题原因】
+1.没有安装中文支持的包；
+2.相应的环境变量需要做相应的调整
+
+【问题处理】
+1.确认系统版本
+# cat /etc/redhat-release
+Red Hat Enterprise Linux Server release 5.1 (Tikanga)
+
+2.查看linux系统中是否已安装fonts-chinese中文语言支持包，如果没有安装，需要下载相应版本的rpm包进行安装
+# rpm -aq | grep fonts-chinese
+fonts-chinese-3.02-12.el5
+
+3.修改/etc/sysconfig/i18n文件为以下内容
+LANG="zh_CN.GB18030"
+LANGUAGE="zh_CN.GB18030:zh_CN.GB2312:zh_CN"
+SUPPORTED="zh_CN.GB18030:zh_CN:zh:en_US.UTF-8:en_US:en"
+SYSFONT="lata0-sun16"
+export LC_ALL="zh_CN.GB18030"
+
+4.在/etc/profile尾部添加如下内容
+export LC_ALL="zh_CN.GB18030"
+
+5.重新启动机器，Linux系统中含有中文内容的文件名显示乱码问题和使用vi编辑器查看中文内容为乱码的问题得到解决
+# reboot
+
+6.在oracle用户的.bash_profile中添加如下内容，解决sqlplus进入到数据库中查看中文内容为乱码问题
+export NLS_LANG=AMERICAN_AMERICA.WE8ISO8859P1
+
+7.设置putty中Window- Translation中的Received data assumed to be in which character set设置为ISO-8859-1:1998 (Latin-1, West Europe)解决putty中中文内容显示为乱码问题。
+
+至此，目前遇到的中文乱码的问题得以解决。
+
+Good luck.
+
+secooler
+10.09.22
