@@ -80,3 +80,6 @@ A:1. PM_code = "L"
 
 Q:在CHAR上的程序怎么能在WEBUI上运行？
 A:在mgpgmimt.p-36.3.21.1 程序信息维护里注册
+
+Q:怎么可以让text可以输入的字符超过表单显示
+A:view-as fill-in size 40 by 1. 请参照程序mgfdsply.p 

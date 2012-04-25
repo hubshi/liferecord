@@ -1,10 +1,18 @@
-1)在 LINUX 管理中，常有需要修改根目录下 .bash_profile 文件，更改环境变量的情况，文件修改后，一般的做法是重新登录，或者重新启动机器，不知道大家是怎么做的，反正我以前是用前面的两个办法中的一个，感觉很不方便。现在发现了一个命令: source，在修改好 .bash_profile 文件后，直接运行这个命令如： 
+1)在 LINUX 管理中，常有需要修改根目录下 .bash_profile 文件，更改环境变量的情况，
+     文件修改后，一般的做法是重新登录，或者重新启动机器，不知道大家是怎么做的，
+     反正我以前是用前面的两个办法中的一个，感觉很不方便。
+     现在发现了一个命令: source，在修改好 .bash_profile 文件后，直接运行这个命令如： 
 
 #soure .bash_profile  
 就可以直接让环境变量的修改生效了。 
+
+这个方法的原理就是再执行一次/etc/profile脚本，注意如果用
+sh /etc/profile
+是不行的，因为sh是在子shell进程中执行的，即使PATH改变了也不会反应到当前环境中，但是source是在当前 shell进程中执行的，所以我们能看到PATH的改变。
 
 (2)另外据发现 "." 也可以使配置好的环境变量生效，同上的等效命令为: 
 
 #. .bash_profile 
 据笔者认为，“.” 命令应该是soure命令的缩写，欢迎大家发表对本文章的看法。
 原文地址：http://www.gzu521.com/campus/article/software/200805/168456.htm
+           http://www.weizhifeng.net/linux-source-command-path/

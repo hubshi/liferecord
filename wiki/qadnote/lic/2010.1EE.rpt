@@ -180,3 +180,91 @@ Report Criteria:                        Report Submitted By:       mfg
                                                              Output: LIC
                                                            Batch ID:
 
+
+lvlarrp.p 2+                                   36.16.10.3 Licensed Application Report                                 Date: 04/17/12
+Page:    1                                                   ShinEtsu(JS)                                             Time: 17:23:29
+
+Application  License                             License      Appln     Licensed Installed Installed Expiry   Audit       Audit
+Description  Code                                Type         Version      Count Date/Time By        Date     Due Date Days/No.
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+AIM          0VBHD 0TRHD 0VB6F 0T0VD 0VB6G PTNFY Named        eB3             50 12/19/11  mfg                12/18/12       90
+Warehouse Management                                                            11:44:57
+
+COMPLIANCE   0V54G 0TQ4G 0V5FH 0X6PG 0V5FD PTT6W Named        eB3             50 12/19/11  mfg                12/18/12       90
+Compliance                                                                      11:45:44
+
+CONF         0VBZ2 0TRZ2 0VBP3 0T&S2 0VBP0 PTNX& Named        eB3             50 12/19/11  mfg                12/18/12       90
+Configurator                                                                    11:46:32
+
+CONSIGNMENT  0V4KX 0TPKX 0V4VW 0W9QX 0V4VZ PTV&H Named        eB3             50 12/19/11  mfg                12/18/12       90
+Consignment Inventory                                                           11:47:22
+
+ECOMMERCE    0V69N 0TM9N 0V60M 0Y1MN 0V60Q PTSC7 Named        eB3             50 12/19/11  mfg                12/18/12       90
+EDI ECommerce                                                                   11:48:29
+
+ECONTROL     0V7ND 0TNND 0V7WF 0ZL1D 0V7WG PTRQY Named        eB3             50 12/19/11  mfg                12/18/12       90
+Enhanced Controls                                                               11:49:12
+
+FA           0VB2& 0TR2& 0VBCJ 0VPT& 0VBCK PTN02 Named        eB3             50 12/19/11  mfg                12/18/12       90
+Fixed Assets                                                                    11:50:13
+
+FSS          0VBFD 0TRFD 0VB4F 0T6SD 0VB4G PTNHY Named        eB3             50 12/19/11  mfg                12/18/12       90
+Field Service Scheduler                                                         11:51:00
+
+KBMGMT       0V87T 0TT7T 0V8GV 0R9ST 0V8GR PTQ58 Named        eB3             50 12/19/11  mfg                12/18/12       90
+Lean Manufacturing                                                              11:52:25
+
+LA           0VB2W 0TR2W 0VBCX 0VQ6W 0VBCY PTN0G Named        eB3             50 12/19/11  mfg                12/18/12       90
+Logistics Accounting                                                            11:53:04
+
+MFG/PRO      0V8TD 0TTTD 0V8LF 0RXGD 0V8LG PTQRY Named        eB3             50 12/16/11  mfg                12/15/12       90
+Enterprise Application                                                          18:53:24
+
+MFG/PRO      PQRM2 PPBM2 PQR&3 PMF02 PQRX2 0P7P& Named        eB3             50 01/04/11  mfg                01/04/12
+Enterprise Application                                                          15:02:40
+
+PROPLUS      0V73R 0TN3R 0V7BS 0RS3R 0V7BT PTR1B Named        eB3             50 12/19/11  mfg                12/18/12       90
+PRO/PLUS                                                                        11:53:45
+
+RELMGMT      0V8YD 0TTYD 0V8QF 0RJBD 0V8QG PTQWY Named        eB3             50 12/19/11  mfg                12/18/12       90
+Release Management                                                              11:54:30
+
+SSD          0VBDG 0TRDG 0VB5H 0T1YG 0VB5D PTNGW Named        eB3             50 12/19/11  mfg                12/18/12       90
+Shared Services Domain                                                          11:55:20
+
+SSM          0VBKK 0TRKK 0VBVL 0T64K 0VBV& PTN&0 Named        eB3             50 12/19/11  mfg                12/18/12       90
+Service and Support                                                             11:56:02
+
+SUPCHAIN     0V7&K 0TN&K 0V7SL 0Z96K 0V7S& PTRK0 Named        eB3             50 12/19/11  mfg                12/18/12       90
+Supply Chain Planning                                                           11:56:55
+
+VERTEX       0V8BT 0TTBT 0V83V 0RDMT 0V83R PTQ88 Named        eB3             50 12/19/11  mfg                12/18/12       90
+Sales and Use Tax                                                               11:57:30
+
+lvlarrp.p 2+                                   36.16.10.3 Licensed Application Report                                 Date: 04/17/12
+Page:    2                                                   ShinEtsu(JS)                                             Time: 17:23:29
+
+Application  License                             License      Appln     Licensed Installed Installed Expiry   Audit       Audit
+Description  Code                                Type         Version      Count Date/Time By        Date     Due Date Days/No.
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+WAVE         0VBWV 0TRWV 0VBNT 0T&3V 0VBNS PTNY9 Named        eB3             50 12/19/11  mfg                12/18/12       90
+Warehouse Wave Planning                                                         11:58:15
+
+
+
+                                                           End of Report
+lvlarrp.p 2+                                   36.16.10.3 Licensed Application Report                                 Date: 04/17/12
+Page:    3                                                   ShinEtsu(JS)                                             Time: 17:23:29
+
+
+
+
+Report Criteria:                        Report Submitted By:       qadfiy
+
+
+        Application:                      To:
+
+    Show Only Active Licenses: No
+                                                             Output: licrp
+                                                           Batch ID:
+
