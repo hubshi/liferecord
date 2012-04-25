@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Templates encode="utf8escenc"><Template Name="defChar" Comments="0" Strings="0">define variable ^ as character no-undo.&#xD;
+</Template><Template Name="defLike" Comments="0" Strings="0">define variable ^ like no-undo.&#xD;
+</Template><Template Name="defInteger" Comments="0" Strings="0">define variable ^ as integer no-undo.&#xD;
+</Template><Template Name="defDecimal" Comments="0" Strings="0">define variable ^ as decimail no-undo.&#xD;
+</Template><Template Name="defDate" Comments="0" Strings="0">define variable ^ as date no-undo.&#xD;
+</Template></Templates>
