@@ -108,4 +108,5 @@ assign destDir = "/qad/2010ee/mfgpro/us/zz".&#xD;
 propath = srcDir + propath.&#xD;
 compile value(src) save into value(destDir).&#xD;
 propath = substring(propath,length(srcDir) + 1).</Template><Template Name="{mfphead2.i}" Comments="0" Strings="0">{mfphead2.i}  /* PRINT PAGE HEADING FOR REPORTS 80 COLUMNS */&#xD;
+{mfselprt.i "terminal" 80}&#xD;
 {mftrl080.i}  /* REPORT TRAILER */</Template></Templates>
