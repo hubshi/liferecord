@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Templates encode="utf8escenc"><Template Name="V8:ConvertMode" Comments="0" Strings="0">/* [+procedureName+] - [+procedureDesc+]                                                 */&#xD;
+<Templates encode="utf8escenc"><Template Name="V8:ConvertMode" Comments="0" Strings="0">/* [FILE_NAME][FILE_EXTENSION] - [+procedureDesc+]                                                 */&#xD;
 /*V8:ConvertMode=[+Maintenance+]                                                 */&#xD;
 /* Environment: Progress:10.1B   QAD:eb21sp7    Interface:Character          */&#xD;
 /* REVISION: 24YP LAST MODIFIED: 04/24/12 BY: zy expand xrc length to 120    */&#xD;
