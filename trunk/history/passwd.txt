@@ -5,3 +5,4 @@ application	account 			pwd
 91记账		yunzy@softspeed.com.cn		0......1
 mst-wifi					abc123.....a
 汽车之家	r7733251		 	ni......8
+SSFTPSERVER     ftp://mfg:mfgpro@211.155.28.253
