@@ -1,0 +1,5 @@
+开启硬盘AHCI模式
+1. 下载安装驱动。
+2. run C:\DRIVERS\WIN\IMSM\PREPARE\install.cmd
+3. 重启并且修改BIOS到AHCI模式
+4. 重新安装PCI驱动，路径为C:\DRIVERS\WIN\IMSM\
