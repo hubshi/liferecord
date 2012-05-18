@@ -70,5 +70,5 @@ Received data assumed to be in which character set 中,
 现在打开putty,登录成功后,在shell中输入:export LC_ALL=&amp;#39;zh_CN.utf8&amp;#39;,
 这样应该可以的 <br>
 
-Q:那位大虾知道我用netterm登陆到unix系统后，显示的线条方框全是怪码，怎样处理阿？我在其他机子上安装后却是正常的？？？郁闷
-A:TERM=vt100;export TERM
+那位大虾知道我用netterm登陆到unix系统后，显示的线条方框全是怪码，怎样处理阿？我在其他机子上安装后却是正常的？？？郁闷
+TERM=vt100;export TERM

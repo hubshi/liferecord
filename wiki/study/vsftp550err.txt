@@ -1,0 +1,61 @@
+SUSE vsftp:500 OOPS: could not bind listening IPv4 socket 解决办法
+http://studyerabbit.bokee.com/6895459.html
+关键词： SUSE    vsftp    500    错误    解决办法                                           
+
+几天以来一直被困扰。
+
+终于有一个解决了。
+
+使用SUSE linux做服务，windows的机器ftp上来就是ls -l不出文件列表。ls就正常。
+
+ls -l的结果和ls的结果在ftp常规模式下看没什么不同。搜了半天ls -l为什么不能显示列表。
+
+解决过程：看debug模式的ftp，似乎是返回超时导致，有一个time out提示
+
+于是再看使用了什么样子的ftp导致返回超时的。
+
+使用了pure-ftp，pure-ftpd在起作用。当时看到的是vsftpd和pure-ftpd都有，不过进入ftp使用的是pure-ftpd。
+
+好，root用户进入yast2配置中关掉pure-ftpd。外面windows一连接ftp，失败了。自己连接自己都不行，说明ftp服务没启动好。怪事。
+
+那咱们继续配pure-ftpd，左改右改就是不行。网上找了很多各类linux和unix的配置文章，发现linux版本是多，各种版本的安装地点都不一样。终于有文章说，SUSE下面不适合安装pure-ftpd，早说啊，费这么大劲。
+
+那么方向转为努力搞vsftpd。还是关掉pure-ftpd，启动vsftpd，重新启动，/etc/init.d/xinetd restart
+
+还是不行。继续报500错误 500 OOPS: could not bind listening IPv4 socket
+
+故障现象如下：
+
+C:\Documents and Settings\finite_hao>ftp 10.200.18.122
+Connected to 10.200.18.122.
+500 OOPS: could not bind listening IPv4 socket
+
+
+继续找。有文章如是说：
+
+“/usr/local/etc/rc.d/vsftpd.sh启动就好了，不要restart
+
+你们少做的那些事情vsftpd.sh会提示你们去做。 
+
+一个是listen=yes还有一个是background=yes，你们估计都没有加”
+
+下文说：如果需要使用这个脚本的话，用ports安装的时候要在config的时候选择rcNG，否则不会有这个脚本
+
+找不到这个文件。也不想重装vsftp。此路不通，继续。
+
+再下一个帖子说：在inetd里面改了一下好了
+
+怎么能……
+
+ok继续看看别的。
+
+终于发现了一个说法：
+
+修改/etc/vsftpd.conf
+
+注释掉listen=YES这一行就可以了.
+
+listen=yes说的是：standalone模式
+
+改，重启，终于上去了。太不容易了。
+
