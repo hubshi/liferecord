@@ -83,3 +83,7 @@ A:在mgpgmimt.p-36.3.21.1 程序信息维护里注册
 
 Q:怎么可以让text可以输入的字符超过表单显示
 A:view-as fill-in size 40 by 1. 请参照程序mgfdsply.p 
+
+Q:条码是怎么制作的?
+A:领跑条码标签设计软件下载地址
+  http://www.xdowns.com/soft/softdown.asp?softid=74120

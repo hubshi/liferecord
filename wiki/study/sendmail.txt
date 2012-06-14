@@ -1,0 +1,8 @@
+Q:怎么解决SendMail sm-client启动慢
+A:修改/etc/hosts将主机名加到localhost后面
+  http://wenku.baidu.com/view/90404914cc7931b765ce153b.html
+	修改前
+	127.0.0.1 localhost.localdomain localhost
+	修改后
+	127.0.0.1 localhost.localdomain localhost dbserver
+	

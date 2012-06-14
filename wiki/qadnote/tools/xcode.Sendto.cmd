@@ -1,6 +1,7 @@
 rem @echo off
 set vfile=%1
 set xrc=c:\qadguicli\xrc
+rem set xrc=\\192.168.0.92\admin\cim\xrc
 set src=C:\qadguicli\garbage\src
 set cim=C:\qadguicli\garbage\cim
 set gui=c:\qadguicli\garbage\gui
@@ -25,11 +26,12 @@ rem Xcode.
 cd /d %src%
 copy %src%\*.cim %xrc%\p.cim
 %xcode%\xcode -d %xrc% *.p
+%xcode%\xcode -d %xrc% *.w
 %xcode%\xcode -d %xrc% *.i
 %xcode%\xcode -d %xrc% *.v
 %xcode%\xcode -d %xrc% *.t
 
-if %2=="" goto exitme
+rem if %2=="AA" goto exitme
 
 rem convert.
 
