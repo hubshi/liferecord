@@ -1,0 +1,15 @@
+Cent OS在secureCRT下乱码显示问题解决方法
+http://www.cnblogs.com/wangdx/archive/2009/11/02/1594476.html
+1、 修改 /etc/sysconfig/i18n 
+内容如下： 
+LANG="zh_CN.GBK" 
+SUPPORTED="zh_CN.GBK:zh_CN.zh:en_US.UTF-8:en_US:en" 
+SYSFONT="latarcyrheb-sun16" 
+2、  修改 options/Session options/Appearance/Charactor 
+     default
+
+[showaserver]$cat  /etc/sysconfig/i18n
+LANG="zh_CN.GB18030"
+LANGUAGE="zh_CN.GB18030:zh_CN.GB2312:zh_CN"
+SUPPORTED="zh_CN.GB18030:zh_CN:zh:en_US.UTF-8:en_US:en:ja_JP.eucJP:ja_JP:ja"
+SYSFONT="latarcyrheb-sun16"

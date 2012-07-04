@@ -61,6 +61,13 @@ A:QAD_WKFL KEY1 = fm_desc QAD_KEY2 = fm.
 Q:MRP数据里为什么会有空site数据
 A:.1.4.16物料库存数据里有空地点数据引起.
 
+Q:MRP数据有异常怎么处理
+A:  for each qad_wkfl where qad_key1 = "mrp/drp":
+          display qad_wkfl with side-labels.
+    有资料就删掉
+    23.25.1
+    23.2
+
 Q:程序慢有什么办法？
 A:在编写程序时,一些大数据量的表(诸如tr_hist,abs_mstr,gltr_hist,ih_hist,idh_hist等),尽量不用BUFF, 而是先用临时表表抽取合适的数据记录. 不然多用户同时用时,内存占用太大. 
 

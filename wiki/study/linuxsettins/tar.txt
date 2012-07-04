@@ -1,0 +1,15 @@
+tar 分卷压缩和合并
+http://bbs.chinaunix.net/thread-1960514-1-1.html
+
+以每卷500M为例
+tar分卷压缩：tar cvzpf - somedir | split -d -b 500m 
+tar多卷合并：cat x* > mytarfile.tar.gz
+============================
+例如：tar czvpf - server | split -d -b 1000m 
+会生成1G的文件多个，名称x00 x01 ......
+然后cat x0* > server090827.tar.gz(这步很快的！)
+tar zxvf server090827.tar.gz
+
+
+HP-UX tar command
+tar -cvf /db2/vst/bakup/hlp001.tar /db2/vst/bakup/hlp001.bak | split -b 500m

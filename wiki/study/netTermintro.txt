@@ -142,6 +142,11 @@ NetTerm使用技巧：
 ☆英文丢失现象
 如果你用netterm发现有英文丢失，但是中文没有事，请把字体换成
 isi_ansi不要使用预定义的isi_oem。
+
+☆字体
+	简体字体：isi_oem  字型：常规  大小:12  字符集:西方
+	繁体字体：MingLiU  字型：常规  大小:12  字符集:CHINESE_BIG5
+	
 ☆增加pgup,pgdn功能
 很多网友一定不习惯用和P进行上下翻页，如果能使用pgup和
 pgdn就好了。
