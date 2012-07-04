@@ -1,0 +1,2 @@
+android
+/data/dalvlk-cache 这里的文件可以删除

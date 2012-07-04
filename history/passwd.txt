@@ -1,4 +1,4 @@
-application	account 			pwd
+application	account 			pwd  email
 新浪微博 	nd4zu7-1@yiii.net		1....2
 导航犬		12665504(nd4zu7-1@yiii.net)	1....2
 高德地图	yunzy@live.cn
@@ -6,3 +6,4 @@ application	account 			pwd
 mst-wifi					abc123.....a
 汽车之家	r7733251		 	ni......8
 SSFTPSERVER     ftp://mfg:mfgpro@211.155.28.253
+51CTO	nd4zu7	1....2 nd4zu7-1@yiii.net
