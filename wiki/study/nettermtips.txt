@@ -72,3 +72,7 @@ Received data assumed to be in which character set 中,
 
 Q:那位大虾知道我用netterm登陆到unix系统后，显示的线条方框全是怪码，怎样处理阿？我在其他机子上安装后却是正常的？？？郁闷
 A:TERM=vt100;export TERM
+
+Q:NETTERM 繁体字体找不到怎么办？
+A:NETTERM -> 字体 -> 显示更多字体 -> 字体设置 -> 根据语言设置隐藏字体 / 还原默认字体
+
