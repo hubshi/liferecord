@@ -45,6 +45,14 @@ A:1.longin as sa
   3.prostrct repair mfgdemo mfgdemo.st
   4.startDB
 
+Q:数据文件大于2G怎么处理
+	1.prostrct list mfgdemo
+	2.新增文件add.st(目录为绝对路径)
+		d "TRANSACTION":7,64 \prod\db
+	3.prostrct add mfgdemo add.st
+	4.prostrct list mfgdemo
+
+
 Q:供应商日程单和标准采购单，在数据库上的那个栏位进行区分啊?
 A:pod_sched po_sched
 

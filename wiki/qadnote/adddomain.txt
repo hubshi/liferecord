@@ -1,0 +1,18 @@
+
+where
+create
+mfnp
+fields
+
+{mfnp.i si_mstr site  site site si_site si_site} {mfnp.i si_mstr site  " si_mstr.si_domain = global_domain and si_site "  site si_site si_site}
+
+{mfnp01.i cs_mstr csset cs_set ""SIM"" cs_type cs_type}  {mfnp01.i cs_mstr csset cs_set ""SIM""  " cs_mstr.cs_domain = global_domain and cs_type "  cs_type}
+
+{mfnp.i cs_mstr csset cs_set csset cs_set cs_set}  {mfnp.i cs_mstr csset  " cs_mstr.cs_domain = global_domain and cs_set "  csset cs_set cs_set}
+
+{mfnp05.i bom_mstr bom_fsm_type "bom_fsm_type = """" " bom_parent "input parent"}   {mfnp05.i bom_mstr bom_fsm_type " bom_mstr.bom_domain = global_domain and bom_fsm_type  = """" " bom_parent "input parent"}
+
+{mfnp05.i ecm_mstr ecm_mstr "(ecm_eff_date <> ?)" ecm_nbr "input ecmnbr"} {mfnp05.i ecm_mstr ecm_mstr " ecm_mstr.ecm_domain = global_domain and (ecm_eff_date  <> ?)" ecm_nbr "input ecmnbr"}
+
+{mfnxtsq.i wo_mstr wo_lot woc_sq01 wolot} {mfnxtsq.i  "wo_mstr.wo_domain = global_domain and " wo_mstr wo_lot woc_sq01 wolot}
+

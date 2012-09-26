@@ -1,0 +1,35 @@
+Unable to open word-break table file <table-num>. (2736)  
+http://blog.163.com/songlin_li2010/blog/static/1718536262011495217135/
+2011-05-09 17:21:07|  ·ÖÀà£º Progress |×ÖºÅ ¶©ÔÄ
+ID: P6436
+Title: "Error 2736 when connecting to the database."
+Created: 08/15/2002	Last Modified: 03/21/2008
+Status: Verified
+WME('Symptoms: '); 
+Symptoms:  
+Error 2736 when connecting to the database.
+
+Unable to open word-break table file <table-num>. (2736)
+
+Unable to open word-break table file 1. (2736)
+
+WME('Facts: '); 
+Facts:  
+Progress 9.1x WME('Facts: '); 
+OpenEdge 10.x WME('Facts: '); 
+All Supported Operating Systems
+WME('Cause: '); 
+Cause:  
+A word-break rule file has been associated with the database and cannot be found. These files are named "proword.<table-num>".
+For example: proword.1
+WME('Fixes: '); 
+Fixes:  
+Check whether the file exists in the Progress installation directory (DLC) and whether its permissions are set correctly.
+Additionally, verify whether an environment variable PROWDn=<path_to_proword.n> is defined. (n = the rule-number specified when the proutil wbreak-compiler was run).
+If this file doesn't exist, as a last resort the word-break rule can be changed back to the default by doing the following:
+        proutil <database> -C word-rules 0
+        proutil <database> -C idxbuild all
+WME('Notes: '); 
+Notes:  
+Changing the word-break rule of the database will impact the search capabilities of the application. Expect any search using the CONTAINS operator to make use of word-indexes to return different results if the word-break rule is changed. WME('Notes: '); Reference to Written Documentation:
+Progress Database Administration Guide and Reference
