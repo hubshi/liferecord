@@ -11,5 +11,7 @@ tar多卷合并：cat x* > mytarfile.tar.gz
 tar zxvf server090827.tar.gz
 
 
-HP-UX tar command
+HP-UX tar command '分卷为500M
 tar -cvf /db2/vst/bakup/hlp001.tar /db2/vst/bakup/hlp001.bak | split -b 500m
+
+tar cvf - /app/mfg | split -b 1800m - /db/rbak/rbak.tar
