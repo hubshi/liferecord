@@ -1,0 +1,105 @@
+Here's the KB entries I mentioned:
+
+
+-------
+
+P27242:
+
+
+FACT(s) (Environment):
+
+UNIX
+
+SYMPTOM(s):
+
+
+
+Shared-memory segment already exist for <database-name>. (1172)
+
+Invalid address to attach the shared memory segment (1173)
+
+SYSTEM ERROR: Invalid shared memory segment identifier (1174)
+
+SYSTEM ERROR: Unspecified shared memory error errno= (1180)
+
+Shared memory in use by another process. (1260)
+
+There is no server for database <dbname>. (1423)
+
+CAUSE:
+
+Shared memory for the database is still being addressed by the system
+even though the database is no longer running.
+
+FIX:
+
+The memory segment must be identified and removed. 
+
+1. Use Progress command "proutil -C dbipcs" or UNIX command "ipcs" to
+identify shared memory segment
+
+2. Use the UNIX command ipcrm -m (ID#), to remove the shared memory
+segments for the database which has crashed and you wish to restart.
+(See the man pages on your system)
+
+On Linux RedHat 7.2 and 7.3 the option to remove the shared memory is
+ipcrm shm <id >
+
+-----
+
+15912
+
+GOAL:
+
+How to find Shared Memory used by database proutil -C dbipcs
+
+GOAL:
+
+How to find and remove invalid or orpahned Shared Memory using dbipcs
+and IPCRM.
+
+FIX:
+
+
+In some support cases you may need to know what Shared Memory
+Segments are attached to Progress Databases. (For example; in the case
+of a database crash where the shared memory was not released and you
+cannot restart the database - when you are getting a 'shared memory
+already in use' error) In cases like this to determine what shared
+memory segments are used by databases use the command: 
+
+proutil -C dbipcs (notice no dbname!) 
+
+This will display all databases on system and the shared memory ID
+used by each as in the example below. 
+
+PROGRESS SHARED MEMORY STATUS 
+ID ShMemVer Seg# InUse Database 
+68 - - - (not PROGRESS) 
+100 3 0 YES /db/work5/sports 
+101 3 1 - /db/work5/sports 
+120 3 0 NO /db/work5/test 
+150 2 - - (unsupported shared memory version) 
+
+
+ID indicates the shared-memory ID. 
+
+ShMemVer specifies the shared memory version. 
+
+Seg# indicates the shared-memory segment number. One database can own
+more than one segment. 
+
+InUse Specifies whether the segment is in use. YES or NO are display
+only if the segment # is 0. All other segments show a dash(-) 
+
+Database represents full pathname to database - This column will even
+represent non-progress db's and different versions of progress db's (
+an unsupported shared memory version (-) is another version of
+progress) 
+You can then use the UNIX command ipcrm -m (ID#), if necessary, to
+remove the shared memory for the database which has crashed and you
+wish to restart. (See the man pages on your system) 
+
+To see the amount of shared memory in use by a database, use the
+PROMON activity screen for that database. 
+

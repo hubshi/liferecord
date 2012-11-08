@@ -1,0 +1,38 @@
+lvlarrp.p                                             36.16.10.3 许可应用程序报表                                     日期: 10/22/12
+页:      1                                             东风康明斯发动机有限公司                                       时间: 20:43:08
+
+应用程序     许可                                许可         Appln         许可 安装      安装      截止     审计         审计
+描述         代码                                类型         版本          数量 日期/时间 人        日期     截止日期  天数/号
+------------ ----------------------------------- ------------ -------- --------- --------- --------- -------- -------- --------
+CONSIGNMENT  VBMJN V9XJN VBMRM VFSMN VBMSQ FCCL7 名称为       eB2.1          105 10/10/12  mfg                10/10/13       30
+Consignment Inventory                                                           10:34:12
+
+ECOMMERCE    VBPHF V9ZHF VBP6D VHJKF VBP7H FC9FZ 名称为       eB2.1          105 10/10/12  mfg                10/10/13       30
+EDI ECommerce                                                                   10:33:41
+
+FA           VBT08 V9L08 VBT99 VB6R8 VBT8B FC52T 名称为       eB2.1          105 10/10/12  mfg                10/10/13       30
+Fixed Assets                                                                    10:33:02
+
+MFG/PRO      VBRS4 V9JS4 VBR&5 V9FF4 VBRJ6 FC7VP 名称为       eB2.1          105 10/10/12  mfg                10/10/13       30
+MFG/PRO Foundation                                                              10:31:04
+
+RELMGMT      VBRX4 V9JX4 VBRM5 V9194 VBRN6 FC7ZP 名称为       eB2.1          105 10/10/12  mfg                10/10/13       30
+Release Management                                                              10:31:40
+
+SUPCHAIN     VBQPB V9YPB VBQZC VGS0B VBQY8 FC8MR 名称为       eB2.1          105 10/10/12  mfg                10/10/13       30
+Supply Chain Planning                                                           10:32:20
+
+
+
+                                                           报表结束
+lvlarrp.p                                             36.16.10.3 许可应用程序报表                                     日期: 10/22/12
+页:      2                                             东风康明斯发动机有限公司                                       时间: 20:43:08
+
+
+
+
+报表选择条件:                           报表提交人:                mfg
+
+             应用程序:                      至: 
+                 仅显示活动许可: N)否                            输出: window
+                                                            批处理 ID: 

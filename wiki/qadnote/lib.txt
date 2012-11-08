@@ -117,3 +117,10 @@ DO i = 1 to length(input code_cmmt).
       undo, retry.
    end.
 end.
+
+/*计算总账成本的标准程序*/
+{gpsct03.i &cost=sct_cst_tot}
+
+
+   /* Determine length of field as defined in db schema */
+ {gpfldlen.i}

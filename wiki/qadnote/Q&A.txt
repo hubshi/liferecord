@@ -102,3 +102,29 @@ A:view-as fill-in size 40 by 1. 请参照程序mgfdsply.p
 Q:条码是怎么制作的?
 A:领跑条码标签设计软件下载地址
   http://www.xdowns.com/soft/softdown.asp?softid=74120
+  
+Q:GUI里怎么停止启动动画
+A:修改progress.svg
+  spin=no
+  
+Q:资源不足有什么解决方案？
+A: vst start scripts
+   DLC=/app/dlc/91D;		export DLC
+   PATH=$PATH:$DLC;		export PATH
+   PROMSGS=$DLC/promsgs;		export PROMSGS
+   PROTERMCAP=$DLC/protermcap;	export PROTERMCAP
+   DB=/db2/vst/prod;		export DB
+    
+   #loop-db-start -S merant
+     $DLC/bin/proserve $DB/mfg001 -L 500000 -c 350 -B 80000 -spin 6000 -n 230 -bibufs 24 -S 6000 [-minport 40000 -maxport 43000] -N TCP
+     $DLC/bin/proapw   $DB/mfg001
+     $DLC/bin/probiw   $DB/mfg001
+     $DLC/bin/prowdog  $DB/mfg001
+     $DLC/bin/proserve $DB/hlp001 -L 8000 -c 350 -B 8000 -spin 2000 -n 230  -S 60002 [-minport 44000 -maxport 45000] -N TCP
+     $DLC/bin/proserve $DB/prg001 -L 8000 -c 350 -B 8000 -n 230  -S 60003  [-minport 46000 -maxport 47000] -N TCP
+     $DLC/bin/proserve $DB/adm001 -L 8000 -c 350 -B 8000 -spin 2000 -n 230  -S 60004 [-minport 48000 -maxport 49000] -N TCP
+   
+   #loop-db-end
+   
+Q: how to get os userid
+A: program mf1.p procedure getOSUserid:
