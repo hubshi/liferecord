@@ -128,3 +128,10 @@ A: vst start scripts
    
 Q: how to get os userid
 A: program mf1.p procedure getOSUserid:
+
+Q:票据流程是什么样的
+A:产生AR(27.1)->应收转成应收票据(27.6.1)->确认(27.6.20)
+  注销票据(27.6.4)->维护应付票据(28.9.10)->应付票据注销(28.9.13)
+
+Q:Excel读入时字符串不和原值一样怎么办？
+A:用sheeta:RANGE(i,j):FormulaR1C1替代sheeta:RANGE(i,j):Value
