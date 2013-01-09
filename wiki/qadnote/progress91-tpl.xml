@@ -147,4 +147,8 @@ OUTPUT CLOSE.&#xD;
          readkey.&#xD;
          apply lastkey.&#xD;
       end.&#xD;
-   end.</Template></Templates>
+   end.</Template><Template Name="InputfromOS-DIR" Comments="0" Strings="0">input from os-dir([+ImportFromDir+]).&#xD;
+repeat:&#xD;
+import .&#xD;
+end.</Template><Template Name="R1C1" Comments="0" Strings="0">:FormulaR1C1</Template><Template Name="Detail/Summary" Comments="0" Strings="0">define variable [+variable+] like mfc_logical&#xD;
+   label "Detail/Summary" format "Detail/Summary" initial yes.</Template><Template Name="validate" Comments="0" Strings="0">validate([+condition+],"")</Template></Templates>
