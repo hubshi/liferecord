@@ -1,0 +1,14 @@
+How to print in landscape mode 
+Author: QAD Support Article ID: AA-01763 Views: 97 Created: 1997-10-08 16:22 Last Updated: 2011-01-17 17:54 	0 Rating/ Voters 	     
+goal: How to print in landscape mode 
+fact: MFG/PRO All Versions
+fact: HP LaserJet printer
+fact: WinPrint
+symptom: cannot print report in landscape
+symptom: Need to print a report in landscape format 
+fix: Create landscape printer setup in 36.13.2 Printer Setup Maintenance (mgmgmt05.p) by
+1) Entering any new printername in Output To: 
+2) Enter Printer Type: HP LASER. This will automatically bring in the default sequences
+3) Use escape sequence /027&l1O on the 80 and 132-COL Start Ctrl: lines.
+
+In MFG/PRO eB, print functions can be integrated with the Windows Print functions. For more information see the solution How to set up the Windows Printing output option (WinPrint) in the GUI Client.

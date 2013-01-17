@@ -147,3 +147,6 @@ A:1/etc/pam.d/login
 
 Q:请问在修改fstab文件后，如何使他生效（不用重启）?
 A: mount -a
+
+Q:rm -rf 提示参数列表过长怎么办
+A:find . -name "*" -print | xargs rm -rf 

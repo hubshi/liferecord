@@ -1,0 +1,22 @@
+QAD, Inc. 
+License Code Sheet 
+You will be prompted to enter the license code number(s) on this sheet when you install MFG/PRO. 
+Please safeguard this document. 
+There is a provision in QAD's software to monitor the count of sessions and user ID's. This utility 
+will help you identify how many sessions are started / running on the database at any given point 
+in time. The license code number at the bottom of this sheet will identify to the software the number 
+of sessions for which you are licensed at the referenced site location. 
+Each time a user logs onto MFG/PRO, it will show the total of sessions logged on and the total 
+number of licensed sessions allowed on MFG/PRO per your license agreement. If a warning 
+message appears stating that the usage of the software exceeds the number of licensed sessions, 
+please contact your QAD sales representative or distributor to increase the number of licensed 
+sessions for your system. A new license code will be issued at that time. 
+The license code numbers are QAD confidential information subject to the terms and conditions of 
+your non-disclosure agreement. QAD considers any attempt to disable the count of sessions and or 
+system user monitoring to be a violation of your license agreement. 
+Customer ID: 00060635 TIS Karrie Technologies(H.K) 
+Sales Order: HKS15989 Date: 09/22/2009 
+License Code Lic Cnt Typ Product Description 
+----------------------------------- --------- --- ------------------------------ 
+&8QXG &8XXG &8QVG &C29G &8QNG 698ZW 10 CS MFG/PRO Foundation 2008_SE
+
