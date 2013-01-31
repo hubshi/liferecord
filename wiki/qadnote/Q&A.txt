@@ -140,3 +140,8 @@ Q:出货时提示必须输入号码请重新输入该检查那里？
 A:step1 7.9.24 rcpm.p 检查3个序号ID,单据格式，是否设置对
   step2 36.2.21.1 nrsqmt.p 检查序号ID是否都正确设置(内部：Y-自动产生/N-手动输入)
   step3 2.18.13 sodfmt.p 文档格式维护确认单据格式。
+
+Q:How to batch prog.
+A：1.0 6 * * * /apps/scripts/prod/bclient.Production /home/mfg/batch/5_5_3_1 startup.p
+   2.bclient.Production: -pf /apps/qad2011/Production.pf -p $2
+   3.### startup.p
