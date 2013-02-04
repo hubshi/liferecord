@@ -1,3 +1,4 @@
 rem 此档案记录了装机前备份的资料
 1.NetTerm settings backup
   C:\WINDOWS\netterm.ini or %installdir%\netterm.ini
+  %netterm installdir%\sc_bbs.txt
