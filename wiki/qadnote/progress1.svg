@@ -1,0 +1,255 @@
+[Startup]
+; SCCS: @(#)progress.svg        1.2 05/21/97 16:21:30 >
+; ADDED By QAD, on Dec 5, 2012
+DBWideCursorPos=yes
+
+V6Display=no
+;ImmediateDisplay=yes
+;MultitaskingInterval=100
+;SVGA - low-resolution (800 x 600)
+CharWidth=9
+;*DefaultFont=MS Sans Serif, size 8 bold
+DefaultFont=宋体,size 10
+DefaultFixedFont=宋体,size 10
+printerfont=宋体,size 10
+;* New frame spacing parameter from Progress - required for legacy code
+FrameSpacing=1
+Use-3D-Size=no
+DLC=\\dcecssy046\qadapps\OpenEdge
+PROBUILD=\\dcecssy046\qadapps\OpenEdge\probuild
+PROPATH=.,\\dcecssy046\qadapps\2011se\patch,\\dcecssy046\myapps\mywrk,\\dcecssy046\myapps\mywrk\xrc,\\dcecssy046\qadapps\qxtend,\\dcecssy046\qadapps\2011se\ict,\\dcecssy046\qadapps\2011se\ict\xrc,\\dcecssy046\qadapps\2011se\cas,\\dcecssy046\qadapps\2011se,\\dcecssy046\qadapps\2011se\bbi,\\dcecssy046\qadapps\2011se\xrc,\\dcecssy046\qadapps\2011se\images.pl
+PROMSGS=\\dcecssy046\qadapps\OpenEdge\promsgs
+
+[Applications]
+;* Enable Spinning MFG/PRO Globe
+spin=no
+;* Enable Graphs with the Browse and specify the Grafsman path
+graph=No
+GRAFPATH=
+;* Specifies the executable to run when you select edit image
+paint=
+;* Auto-go default
+auto-go=false
+GRAPATH=
+
+[Colors]
+;******************************************************************************
+; THE DEFINITION OF COLOR 0 THROUGH 15 IS PRIVATE TO THE PROGRESS ADE.  
+; MODIFYING COLORS 0 THROUGH 15 MAY PREVENT THE PROGRESS ADE FROM RUNNING.
+; The following color definitions correspond to the ADE standards.
+;  0 to 15  - reserved
+color0=0,0,0
+color1=0,0,128
+color2=0,128,0
+color3=0,128,128
+color4=128,0,0
+color5=128,0,128
+color6=128,128,0
+color7=128,128,128
+color8=192,192,192
+color9=0,0,255
+color10=0,255,0
+color11=0,255,255
+color12=255,0,0
+color13=255,0,255
+color14=255,255,0
+color15=255,255,255
+color16=255,255,0
+NORMAL=0,15
+INPUT=15,0
+MESSAGES=15,1
+
+[Default Window]
+
+;x=
+;y=
+;rows=
+;columns=
+[fonts]
+;******************************************************************************
+; THE DEFINITION OF FONT 0 THROUGH 7 IS PRIVATE TO THE PROGRESS ADE.  
+; MODIFYING FONTS 0 THROUGH 7 MAY PREVENT THE PROGRESS ADE FROM RUNNING.
+; The following fonts definitions correspond to the ADE standards.
+;       ?  - Note choice of DefaultFont above (=FixedSys)
+;       0  - Fixed System Font (1 char per PPU)  
+;       1  - Proportional System Font
+;       2  - Editor Font for 4GL program entry
+;       3  - TTY Simulator (should be fixed)
+;       4 -  Desktop Font
+;  5 to 7  - reserved
+font0=宋体,size 10
+font1=宋体,size 10
+font2=宋体,size 10
+font3=宋体,size 10
+font4=宋体,size 10
+font5=宋体,size 10
+font6=宋体,size 10
+font7=宋体,size 10
+font8=宋体,size 10
+font9=宋体,size 10
+font10=宋体,size 10
+font11=宋体,size 10
+font12=宋体,size 10
+font13=宋体,size 10
+font14=宋体,size 10
+font15=宋体,size 10
+font16=宋体,size 10
+font17=宋体,size 10
+font18=宋体,size 10
+font19=宋体,size 10
+font20=宋体,size 10
+font21=宋体,size 10
+font22=宋体,size 10
+font23=宋体,size 10
+font24=宋体,size 10
+font25=宋体,size 10
+font26=宋体,size 10
+font27=宋体,size 10
+font28=宋体,size 10
+font29=宋体,size 10
+font30=宋体,size 10
+font31=宋体,size 10
+; The following variables identify which of the above fonts will be used for
+; 80-column and 132-column reports.  Always used fixed-space fonts for reports.
+80ColumnReportFont=21
+132ColumnReportFont=22
+
+[DOS Startup]
+;PROPATH=
+;PROMSGS=
+;PROCFG=
+;DLC=
+DLC=C:\DLC
+PROBUILD=C:\DLC\PROBUILD
+PROPATH=.,C:\DLC\PROBUILD\EUCAPP,C:\DLC\PROBUILD\EUCAPP\EUC.PL,\\dcecssy046\qadapps\2011se\images.pl
+
+[DOS Colors]
+color0=WHITE/BLUE          "NORMAL"
+color1=BLACK/GRAY          "INPUT, UNDERLINE"   
+color2=BLACK/GRAY          "MESSAGES, REVERSE"
+color3=BLUE/WHITE          "HIGHLITE, HELP"
+color4=BLINK-RED/WHITE     "URGENT"
+
+;NORMAL=WHITE/BLUE
+;INPUT=BLACK/GRAY 
+;MESSAGES=BLACK/GRAY 
+[DOS Default Window]
+
+;rows=25
+;rows=50
+[DOS Keys]
+
+;GO=F1,CTRL-X
+[Debug-Init]
+;******************************************************************************
+; THE FOLLOWING INFORMATION IS PRIVATE TO THE DEBUGGER. IT SHOULD NEVER BE
+; MODIFIED EXCEPT BY THE DEBUGGER PROGRAM.
+;
+Location=
+Pane0=1,46," "
+Pane1=1,14,""
+Pane2=1,16,"Commands in Queue: 0"
+Pane3=1,25,""
+DebuggerName=PRODEBUG.EXE
+
+[Debug-Macros]
+Macro0=r, run &file
+Macro1=c, continue
+Macro2=s, step
+Macro3=n, next
+Macro4=b, break &file &line
+Macro5=cb, cancel break &file &line
+Macro6=sb, show breaks
+Macro7=ss, show stack
+Macro8=u, up
+Macro9=d, down
+Macro10=di, display &text
+Macro11=sm, show macros
+
+[Debug-Buttons]
+Button0=Run,run &file
+Button1=Cont,continue
+Button2=Step,step
+Button3=Next,next
+Button4=Break,break &file &line
+Button5=Stack,show stack
+Button6=Up,up
+Button7=Down,down
+Button8=Disp,display &text
+Button9=Exit,exit
+
+[ProADE]
+
+;DividerFgColor=15
+;DividerBgColor=1
+;OKBoxFgColor=1
+;OKBoxBgColor=8
+;FillinFgColor=0
+;FillinBgColor=8
+;Editor4GLFgColor=DEFAULT
+;Editor4GLBgColor=DEFAULT
+;Editor4GLFgSmallColor=0
+;Editor4GLBgSmallColor=8
+;FixedFont=0
+;StandardFont=1
+;Editor4GLFont=2
+[Proedit]
+SaveSettings=yes
+BufList=
+ExitWarning=yes
+SaveBufList=no
+MinimizeBeforeRun=no
+RestoreAfterRun=yes
+PauseAfterRun=yes
+AutoCleanup=yes
+MostRecentlyUsedFileList=yes
+MRUEntries=4
+EditorFont=2
+AutoSaveCls=no
+MRUFile1=D:\dcec\src\SRC-2011SE\xxapvoexp\xxvoexp.p
+
+[MFGPRO]
+mfguserid=
+
+[WinChar Startup]
+DLC=\\dcecssy046\qadapps\OpenEdge
+PROBUILD=\\dcecssy046\qadapps\OpenEdge\probuild
+PROMSGS=\\dcecssy046\qadapps\OpenEdge\promsgs
+PROPATH=\\dcecssy046\myapps\mywrk,\\dcecssy046\qadapps\2011se\ict,\\dcecssy046\qadapps\2011se\ict\xrc,\\dcecssy046\qadapps\2011se\cas,\\dcecssy046\qadapps\2011se,\\dcecssy046\qadapps\2011se\bbi,
+\\dcecssy046\qadapps\2011se\images.pl
+[WinChar Colors]
+color0=WHITE/BLUE          "NORMAL"
+color1=BLACK/GRAY          "INPUT, UNDERLINE"
+color2=BLACK/GRAY          "MESSAGES, REVERSE"
+color3=BLUE/WHITE          "HIGHLITE, HELP"
+color4=BLINK-RED/WHITE     "URGENT"
+
+[Procomp]
+SaveSettings=yes
+DefFileSpec=*.p *.w
+LogFile=compile.log
+ShowStatus=yes
+RemoveOldRs=no
+IfNoR=no
+SubDirs=no
+SaveNewRs=yes
+XrefAppend=no
+ListAppend=no
+PageLength=60
+PageWidth=80
+V6Frame=No
+StreamIO=no
+MinRcodeSize=no
+GenerateMD5=no
+
+[WinChar Startup]
+DLC=\\dcecssy046\qadapps\OpenEdge
+PROBUILD=\\dcecssy046\qadapps\OpenEdge\probuild
+PROMSGS=\\dcecssy046\qadapps\OpenEdge\promsgs
+PROPATH=\\dcecssy046\myapps\mywrk,\\dcecssy046\qadapps\2011se\ict,
+\\dcecssy046\qadapps\2011se\ict\xrc,\\dcecssy046\qadapps\2011se\cas,\\dcecssy046\qadapps\2011se,\\dcecssy046\qadapps\2011se\bbi,
+\\dcecssy046\qadapps\2011se\images.pl,
+[ADM]
+Color3DFace=17
+Color3DHighLight=18
+Color3DShadow=19

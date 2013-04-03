@@ -148,3 +148,11 @@ A：1.0 6 * * * /apps/scripts/prod/bclient.Production /home/mfg/batch/5_5_3_1 sta
 
 Q:How to debug program
 A: -clientlog E:\scripts\bkflh\out\qad.log -logginglevel 4 -logentrytypes 4GLTrace 
+
+Q:BOM展开的程序在那里？
+A:$\trunk\ts\xxmprp11\xxbmps\xxbmps.i
+A:$\trunk\ccl\fccalcrpt\xxa6simrp1\xxa6simbom.i
+
+Q: GUI菜单里（menu-list)的字在那里调整
+A: 在SVG里Font20  (eg:  font20="宋体", size 11)
+
