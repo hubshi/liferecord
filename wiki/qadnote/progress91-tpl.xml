@@ -129,4 +129,4 @@ END.&#xD;
       end.&#xD;
    end.</Template><Template Name="error-status:error" Description="" Comments="0" Strings="0">if error-status:error then do:&#xD;
 end.</Template><Template Name="defpwd" Description="" Comments="0" Strings="0">define variable passwd as character label "Password" format "x(16)"&#xD;
-   case-sensitive no-undo.</Template></Templates>
+   case-sensitive no-undo.</Template><Template Name="mfdemo.i" Description="" Comments="0" Strings="0">{mfdemo.i [+01/01/1900+] [+01/01/9999+]} /* ref mf1.p */</Template><Template Name="getOSUserid" Description="" Comments="0" Strings="0"> /* This function is standard procedure in mf1.p */</Template></Templates>
