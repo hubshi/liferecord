@@ -1,0 +1,2 @@
+/mnt/hgfs/conv/convert.Linux -v -ini=convert.ini /mnt/hgfs/conv/src/*.p > /mnt/hgfs/conv/convertprogramlog.log
+/mnt/hgfs/conv/convert.Linux -v -ini=convert.ini /mnt/hgfs/conv/src/*.i >> /mnt/hgfs/conv/convertprogramlog.log

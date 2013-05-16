@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+;这是CONV的右键菜单;请参阅C:\lr\wiki\winconfig\cmdopenfolder.reg
+
+[HKEY_CLASSES_ROOT\Folder\shell\Convert]
+
+[HKEY_CLASSES_ROOT\Folder\shell\Convert\command]
+@="C:\\qadguicli\\conv\\convertx64.bat %1"
