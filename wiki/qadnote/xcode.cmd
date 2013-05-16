@@ -36,14 +36,14 @@ cd /d %src%
 %xcode%\xcode -d %xrc% *.v
 %xcode%\xcode -d %xrc% *.t
 rem if %2=="AA" goto exitme
-goto exitme
+rem goto exitme
 rem convexitme
 mkdir %gui%
 echo srcSearchPath=%src%> %wkdir%\convert.tmp
 echo targetDir=%wkdir%\gui>> %wkdir%\convert.tmp
 echo workDir=%wkdir%>> %wkdir%\convert.tmp
-%xcode%\convert.exe -r -ini=%wkdir%\convert.tmp %src%\*.p>%wkdir%\convert.log
-%xcode%\convert.exe -r -ini=%wkdir%\convert.tmp %src%\*.i>>%wkdir%\convert.log
+%xcode%\convx64.exe -r -ini=%wkdir%\convert.tmp %src%\*.p>%wkdir%\convert.log
+%xcode%\convx64.exe -r -ini=%wkdir%\convert.tmp %src%\*.i>>%wkdir%\convert.log
 rem del %wkdir%\convert.tmp /s/q/f/a
 
 :exitme
