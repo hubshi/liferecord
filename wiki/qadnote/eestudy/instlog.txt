@@ -1,0 +1,195 @@
+1). groupadd qad -g 65535
+2). useradd -u 65535 - g 65535
+3). passwd
+4). vi ./.bash_profile
+    export PATH
+    export DLC=/app/progress/10.2B
+    export JAVA_HOME=/app/java/jdk1.5.0_22
+    export CATALINA_HOME=/app/tomcat
+    export CATALINA_BASE=/app/tomcat
+    export TOMCAT_HOME=/app/tomcat
+    export PATH=/$DLC/bin:$JAVA_HOME/bin:$TOMCAT_HOME/bin:$PATH
+5). id check mfg account 65535 group 65535.
+6). mkdir /app
+          /app/java
+          /app/tomcat
+          /app/2011.1ee
+          /app/progresss
+7). 安装Java 用root 安装
+    7.1) su
+    7.2) cd /app/java
+    7.3) cp cp /mnt/hgfs/xrc/2011EEInstall/jdk-1_5_0_22-linux-amd64.bin ./
+    7.4) jdk-1_5_0_22-linux-amd64.bin
+    7.5) exit
+    7.6) java -version "1.5.0_22"
+8). 安装Progress 用root 安装
+    8.1) su
+    8.2) export JAVA_HOME=/app/java/jdk1.5.0_22
+         export PATH=/app/java/jdk1.5.0_22:$PATH
+    8.3) java -version "1.5.0_22"
+    8.4) mount -o loop OE102BLINUX64.ISO /mnt
+    8.5) cd /app
+    8.6) mount -o loop /dev/sr0 /mnt/cd
+    8.7) chmod -Rf 777 /mnt
+    8.8) /mnt/proinst
+    8.2) Serial Number:  004107289
+         Control Number: ?ZFS9 XPP6M N4CYM
+         Serial Number:  004107288
+         Control Number: XQDRS  XQPXN  34R?M
+         Serial Number:  004107290
+         Control Number: ZEBRS  6PRXN  K4M?R
+         Serial Number:  004107284
+         Control Number: XQBR9  TQRTN  34M?8
+         Serial Number:  004107287
+         Control Number: XPFR9  XPP6M  34RY8
+    8.3) java_home /app/java/jdk1.5.0_22
+    8.4) Select Type of Installation   /   Complete Install
+    8.5) Select Destination Pathname
+          | Enter Destination Path: /app/progress/10.2B__________ |
+          | Enter Work Directory Path: /app/progress/10.2B_______ |
+    8.6) Select Management Pathname                         |
+          | Enter Management Path: /app/progress/10.2B/oemgmt_____________ |
+          | Enter Management Work Path: /app/progress/10.2B/wk_oemgmt_____ |
+    8.7) Check check
+         |Type: Complete Install                                             |
+         |Destination pathname: /app/progress/10.2B                          |
+         |Working Dir pathname: /app/progress/10.2B                          |
+         |Management pathname: /app/progress/10.2B/oemgmt                    |
+         |Management Working Dir pathname: /app/progress/10.2B/wk_oemgmt     |
+    8.8) Continue with Installation
+    8.9) Select Web Server Type  :   CGI - compatible
+    8.10) Select Web Server Script directory  : /app/progress/10.2B/cgi-bin
+    8.11) Copy the static HTML to docroot : /app/progress/10.2B/htdocs
+    8.12) Check Check
+        |Type: CGI - compatible                                              |
+        |Script directory: /app/progress/10.2B/cgi-bin                       |
+        |Document Root directory: /app/progress/10.2B/htdocs
+   8.13)   Continue with Installation
+               *English - American(d)
+               | Make Default               |
+               | Continue with Installation |
+          | Select CharacterSet,Collation,Case |
+          | Select a Date Format               |
+          | Select a Number Format             |
+   8.14) Check Check
+     |CharacterSet,Collation,Case: ISO8859-1, Basic, Basic                 |
+     | Date Format: mdy                                                    |
+     | Number Format: 1,234.56  (comma, period)
+
+9). 安装Progress补丁 用root 安装
+   9.1 装入progress 102.b SP5的光驱
+   9.2 mount -o loop /dev/sr0 /mnt
+   9.3 cd /app
+   9.4 /mnt/proinst
+   9.5 Enter Path: /app/progress/10.2B
+   9.6 Enter, Enter.
+10). cd 10.2B
+     vi startup.pf
+        -cpinternal CP936
+        -cpstream CP936
+        -cpcoll Basic
+        -cpcase Basic
+        -d mdy
+        -numsep 44
+        -numdec 46
+11).  cp $sch/* /app/progress/10.2B
+12).  cp $sch/cp936/* /app/progress/10.2B
+
+Progress 安装完成
+
+13) install vncserver:
+14) startvncserver: $vncserver
+New 'dbserver:1 (mfg)' desktop is dbserver:1
+
+一下操作都用mfg进行
+15) 登录vnc： 192.168.0.55:5901   (192.168.0.55:1)
+16) $cp -fR ./apache-tomcat-6.0.36/* /app/tomcat/
+17) start Tomcat: $/app/tomcat/bin/startup.sh
+    检查TOMCAT状态： http://192.168.0.55:8080/
+18) 用mfg在VNC里开个终端(注意：1.用户mfg 2.在VNC xwindow 操作)
+    $proadsv -start
+    $proadsv -q
+        OpenEdge Release 10.2B05 as of Tue Sep  6 14:17:06 EDT 2011
+        AdminServer is alive. (8545)
+    $nsman -i NS1 -start
+        OpenEdge Release 10.2B05 as of Tue Sep  6 14:17:06 EDT 2011
+        Connecting to Progress AdminServer using rmi://localhost:20931/Chimera (8280)
+        Searching for NS1 (8288)
+        Connecting to NS1  (8276)
+        Start request failed NS1 already running. (8325)
+    $nsman -i NS1 -q
+       OpenEdge Release 10.2B05 as of Tue Sep  6 14:17:06 EDT 2011
+
+       Connecting to Progress AdminServer using rmi://localhost:20931/Chimera (8280)
+       Searching for NS1 (8288)
+       Connecting to NS1  (8276)
+
+       NameServer NS1 running on Host dbserver Port 5162 Timeout 30 seconds.
+       There are no registered Application Services for this NameServer
+    $cd /mnt/cd/install
+    $./install_linux
+      Please enter the the directory in which to install QAD Deployment Toolkit (QDT).
+      Default is /usr/local/qdt
+        ->/app/2011.1ee/qdt
+      其余yes.
+    $cd /app/2011.1ee/qdt
+    $./qadinst_RH6_64bit
+    $New Env 改为Prod
+    $edit install path:/app/2011.1ee/mfgpro
+    等到close.
+    admin 管理
+
+  Edit lang det (!重要,重要)
+  add ch simple
+  [X] make unicode DB
+  us /remove /add
+  [ ] make unicode DB
+  add to env = yes  make ch DB Default = yes
+  host name:dbserver (重要)
+
+nsman -l NS1 -q 检查progress admin 服务是否正常启动
+run stopall.sh
+run startall.sh
+
+用Termnet注册mfgpro
+cd /app/2011.1ee/qdt/envs/scripts/client.Prod
+
+ lincense code
+ P1WM2 P1LMZ P1WMY P290Z P1WXZ 003PF
+ P1RHD P1QHD P1RHF P6NBD P1R6D 007FY
+ P1TB4 P1NB4 P1TB5 P4XQ4 P1T34 0058P
+ P1VQZ P1MQZ P1VQY P5H3Z P1VYZ 004NF
+ P1ZZ3 P1&Z3 P1ZZ2 P1373 P1ZP3 000XJ
+ P1WWC P1LWC P1WWB P22WC P1WNC 003YS
+ P1YGS P1JGS P1YGR P0NWS P1Y7S 001DC
+
+36.6.17
+36.4.14
+userid *
+1 username
+2 Password
+3 scripts path
+4 script
+
+stop.env
+确认这些服务正常启动
+  $proadsv -start
+  $nsman -i NS1 -start
+  $/app/tomcat/bin/startup.sh
+check tomcat 是否正常
+http://192.168.0.55:8080/
+
+用VNC admin qdt
+ $./qadinst_RH6_64bit
+ 到最后一个(qxtend)
+ Edit Qxtend
+ qxtend dir :/app/2011.1ee/qxtend
+ 选prod
+ user: admin
+ pass: mfgpro
+
+ qxtend build
+ Execute
+
+stopall.sh
+reboot server

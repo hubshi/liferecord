@@ -1,0 +1,41 @@
+Q&A
+Q:Business Relation Create 错误提示：Program Business Relation create (urn:cbf:BBusinessRelation.create)of type 'DotNet' Not supported.
+
+Q:Role Permission Maintain 白屏。
+
+Q:怎样验证Scripts是否正确。
+A:run 脚本connmgr.demo.
+
+Q:进入后地图不存在
+A:检查tomcat:processAdmin:xml Directory 设定
+
+Q:同一PC运行2套2011EE.
+A:安装后修改目录，修改快捷方式指向
+
+Q:虚拟机开机后TOMCAT不能启动
+A:删除/app/tomcat/logs/catalina.pid file
+
+Q:Crystal Report runtime is not installed yet.
+A:(1) FIND 
+/app/mfgpro/qdt/pstage/netui-module-standard/packages/netui-module-fin/2011/0/79
+/20/netui-module-fin-2011.0.79.20.zip
+(2)Extract File
+    CRRuntime/
+       * data.zip
+       * manifest.qpkg
+(3) COPY File To app/tomcat/webapps/qadhome/packages/plugins/qad.plugin.financials/CRRuntime
+
+Q:daemon con 状态.
+A:Deaemon start 10
+
+Q:打印机设置
+A:Printer  Scroll Output= yes Dev Pathname = Printer . initialze crt = text
+  Page  Scroll Output= yes Dev Pathname = [Blank]
+
+Q:SI STATUS(供应商发票状态)
+A:1-MEMO  (INIT NOPAY OK2PAY)
+  2-PO    (RM-HOLD  RM-INIT RM-NOPAY  RM-OK2PAY)
+  
+Q:BI 里Internel Entity为什么要打钩
+A:不打钩在建entyty就不可以选择
+
