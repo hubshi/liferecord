@@ -156,3 +156,9 @@ A:$\trunk\ccl\fccalcrpt\xxa6simrp1\xxa6simbom.i
 Q: GUI菜单里（menu-list)的字在那里调整
 A: 在SVG里Font20  (eg:  font20="宋体", size 11)
 
+Q:客户寄售库存使用创建怎么取消？
+A:7.18.22 - socnundo.p 使用创建撤销
+  7.18.4.15 - socnrp04.p 顺序使用报表-查ID
+
+Q:NETUI 响应慢有什么解决方法
+A:修改这个文件/etc/resolv.conf   增加：dbserver  192.168.0.55
