@@ -1,0 +1,54 @@
+http://hi.baidu.com/chssheng2007/item/f957320a6a538cdfdce5b0e0
+putty使用
+
+
+ 
+
+1、常用的putty配置选项。
+
+Putty是个非常好用的ssh客户端软件。当然要先配置好putty，使用起来才能方便，配置不好的话，或许你不会喜欢它。
+
+配置putty首先在配置窗口选择”Default Settings”这个配置方案，然后点击load把这个配置方案调出来，然后依次按照下面的进行配置，注意配置完成之后要重新选择”Default Settings”这个配置方案，然后点击save把刚才配置的东西保存到”Default Settings”这个配置方案。这样以后新建立的连接都会采用”Default Settings”里面的各项设置了。
+
+ 
+
+需要配置的选项为：
+
+ 
+
+Window -> Lines of scrollback 20000   – 让putty窗口的缓冲区大一些，这样在使用的时候好翻看putty的历史
+
+Window -> appearance: Font Fixedsys 12 points   – 选择这个字体可以更好显示中文
+
+Window -> translation: select UTF-8 in the dropdown menu    – 很多linux的编码都是utf8，选择该项目才能够支持linux的utf8
+
+Connection -> seconds between keepalives 60   – 心跳，长时间没有操作的话，能够保证不断开
+
+Connection -> SSH -> auth: Allow agent forwarding   – 这个是SSH的一个高级选项，不多解释了，可以不配置
+
+Connection -> SSH -> auth: Private key file   – 这个是SSH的一个高级选项，不多解释了，可以不配置，如果是使用Putty Session Manager那就更没有必要配置该项了
+
+配置完成之后，不要忘了按照本文前面的方法保存
+
+2、本地备份 PuTTY 配置文件的简单方法
+
+    PuTTY 是一款小巧的开源 Telnet/SSH 客户端。相对于 SecureCRT 那样的庞然大物来说，PuTTY 虽然没有如此强大的功能，但几百K 的身躯却基本包括了所有 SSH 客户端的常用功能。相信很多程序员都将 PuTTY 作为必备软件，而现在越来越多的 Blogger 都在用国外的虚拟主机，相信对 PuTTY 也不会陌生了（例如如何用 PuTTY 建立 SSH 隧道破墙 :)。
+
+ 
+
+    不过 PuTTY 有个比较烦人的地方，就是它不提供设置的导入导出工具。每次重装系统，我都要翻出记录本将常用的主机信息一个个敲回去，非常麻烦。
+
+ 
+
+    但是，PuTTY 将设置存在注册表中。这样一来，备份/恢复设置就简单了。
+
+ 
+
+下面是备份步骤，实质上就是导出相应的注册表键值：
+
+ 
+
+开始->运行(Win+R)->regedit 找到 HKEY_CURRENT_USER\Software\SimonTatham 在 SimonTatham 这个节点上点击右键，选择导出，保存即可。 没了，哈哈
+
+这样我们就导出了 PuTTY 的配置。而如果你想恢复配置信息的话，只需要双击这个文件，导入注册表信息即可。
+

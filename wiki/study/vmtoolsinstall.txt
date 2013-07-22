@@ -1,3 +1,20 @@
+
+ 1安装vmtools for linux: 
+
+启动VM中的linux，
+ 选择vmware workstation程序菜单中VM > install VMware tools... 
+执行：
+mkdir /mnt/cdrom 
+ mount -o ro /dev/cdrom /mnt/cdrom （vmtools的安装文件放在vmware虚拟的cdrom中，首先要mount上这个光驱才能找到安装文件） 
+cd /mnt/cdrom 
+ tar -zxvf VMwareTools-5.0.0-12124.i386.tar.gz -C /tmp （把安装文件解压到/tmp） 
+
+cd /tmp/vmware-tools-distrib 
+ ./vmware-install.pl （执行vwware的安装脚本，这个脚本是用perl编写的） 
+ 在这里，安装程序会询问安装文件存放位置和设置分辨率等一系列问题，在大多数情况下，安装默认配置vmware tools就可以正常工作，因此，这里对每一个问题按回车键选择默认配置 
+
+
+
 windows VMware tools安装步骤：
 （1）主系统windows下,在CD-ROM虚拟光驱中选择使用ISO镜像，找到VMWARE TOOLS 安装文件，如D:\VMware\VMware Workstation\Programs\windows.iso
 （2）启动进入子系统windows
