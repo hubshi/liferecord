@@ -244,7 +244,7 @@ execname = "zzbkflh.p".&#xD;
      if available [+TableName+]&#xD;
         and not locked [+TableName+]&#xD;
         then [++].&#xD;
-        else [++].</Template><Template Name="TRIGGER TABLE WRITE" Description="" Comments="0" Strings="0">on write of [+TableName+] do:&#xD;
+        else [++].</Template><Template Name="TRIGGER TABLE WRITE" Description="" Comments="0" Strings="0">on [+write+][+assign+] of [+TableName+].[+Field+] do:&#xD;
     message program-name(1) skip&#xD;
             program-name(2) skip&#xD;
             program-name(3) skip&#xD;
