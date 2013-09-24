@@ -162,3 +162,18 @@ A:7.18.22 - socnundo.p 使用创建撤销
 
 Q:NETUI 响应慢有什么解决方法
 A:修改这个文件/etc/resolv.conf   增加：dbserver  192.168.0.55
+
+Q:为什么有些固定资产在拥有资产表里是有的，但是总账里就查不到。
+A:说明他们在做资产的时候，没有在总账中维护
+   因为他们是在总账里与子模板分别维护的，没有通过子模板过账过去的。
+
+Q:截BI的命令
+/app/progress/91d/bin/proutil /app/db/prod/mfg001 -C truncate bi  >> mfg001truncbi.log 2>&1
+
+Q:EE中菜单36.9.13事务过账的控制不能修改(下面4个YES/NO的地方改不了)是什么原因？
+A:一旦有子模块的账务产生过账之后这里就会标记为YES了,如果这里为YES了之后，那么在36.23.2那个删除总账凭证的功能就不能使用了
+
+Q:.NetUi白屏怎么办？
+A:/usr/tomcat/webapps/qadhome/configurations/出错的环境名称/storage/user-data/ 删除掉相应用户就可以了。
+
+   
