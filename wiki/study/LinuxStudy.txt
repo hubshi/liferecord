@@ -150,3 +150,5 @@ A: mount -a
 
 Q:rm -rf 提示参数列表过长怎么办
 A:find . -name "*" -print | xargs rm -rf 
+  ls *.tmp | xargs -t -I {} mv {} ../matchres/ 
+  ls | xargs -t -I abc mv abc ../matchres/ 
