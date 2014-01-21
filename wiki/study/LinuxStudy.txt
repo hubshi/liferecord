@@ -153,4 +153,5 @@ A:find . -name "*" -print | xargs rm {} -rf
   ls *.tmp | xargs -t -I {} mv {} ../matchres/ 
   ls | xargs -t -I abc mv abc ../matchres/ 
   ls ./temp | xargs -t -I {} mv ./temp/{} /var/tmp  # tempÊÇ¸öÄ¿Â¼
-  find /home \( -name '*.prn' -o -name '*.bpo' -o -name '*.bpi' -o -name '*.csv' -o -name 'TMP*' \) -exec rm {} \;
+  find /home \( -name '*.prn' -o -name '*.bpo' -o -name '*.bpi' -o -name '*.csv' -o -name 'TMP*' \) -exec mv {} /var/tmp \;
+  find /home \( -name '*.cim' -o -name '*.inp' -o -name '*.o' -o -name '*.in' -o -name '*.ou' -o -name 'TMP*' -o -name '*.cimin' -o -name '*.cimout' -o -name '*.r' -o -name '*.l' -o -name 'protrac*.*' -o -name '*.ped' -o -name '*TMP*' \)  -exec mv {} /var/tmp \;
