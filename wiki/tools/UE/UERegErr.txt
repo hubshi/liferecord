@@ -1,0 +1,40 @@
+http://bbs.beikeit.com/thread-4927-1-1.html
+
+ULTRAEDIT 新安装后运行提示一下截图错误，更别说注册破解了，根本无法打开！
+给您带来不便,我们深感抱歉
+但是,您的激活存在问题！
+解决方法！
+1.完全卸载UltraEdit 
+2.删除系统盘下该路径的文件
+%ProgramData%\IDMComp\UltraEdit\license\uedit32.spl（我的是WIN764位的系统）
+
+
+3.制作个注册表文件名称是idm-assist.reg，内容如下：
+Windows Registry Editor Version 5.00
+ [HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Wow6432Node\CLSID\{c3d6e9f4-9c89-4580-b2fd-290a9e9374eb}]
+ "ISRA"=-
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Wow6432Node\CLSID\{f76e626e-ff4c-480a-a201-772bc070c32a}]
+ "ProcRequest"=-
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Common\GUD\UniqueId\{ce12ceae-edb9-4522-9f72-872d268268af}]
+ "default"=-
+
+或者你手动进入注册表，删除ISRA、ProcRequest、default键的数值
+4.重新安装你在官方网站下载的UltraEdit 20.00.0.1056中文简体版
+这个时候你打开UltraEdit时应该不会出现
+
+  /******************************
+http://www.midbai.com/ultraedit-v21-00.html
+二、暴力破解UltraEdit无需注册
+
+1.复制一份UltraEdit安装目录中的主程序uedit32.exe，到任意目录，用UltraEdit打开复制的uedit32.exe文件。
+
+2.修改以下内容
+
+1.原来：00094750h: BE DC 09 00 00 00 75 1D 8B 4E 20 8B 86 BC 09 00 ;    
+2.改成：00094750h: BE DC 09 00 00 00 EB 1D 8B 4E 20 8B 86 BC 09 00 ;   
+3.原来：005d28a0h: C4 08 F7 D8 1B C0 83 C0 02 89 01 8B 45 94 83 C0 ;   
+4.改成：005d28a0h: C4 08 F7 D8 1B C0 33 C0 90 89 01 8B 45 94 83 C0 ;  
+
+
+3.保存文件，关闭UltraEdit用修改好的uedit32.exe覆盖原文件（注意备份）
+  ******************************/
