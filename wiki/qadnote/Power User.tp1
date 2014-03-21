@@ -314,4 +314,15 @@ execname = [+Execname+].</Template><Template Name="FormulaR1C1" Description="" C
         apply lastkey.&#xD;
   end.&#xD;
 end.</Template><Template Name="messagecolorvalue" Description="" Comments="0" Strings="0">/******* message &#x7684;&#x5E95;&#x8272;&#x4E3A;&#x7A7A;     ********/&#xD;
-message color value("") fill(" ",66) "test".</Template><Template Name="TMP" Description="" Comments="0" Strings="0">TMP + execname + [+variable+] + ".bpi.prn".</Template><Template Name="debug" Description="" Comments="0" Strings="0">-clientlog [+E:\scripts\bkflh\out\qad.log+] -logginglevel 4 -logentrytypes 4GLTrace </Template><Template Name="ver" Description="" Comments="0" Strings="0">{gprun.i ""gpgetver.p"" "(input '1', output mfgver)"}</Template></Templates>
+message color value("") fill(" ",66) "test".</Template><Template Name="TMP" Description="" Comments="0" Strings="0">TMP + execname + [+variable+] + ".bpi.prn".</Template><Template Name="debug" Description="" Comments="0" Strings="0">-clientlog [+E:\scripts\bkflh\out\qad.log+] -logginglevel 4 -logentrytypes 4GLTrace </Template><Template Name="ver" Description="" Comments="0" Strings="0">{gprun.i ""gpgetver.p"" "(input '1', output mfgver)"}</Template><Template Name="mfnxtsq1.i" Description="" Comments="0" Strings="0">/** reference mgbdld.p ***/&#xD;
+&#xD;
+/* CURRENT-VALUE(mf_sq04) = 999999999. */&#xD;
+&#xD;
+{mfnxtsq1.i "bdl_mstr.bdl_domain = global_domain&#xD;
+             and bdl_source      = """"&#xD;
+             and"&#xD;
+             bdl_mstr&#xD;
+             bdl_id&#xD;
+             mf_sq04&#xD;
+             next_id}&#xD;
+</Template></Templates>
