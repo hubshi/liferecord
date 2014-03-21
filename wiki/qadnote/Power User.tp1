@@ -313,4 +313,5 @@ execname = [+Execname+].</Template><Template Name="FormulaR1C1" Description="" C
         readkey.&#xD;
         apply lastkey.&#xD;
   end.&#xD;
-end.</Template></Templates>
+end.</Template><Template Name="messagecolorvalue" Description="" Comments="0" Strings="0">/******* message &#x7684;&#x5E95;&#x8272;&#x4E3A;&#x7A7A;     ********/&#xD;
+message color value("") fill(" ",66) "test".</Template><Template Name="TMP" Description="" Comments="0" Strings="0">TMP + execname + [+variable+] + ".bpi.prn".</Template><Template Name="debug" Description="" Comments="0" Strings="0">-clientlog [+E:\scripts\bkflh\out\qad.log+] -logginglevel 4 -logentrytypes 4GLTrace </Template><Template Name="ver" Description="" Comments="0" Strings="0">{gprun.i ""gpgetver.p"" "(input '1', output mfgver)"}</Template></Templates>
