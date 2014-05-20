@@ -176,4 +176,17 @@ A:一旦有子模块的账务产生过账之后这里就会标记为YES了,如果这里为YES了之后，那么在3
 Q:.NetUi白屏怎么办？
 A:/usr/tomcat/webapps/qadhome/configurations/出错的环境名称/storage/user-data/ 删除掉相应用户就可以了。
 
-   
+Q:BI怎么调用Porgress程序？
+A:   Public Sub Query_BeforeRefreshData(nMaxRows As Long, bCancel As Boolean)
+      	params = """effdate=" & Query.Param("effdate") & ";effdate1=" & Query.Param("effdate1") & ";loc=" & Query.Param("loc")& ";loc1=" & Query.Param("loc1")& ";part=" & Query.Param("part")& ";part1=" & Query.Param("part1")& """"
+      	prg = "C:\qadguicli\bicallprogress\zh-pdb2.p"
+      	'cmd = """D:\App\PROGRESS\DLC91D\bin\prowin32.exe"" mfgtest -b -ld qaddb -H 192.168.0.92 -S 51410 -N TCP -d ymd"
+      	cmd = """D:\App\PROGRESS\DLC91D\bin\prowin32.exe"" mfgwsa -b -ld qaddb -H 192.168.0.92 -S 52100 -N TCP -d ymd"
+      	cmdline = cmd & " -param " & params & " -p " & prg
+      	App.ShowMsg 0,"cmdline:" & cmdline
+      	hr = App.RunAndWait(cmdline, False)
+      	If(hr < 0) Then
+      		App.ShowMsg(hr)
+      		bCancel = True
+      	End If
+      End Sub
