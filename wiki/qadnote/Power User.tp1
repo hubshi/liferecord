@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Templates encode="utf8escenc"><Template Name="V8:ConvertMode" Comments="0" Strings="0" Description="">/* [FILE_NAME][FILE_EXTENSION] - [+procedureDesc+]                                                 */&#xD;
+<Templates encode="utf8escenc"><Template Name="~tmp1" Description="" Comments="0" Strings="0">/*140516.1 </Template><Template Name="~tmp2" Description="" Comments="0" Strings="0"> */</Template><Template Name="~tmp3" Description="" Comments="0" Strings="0">/*140516.1*/ </Template><Template Name="~tmp4" Description="" Comments="0" Strings="0">140530.1</Template><Template Name="V8:ConvertMode" Comments="0" Strings="0" Description="">/* [FILE_NAME][FILE_EXTENSION] - [+procedureDesc+]                                                 */&#xD;
 /*V8:ConvertMode=Maintenance                                                 */&#xD;
 /* Environment: Progress:10.1B   QAD:eb21sp7    Interface:Character          */&#xD;
 /* REVISION: 120713.1 LAST MODIFIED: 07/13/12 BY: zy                         */&#xD;
@@ -14,7 +14,10 @@
 </Template><Template Name="defTempTable" Comments="0" Strings="0" Description="">Define temp-table [+tablename+]&#xD;
        fields [+fieldname+] as [+fieldtype+]&#xD;
        index is primary [+indexname+] [+fieldname+].&#xD;
-</Template><Template Name="for each" Comments="0" Strings="0" Description="">for each ^ no-lock where :&#xD;
+</Template><Template Name="defShared" Description="" Comments="0" Strings="0">&amp;IF DEFINED(NOSHARED) = 0 &amp;THEN  /* ref:mfdeclre.i */&#xD;
+    define {1} shared variable [+variable+] as character.&#xD;
+&amp;ELSE&#xD;
+&amp;ENDIF</Template><Template Name="for each" Comments="0" Strings="0" Description="">for each ^ no-lock where :&#xD;
 &#xD;
 end.&#xD;
 </Template><Template Name="procedure" Comments="0" Strings="0" Description="">PROCEDURE [+ProcedureName+]:&#xD;
@@ -280,10 +283,10 @@ global_user_lang_dir = [+"ch/"+].&#xD;
 global_domain = [+Domain+].&#xD;
 global_db = [+Domain+].&#xD;
 execname = [+Execname+].</Template><Template Name="FormulaR1C1" Description="" Comments="0" Strings="0">:FormulaR1C1</Template><Template Name="stdCost" Description="" Comments="0" Strings="0">{gpsct03.i &amp;cost=sct_cst_tot}  /*ppptrp21.p*/</Template><Template Name="umconv" Description="" Comments="0" Strings="0">{gprun.i ""gpumcnv.p""&#xD;
-                     "(input  tt1_um,&#xD;
-                     input  tt1__qad02,&#xD;
-                     input  tt1_item,&#xD;
-                     output trans_conv)"}</Template><Template Name="mfnxtseq1.i" Description="" Comments="0" Strings="0">/*ref : mgbdld.p */&#xD;
+         "(input  tt1_um,&#xD;
+           input  tt1__qad02,&#xD;
+           input  tt1_item,&#xD;
+           output trans_conv)"}</Template><Template Name="mfnxtseq1.i" Description="" Comments="0" Strings="0">/*ref : mgbdld.p */&#xD;
 {mfnxtsq1.i "bdl_mstr.bdl_domain = global_domain&#xD;
                                and bdl_source      = """"&#xD;
                                and"&#xD;
@@ -314,7 +317,7 @@ execname = [+Execname+].</Template><Template Name="FormulaR1C1" Description="" C
         apply lastkey.&#xD;
   end.&#xD;
 end.</Template><Template Name="messagecolorvalue" Description="" Comments="0" Strings="0">/******* message &#x7684;&#x5E95;&#x8272;&#x4E3A;&#x7A7A;     ********/&#xD;
-message color value("") fill(" ",66) "test".</Template><Template Name="TMP" Description="" Comments="0" Strings="0">TMP + execname + [+variable+] + ".bpi.prn".</Template><Template Name="debug" Description="" Comments="0" Strings="0">-clientlog [+E:\scripts\bkflh\out\qad.log+] -logginglevel 4 -logentrytypes 4GLTrace </Template><Template Name="ver" Description="" Comments="0" Strings="0">{gprun.i ""gpgetver.p"" "(input '1', output mfgver)"}</Template><Template Name="mfnxtsq1.i" Description="" Comments="0" Strings="0">/** reference mgbdld.p ***/&#xD;
+message color value("") fill(" ",66) "test".</Template><Template Name="TMP" Description="" Comments="0" Strings="0">TMP + execname + [+variable+] + ".bpi.prn".</Template><Template Name="debug" Description="" Comments="0" Strings="0">-clientlog [+E:\scripts\bkflh\out\qad.log+] -logginglevel 4 -logentrytypes 4GLTrace </Template><Template Name="ver" Description="" Comments="0" Strings="0">{gprun.i ""gpgetver.p"" "(input '1', output mfgver)"}  /* ref mf1a.p */</Template><Template Name="mfnxtsq1.i" Description="" Comments="0" Strings="0">/** reference mgbdld.p ***/&#xD;
 &#xD;
 /* CURRENT-VALUE(mf_sq04) = 999999999. */&#xD;
 &#xD;
@@ -325,4 +328,23 @@ message color value("") fill(" ",66) "test".</Template><Template Name="TMP" Desc
              bdl_id&#xD;
              mf_sq04&#xD;
              next_id}&#xD;
+</Template><Template Name="log" Description="" Comments="0" Strings="0">-clientlog E:\scripts\bkflh\out\qad.log -logginglevel 4 -logentrytypes 4GLTrace &#xD;
+&#xD;
+/**ProEditor***********************&#xD;
+LOG-MANAGER:LOGFILE-NAME = "CallTest01.log".&#xD;
+LOG-MANAGER:LOGGING-LEVEL = 4.&#xD;
+LOG-MANAGER:LOG-ENTRY-TYPES = "4GLTrace".&#xD;
+      &#xD;
+run us/rs/rsporc.r.&#xD;
+          &#xD;
+LOG-MANAGER:LOGGING-LEVEL = 0.&#xD;
+LOG-MANAGER:CLOSE-LOG().&#xD;
+***********************************&#xD;
+</Template><Template Name="Mail" Description="" Comments="0" Strings="0">/* cat [+File+] | mail -s [+"Title"+] [+Email1,Email2+] */&#xD;
+echo [+"Content"+] | mutt -s [+"Title"+] -a [+attachedfile+] [+mail1,mail2,+] # -b [+mail3,mail4+]&#xD;
+</Template><Template Name="proutil" Description="" Comments="0" Strings="0">proutil [+db-name+] -C dbanalys &gt;&gt; [+file+]&#xD;
+proutil [+db-name+] -C tabanalys &#xD;
+proutil [+db-name+] -C truncate bi&#xD;
+prostrct add [+db-name+] [+structure-description-file+] [+-validate+]&#xD;
+&#xD;
 </Template></Templates>
