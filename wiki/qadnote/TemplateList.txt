@@ -1,14 +1,15 @@
 模板程序。
-最佳报表模板(无批处理)       原因代码报表          mgrnrp.p    36.2.19
-最佳报表模板(含批处理)       舍入方法报表          mgrndrp.p   36.2.11
-最佳维护程序模板             舍入方法维护          mgrndmt.p/mgbcmt.p   36.2.9   
-最佳查询程序模板             原因代码查询          mgrniq.p    36.2.18 
-最佳直接运行程序模板         建立WINDOW输出的记录  uxprup.p    36.13.25.1
-最佳无条件报表               控制表报表            xxmacrp.p
-最佳无条件报表2              序号报表              mgsqrp01.p  36.16.15 
-最佳程序框架                 执行程序              mgmgmt24.p  36.22.3
-                             显示程序/文本文件     mgfdsply.p  36.22.4
-最佳删除/存档模板            登录历史记录归档/删除 mguslhup.p  36.23.3
-最佳即时显示模板             adrlmt.p
-最佳USRW_WKFL模板            昭和客户化程序        xxbctpmt.p/xxpkditem.p/xxpkdmins.p
-                             DCED客户化程序        xxqadatpupm.p/zzptstchgpm.p/xxvoimppm.p
+最佳报表模板(无批处理)  原因代码报表          mgrnrp.p    36.2.19  80col
+最佳报表模板(含批处理)  舍入方法报表          mgrndrp.p   36.2.11
+最佳维护程序模板        舍入方法维护          mgrndmt.p/mgbcmt.p   36.2.9   
+最佳查询程序模板        原因代码查询          mgrniq.p    36.2.18 
+最佳直接运行程序模板    建立WINDOW输出的记录  uxprup.p    36.13.25.1
+最佳无条件报表          控制表报表            xxmacrp.p
+最佳无条件报表2         序号报表              mgsqrp01.p  36.16.15 
+最佳程序框架            执行程序              mgmgmt24.p  36.22.3
+                        显示程序/文本文件     mgfdsply.p  36.22.4
+最佳删除/存档模板       登录历史记录归档/删除 mguslhup.p  36.23.3
+最佳即时显示模板        adrlmt.p
+最佳USRW_WKFL模板       昭和客户化程序        xxbctpmt.p/xxpkditem.p/xxpkdmins.p
+                        DCED客户化程序        xxqadatpupm.p/zzptstchgpm.p/xxvoimppm.p
+最佳展BOM用量程序       Lear客户化程序        lear\xxfgtorawrp\xxfgtorawrp.p                             

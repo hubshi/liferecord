@@ -1,27 +1,27 @@
 Q:½«Êı¾İ¿âÉèÖÃµÄÄê/ÔÂ/ÈÕ¸ñÊ½ĞŞ¸ÄÎªÔÂ/ÈÕ/Äê£¬ÔõÃ´²Ù×÷£¿
-A:ĞŞ¸Äprogress°²×°Ä¿Â¼ÏÂµÄstartup.pfÎÄ¼şºÍmfgpro°²×°Ä¿Â¼ÏÂµÄlocale.dat 
+A:ĞŞ¸Äprogress°²×°Ä¿Â¼ÏÂµÄstartup.pfÎÄ¼şºÍmfgpro°²×°Ä¿Â¼ÏÂµÄlocale.dat
 Q:MFG/PRO ³öÀ´µÄ±¨±í¶àÁËÒ»Ò³°×Ö½£¬ÈçºÎ£¿
 A:´òÓ¡»úÉèÖÃÊÇ²»ÊÇ66ĞĞ,ºóÃæµÄcode controlÈ«²¿É¾³ı
   or »¹¿ÉÒÔ°Ñ66¸Ä³É60
 
-Printer prints additional blank pages on all reports  
- 
-	Solution ID: qad13434  
-	Usage:  1 
-	Status:  Verified 
-	Last Modified:  01/31/2008 
-	Fact:  MFG/Pro all versions 
-	Fact:  36.13.2 Printer Setup Maintenance 
-	Fact:  NetWare 
-	Fact:  Using NetWare Print Queue 
-	Fact:  HP Laser printer
-	 
-	Symptom:  Printer prints additional blank pages on all reports 
-	Symptom:  Control codes are set correctly for printer but additional pages
-	 
-	Cause:  Networking issue. Problem printing via NetWare network.
-	 
-	Fix:  Setup printing via ip and setup share on network. 
+Printer prints additional blank pages on all reports
+
+  Solution ID: qad13434
+  Usage:  1
+  Status:  Verified
+  Last Modified:  01/31/2008
+  Fact:  MFG/Pro all versions
+  Fact:  36.13.2 Printer Setup Maintenance
+  Fact:  NetWare
+  Fact:  Using NetWare Print Queue
+  Fact:  HP Laser printer
+
+  Symptom:  Printer prints additional blank pages on all reports
+  Symptom:  Control codes are set correctly for printer but additional pages
+
+  Cause:  Networking issue. Problem printing via NetWare network.
+
+  Fix:  Setup printing via ip and setup share on network.
 
 Q:³ö»õµ¥È·ÈÏ½çÃærcsois.pÀïÔõÃ´²»³öÏÖ·¢Æ±´òÓ¡Ñ¡Ôñ½çÃæ£¿
 A:´òÓ¡»úÄ¬ÈÏÎ¬»¤(mgupmt.p)ÀïÎ¬»¤³ÉÁËpage.
@@ -31,7 +31,7 @@ A:³ÌĞòxxrcsois1.pÀïÓĞ¿ØÖÆĞèÎ¬»¤Ò»¸ösosorp10.p³ÌĞòµÄ²Ëµ¥ÇÒ´Ë²Ëµ¥ÒªÓĞÈ¨ÏŞ
 Q:¿â´æÖÜ×ªÂÊµÄ¼ÆËã¹«Ê½
 ¡¡¡¡¿â´æÖÜ×ªÂÊµÄ¼ÆËã¹«Ê½£¬Êµ¼ÊÆÀ¼ÛÖĞ¿ÉÓÃÈçÏÂ¹«Ê½½øĞĞ¼ÆËã£º ¡¡¡¡¿â´æÖÜ×ªÂÊ=£¨Ê¹ÓÃÊıÁ¿/¿â´æÊıÁ¿£©¡Á100% Ê¹ÓÃÊıÁ¿²¢²»µÈÓÚ³ö¿âÊıÁ¿£¬ÒòÎª³ö¿âÊıÁ¿°üÀ¨Ò»²¿·Ö±¸ÓÃÊıÁ¿¡£³ı´ËÖ®ÍâÒ²ÓĞÒÔ½ğ¶î¼ÆËã¿â´æÖÜ×ªÂÊµÄ¡£Í¬ÑùµÀÀíÊ¹ÓÃ½ğ¶î²¢²»µÈÓÚ³ö¿â½ğ¶î¡£ ¡¡¡¡¿â´æÖÜ×ªÂÊ=£¨Ê¹ÓÃ½ğ¶î/¿â´æ½ğ¶î£©¡Á100% Ê¹ÓÃ½ğ¶îÒ²ºÃ£¬¿â´æ½ğ¶îÒ²ºÃ£¬ÊÇºÎÊ±µÄ½ğ¶î£¬Òò´Ë¹æ¶¨Ä³¸öÆÚÏŞÀ´ÑĞ¾¿½ğ¶îÊ±£¬ĞèÓÃÏÂÁĞËãÊ½£º ¡¡¡¡¿â´æÖÜ×ªÂÊ=£¨¸ÃÆÚ¼äµÄ³ö¿â×Ü½ğ¶î/¸ÃÆÚ¼äµÄÆ½¾ù¿â´æ½ğ¶î£©¡Á100%=¸ÃÆÚ¼ä³ö¿â×Ü½ğ¶î¡Á2/(ÆÚ³õ¿â´æ½ğ¶î+ ÆÚÄ©¿â´æ½ğ¶î£©¡Á100% ¿â´æÖÜ×ªÂÊ¼ÆËã¹«Ê½ÊÇ(ÒÔÔÂÆ½¾ù¿â´æÖÜ×ªÂÊÎªÀı)£º ¡¡¡¡1¡¢Ô­²ÄÁÏ¿â´æÖÜ×ªÂÊ£½ÔÂÄÚ³ö¿âµÄÔ­²ÄÁÏ×Ü³É±¾/Ô­²ÄÁÏÆ½¾ù¿â´æ ¡¡¡¡2¡¢ÔÚÖÆ¿â´æÖÜ×ªÂÊ£½ÔÂÄÚÈë¿âµÄ³ÉÆ·ÎïÁÏ³É±¾/Æ½¾ùÔÚÖÆ¿â´æ ¡¡¡¡3¡¢³ÉÆ·¿â´æÖÜ×ªÂÊ£½ÔÂÏúÊÛÎïÁÏ³É±¾/³ÉÆ·ÔÚ¿âÆ½¾ù¿â´æ
 ±à¼­±¾¶Î¿â´æÖÜ×ªÂÊµÄ±íÊ¾·½·¨
-¡¡¡¡¿â´æÖÜ×ªÂÊµÄ²»Í¬±íÊ¾·½·¨£º ¡¡¡¡ÓÃÊÛ¼ÛÀ´¼ÆËã£¨±ãÓÚ²ÉÓÃÊÛ¼ÛÅÌ´æ·¨µÄµ¥Î»£¬ÏúÊÛ¶î/Æ½¾ù¿â´æ¶î£©¡¢ ÓÃ³É±¾À´¼ÆËã£¨±ãÓÚ¹Û²ìÏúÊÛ¶î¿â´æ¶îºÍÏúÊÛ³É±¾µÄ±ÈÂÊ£©¡¢ ÓÃÏúÊÛÁ¿À´¼ÆËã£¨ÓÃÓÚ¶©Á¢ÓĞ¹ØÉÌÆ·µÄ±ä¶¯¡¢ÖÃ·ÅÉÌÆ·µÄ³¡Ëù¼°ÏúÊÛ×÷ÒµÈËÔ±¼Æ»®Ê±£¬ÊµĞĞµ¥Î»¿â´æ¹ÜÀí£©¡¢ ÓÃÏúÊÛ½ğ¶îÀ´¼ÆËã£¨±ãÓÚÖÜ×ª×Ê½ğµÄ°²ÅÅ£©¡¢ ÓÃÀûÒæºÍ³É±¾À´¼ÆËã £¨ÒÔ×ÜÏúÊÛ¶îÎª·Ö×Ó£¬Æ½¾ù¿â´æ¶îÔòÓÃ³É±¾¼ÆËã£© ¡¡¡¡ÊÛ¼Û¡¢½ğ¶îÓĞÊ±»áËæ×Åµ¥¼Û¸Ä±ä¶ø·¢Éú±ä»¯£¬´Ó¶øÓ°ÏìÖÜ×ªÂÊ½á¹û¡£ËùÒÔ ¾¡Á¿ÓÃÁ¿±íÊ¾£¬ÈçÖØÁ¿£¨µ±ÆÚ³ö²Ö×ÜÖØÁ¿/µ±ÆÚÆ½¾ù¿â´æÖØÁ¿£©¡£ 
+¡¡¡¡¿â´æÖÜ×ªÂÊµÄ²»Í¬±íÊ¾·½·¨£º ¡¡¡¡ÓÃÊÛ¼ÛÀ´¼ÆËã£¨±ãÓÚ²ÉÓÃÊÛ¼ÛÅÌ´æ·¨µÄµ¥Î»£¬ÏúÊÛ¶î/Æ½¾ù¿â´æ¶î£©¡¢ ÓÃ³É±¾À´¼ÆËã£¨±ãÓÚ¹Û²ìÏúÊÛ¶î¿â´æ¶îºÍÏúÊÛ³É±¾µÄ±ÈÂÊ£©¡¢ ÓÃÏúÊÛÁ¿À´¼ÆËã£¨ÓÃÓÚ¶©Á¢ÓĞ¹ØÉÌÆ·µÄ±ä¶¯¡¢ÖÃ·ÅÉÌÆ·µÄ³¡Ëù¼°ÏúÊÛ×÷ÒµÈËÔ±¼Æ»®Ê±£¬ÊµĞĞµ¥Î»¿â´æ¹ÜÀí£©¡¢ ÓÃÏúÊÛ½ğ¶îÀ´¼ÆËã£¨±ãÓÚÖÜ×ª×Ê½ğµÄ°²ÅÅ£©¡¢ ÓÃÀûÒæºÍ³É±¾À´¼ÆËã £¨ÒÔ×ÜÏúÊÛ¶îÎª·Ö×Ó£¬Æ½¾ù¿â´æ¶îÔòÓÃ³É±¾¼ÆËã£© ¡¡¡¡ÊÛ¼Û¡¢½ğ¶îÓĞÊ±»áËæ×Åµ¥¼Û¸Ä±ä¶ø·¢Éú±ä»¯£¬´Ó¶øÓ°ÏìÖÜ×ªÂÊ½á¹û¡£ËùÒÔ ¾¡Á¿ÓÃÁ¿±íÊ¾£¬ÈçÖØÁ¿£¨µ±ÆÚ³ö²Ö×ÜÖØÁ¿/µ±ÆÚÆ½¾ù¿â´æÖØÁ¿£©¡£
 
 Q:ÏúÊÛ»õÔËµ¥È·ÈÏrcsois.p³öÏÖÌáÊ¾£º¿Í»§¶©µ¥soXX,ÕıÔÚ±»ÓÃ»§Õ¼ÓÃ Uxx ÖØĞÂÊäÈë
 A: msgid:2622 ÔËĞĞ³ÌĞòutshrel.pÉ¾³ıÍ£¶ÙµÄQAD_WKFL.
@@ -46,11 +46,11 @@ A:1.longin as sa
   4.startDB
 
 Q:Êı¾İÎÄ¼ş´óÓÚ2GÔõÃ´´¦Àí
-	1.prostrct list mfgdemo
-	2.ĞÂÔöÎÄ¼şadd.st(Ä¿Â¼Îª¾ø¶ÔÂ·¾¶)
-		d "TRANSACTION":7,64 \prod\db
-	3.prostrct add mfgdemo add.st
-	4.prostrct list mfgdemo
+  1.prostrct list mfgdemo
+  2.ĞÂÔöÎÄ¼şadd.st(Ä¿Â¼Îª¾ø¶ÔÂ·¾¶)
+    d "TRANSACTION":7,64 /prod/db
+  3.prostrct add mfgdemo add.st
+  4.prostrct list mfgdemo
 
 
 Q:¹©Ó¦ÉÌÈÕ³Ìµ¥ºÍ±ê×¼²É¹ºµ¥£¬ÔÚÊı¾İ¿âÉÏµÄÄÇ¸öÀ¸Î»½øĞĞÇø·Ö°¡?
@@ -77,9 +77,9 @@ A:  for each qad_wkfl where qad_key1 = "mrp/drp":
     23.2
 
 Q:³ÌĞòÂıÓĞÊ²Ã´°ì·¨£¿
-A:ÔÚ±àĞ´³ÌĞòÊ±,Ò»Ğ©´óÊı¾İÁ¿µÄ±í(ÖîÈçtr_hist,abs_mstr,gltr_hist,ih_hist,idh_histµÈ),¾¡Á¿²»ÓÃBUFF, ¶øÊÇÏÈÓÃÁÙÊ±±í±í³éÈ¡ºÏÊÊµÄÊı¾İ¼ÇÂ¼. ²»È»¶àÓÃ»§Í¬Ê±ÓÃÊ±,ÄÚ´æÕ¼ÓÃÌ«´ó. 
+A:ÔÚ±àĞ´³ÌĞòÊ±,Ò»Ğ©´óÊı¾İÁ¿µÄ±í(ÖîÈçtr_hist,abs_mstr,gltr_hist,ih_hist,idh_histµÈ),¾¡Á¿²»ÓÃBUFF, ¶øÊÇÏÈÓÃÁÙÊ±±í±í³éÈ¡ºÏÊÊµÄÊı¾İ¼ÇÂ¼. ²»È»¶àÓÃ»§Í¬Ê±ÓÃÊ±,ÄÚ´æÕ¼ÓÃÌ«´ó.
 
-Q: showaÌõÂë×¢²áÂëÊÇÊ²Ã´£¿ 
+Q: showaÌõÂë×¢²áÂëÊÇÊ²Ã´£¿
 A: ~report name = ¹ãÖİÕÑºÍÆû³µÁã²¿¼şÓĞÏŞ¹«Ë¾  usrw_charfld[1]=yeajibhbjcoblliefj
 
 Q: Batch RunºÍmanual input µÄ³ÌĞò»á²»Í¬Âğ£¿
@@ -97,24 +97,24 @@ Q:ÔÚCHARÉÏµÄ³ÌĞòÔõÃ´ÄÜÔÚWEBUIÉÏÔËĞĞ£¿
 A:ÔÚmgpgmimt.p-36.3.21.1 ³ÌĞòĞÅÏ¢Î¬»¤Àï×¢²á
 
 Q:ÔõÃ´¿ÉÒÔÈÃtext¿ÉÒÔÊäÈëµÄ×Ö·û³¬¹ı±íµ¥ÏÔÊ¾
-A:view-as fill-in size 40 by 1. Çë²ÎÕÕ³ÌĞòmgfdsply.p 
+A:view-as fill-in size 40 by 1. Çë²ÎÕÕ³ÌĞòmgfdsply.p
 
 Q:ÌõÂëÊÇÔõÃ´ÖÆ×÷µÄ?
 A:ÁìÅÜÌõÂë±êÇ©Éè¼ÆÈí¼şÏÂÔØµØÖ·
   http://www.xdowns.com/soft/softdown.asp?softid=74120
-  
+
 Q:GUIÀïÔõÃ´Í£Ö¹Æô¶¯¶¯»­
 A:ĞŞ¸Äprogress.svg
   spin=no
-  
+
 Q:×ÊÔ´²»×ãÓĞÊ²Ã´½â¾ö·½°¸£¿
 A: vst start scripts
-   DLC=/app/dlc/91D;		export DLC
-   PATH=$PATH:$DLC;		export PATH
-   PROMSGS=$DLC/promsgs;		export PROMSGS
-   PROTERMCAP=$DLC/protermcap;	export PROTERMCAP
-   DB=/db2/vst/prod;		export DB
-    
+   DLC=/app/dlc/91D;    export DLC
+   PATH=$PATH:$DLC;   export PATH
+   PROMSGS=$DLC/promsgs;    export PROMSGS
+   PROTERMCAP=$DLC/protermcap;  export PROTERMCAP
+   DB=/db2/vst/prod;    export DB
+
    #loop-db-start -S merant
      $DLC/bin/proserve $DB/mfg001 -L 500000 -c 350 -B 80000 -spin 6000 -n 230 -bibufs 24 -S 6000 [-minport 40000 -maxport 43000] -N TCP
      $DLC/bin/proapw   $DB/mfg001
@@ -123,9 +123,9 @@ A: vst start scripts
      $DLC/bin/proserve $DB/hlp001 -L 8000 -c 350 -B 8000 -spin 2000 -n 230  -S 60002 [-minport 44000 -maxport 45000] -N TCP
      $DLC/bin/proserve $DB/prg001 -L 8000 -c 350 -B 8000 -n 230  -S 60003  [-minport 46000 -maxport 47000] -N TCP
      $DLC/bin/proserve $DB/adm001 -L 8000 -c 350 -B 8000 -spin 2000 -n 230  -S 60004 [-minport 48000 -maxport 49000] -N TCP
-   
+
    #loop-db-end
-   
+
 Q: how to get os userid
 A: program mf1.p procedure getOSUserid:
 
@@ -147,7 +147,7 @@ A£º1.0 6 * * * /apps/scripts/prod/bclient.Production /home/mfg/batch/5_5_3_1 sta
    3.### startup.p
 
 Q:How to debug program
-A: -clientlog E:\scripts\bkflh\out\qad.log -logginglevel 4 -logentrytypes 4GLTrace 
+A: -clientlog E:\scripts\bkflh\out\qad.log -logginglevel 4 -logentrytypes 4GLTrace
 
 Q:BOMÕ¹¿ªµÄ³ÌĞòÔÚÄÇÀï£¿
 A:$\trunk\ts\xxmprp11\xxbmps\xxbmps.i
@@ -178,15 +178,38 @@ A:/usr/tomcat/webapps/qadhome/configurations/³ö´íµÄ»·¾³Ãû³Æ/storage/user-data/ É
 
 Q:BIÔõÃ´µ÷ÓÃPorgress³ÌĞò£¿
 A:   Public Sub Query_BeforeRefreshData(nMaxRows As Long, bCancel As Boolean)
-      	params = """effdate=" & Query.Param("effdate") & ";effdate1=" & Query.Param("effdate1") & ";loc=" & Query.Param("loc")& ";loc1=" & Query.Param("loc1")& ";part=" & Query.Param("part")& ";part1=" & Query.Param("part1")& """"
-      	prg = "C:\qadguicli\bicallprogress\zh-pdb2.p"
-      	'cmd = """D:\App\PROGRESS\DLC91D\bin\prowin32.exe"" mfgtest -b -ld qaddb -H 192.168.0.92 -S 51410 -N TCP -d ymd"
-      	cmd = """D:\App\PROGRESS\DLC91D\bin\prowin32.exe"" mfgwsa -b -ld qaddb -H 192.168.0.92 -S 52100 -N TCP -d ymd"
-      	cmdline = cmd & " -param " & params & " -p " & prg
-      	App.ShowMsg 0,"cmdline:" & cmdline
-      	hr = App.RunAndWait(cmdline, False)
-      	If(hr < 0) Then
-      		App.ShowMsg(hr)
-      		bCancel = True
-      	End If
+        params = """effdate=" & Query.Param("effdate") & ";effdate1=" & Query.Param("effdate1") & ";loc=" & Query.Param("loc")& ";loc1=" & Query.Param("loc1")& ";part=" & Query.Param("part")& ";part1=" & Query.Param("part1")& """"
+        prg = "C:\qadguicli\bicallprogress\zh-pdb2.p"
+        'cmd = """D:\App\PROGRESS\DLC91D\bin\prowin32.exe"" mfgtest -b -ld qaddb -H 192.168.0.92 -S 51410 -N TCP -d ymd"
+        cmd = """D:\App\PROGRESS\DLC91D\bin\prowin32.exe"" mfgwsa -b -ld qaddb -H 192.168.0.92 -S 52100 -N TCP -d ymd"
+        cmdline = cmd & " -param " & params & " -p " & prg
+        App.ShowMsg 0,"cmdline:" & cmdline
+        hr = App.RunAndWait(cmdline, False)
+        If(hr < 0) Then
+          App.ShowMsg(hr)
+          bCancel = True
+        End If
       End Sub
+
+Q:SecureCRT µÄ×ÖÌåÓÃÊ²Ã´±È½ÏºÃ
+A:Lucida Console
+
+Q:ÔÚshellÖĞ£¬È¡ÓàÊıµÄº¯ÊıÊÇÊ²Ã´£¿
+A:echo $((a%b))
+
+Q:ÔÚshellÖĞÈ¡µ±Ç°ÈÕÆÚÓë3µÄÓàÊıÔõÃ´È¡£¿
+A:$dte=$(date '+%d')
+  $echo $(($dte%3))
+
+Q:LinuxÖÕ¶ËÏÔÊ¾ÂÒÂëÔõÃ´°ì£¿
+A:echo -e '\xf'
+
+Q:5.13.10³É±¾Îª0 ÓĞÄÇ¸ö±ífieldÃû²»ÊÇdomain ´æµÄ×ÊÁÏÊÇdomain?
+A:qtbl_ext µÄKey1ÊÇdomain field name ²»ÊÇdomain
+
+Q:¿Í»§»¯Éı¼¶³ÌĞò¼ÓÓòÒª¿´ÄÇĞ©µØ·½£¿
+A:1.where Ìõ¼ş±ØĞë¼Ó
+  2.fields list ±ØĞë¼Ó
+  3.create ºó±ØĞë¼Ó
+  4.each , find ¿´Çé¿ö
+
